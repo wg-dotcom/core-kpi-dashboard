@@ -145,8 +145,10 @@
     .adv-genesis{background:var(--orange-l);color:var(--orange);}
     .adv-vicky{background:#eff6ff;color:var(--blue);}
     .adv-amimo{background:var(--green-l);color:var(--green);}
+    .adv-andrea{background:var(--red-l);color:var(--red);}
     .adv-cami{background:var(--purple-l);color:var(--purple);}
     .adv-nadeia{background:var(--yellow-l);color:var(--yellow);}
+    .adv-sofia{background:#f0f9ff;color:#0284c7;}
     .adv-unassigned{background:var(--gray-100);color:var(--gray-400);}
 
     .priority-badge{width:24px;height:24px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;}
@@ -348,8 +350,10 @@
       <button class="filter-btn" data-advisor="Genesis">Genesis</button>
       <button class="filter-btn" data-advisor="Vicky">Vicky</button>
       <button class="filter-btn" data-advisor="Amimo">Amimo</button>
+      <button class="filter-btn" data-advisor="Andrea">Andrea</button>
       <button class="filter-btn" data-advisor="Cami">Cami</button>
       <button class="filter-btn" data-advisor="Nadeia">Nadeia</button>
+      <button class="filter-btn" data-advisor="Sofia">Sofia</button>
       <div class="filter-sep"></div>
       <span class="filter-label">Stage:</span>
       <button class="filter-btn active" data-status="all">All</button>
@@ -729,8 +733,8 @@ async function loadData() {
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 const STATUS_CLASS = {"1. KickOff Meeting":"s-kickoff","2. Candidates Presented":"s-candidates","3. 1st Round of Interviews":"s-interviews","4. Assessment":"s-assessment","5. Final Interview":"s-final","6. Job Offer Letter / Signature":"s-offer","7. Invoice":"s-invoice","8. Placed":"s-placed","9. Closed / Paused / M.I.A.":"s-closed"};
 const STATUS_LABEL = {"1. KickOff Meeting":"KickOff","2. Candidates Presented":"Candidates Sent","3. 1st Round of Interviews":"Interviewing","4. Assessment":"Assessment","5. Final Interview":"Final Interview","6. Job Offer Letter / Signature":"Job Offer 📝","7. Invoice":"Invoice ✓"};
-const ADV_CLASS = {"Genesis":"adv-genesis","Vicky":"adv-vicky","Amimo":"adv-amimo","Cami":"adv-cami","Nadeia":"adv-nadeia","Jesus":"adv-jesus","MIguel":"adv-miguel","Guillermo":"adv-guillermo"};
-const ADV_COLOR = {"Genesis":"var(--orange)","Vicky":"var(--blue)","Amimo":"var(--green)","Cami":"var(--purple)","Nadeia":"var(--yellow)","Unassigned":"var(--gray-400)"};
+const ADV_CLASS = {"Genesis":"adv-genesis","Vicky":"adv-vicky","Amimo":"adv-amimo","Andrea":"adv-andrea","Cami":"adv-cami","Nadeia":"adv-nadeia","Sofia":"adv-sofia","Jesus":"adv-jesus","MIguel":"adv-miguel","Guillermo":"adv-guillermo"};
+const ADV_COLOR = {"Genesis":"var(--orange)","Vicky":"var(--blue)","Amimo":"var(--green)","Andrea":"var(--red)","Cami":"var(--purple)","Nadeia":"var(--yellow)","Sofia":"#0284c7","Unassigned":"var(--gray-400)"};
 const NOW = new Date();
 
 function parseDate(s) {
