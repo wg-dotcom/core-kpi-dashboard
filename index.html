@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Core Members — KPI Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --blue:#0b4d99; --blue-dark:#083d7a; --blue-light:#e8f0fb;
+      --orange:#ff5722; --orange-l:#fff3ef;
+      --green:#22c55e; --green-l:#f0fdf4;
+      --yellow:#f59e0b; --yellow-l:#fffbeb;
+      --purple:#8b5cf6; --purple-l:#f5f3ff;
+      --red:#ef4444; --red-l:#fef2f2;
+      --gray-50:#f8fafc; --gray-100:#f1f5f9; --gray-200:#e2e8f0;
+      --gray-400:#94a3b8; --gray-600:#475569; --gray-800:#1e293b;
+      --white:#ffffff;
+      --shadow-sm:0 1px 3px rgba(0,0,0,.08);
+      --shadow:0 4px 16px rgba(11,77,153,.10);
+      --radius:14px; --radius-sm:8px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Poppins',sans-serif;background:var(--gray-50);color:var(--gray-800);min-height:100vh;}
+
+    /* NAV */
+    .topbar{background:linear-gradient(135deg,var(--blue-dark) 0%,var(--blue) 100%);padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.18);}
+    .topbar-brand{display:flex;align-items:center;gap:12px;}
+    .topbar-logo{width:36px;height:36px;border-radius:8px;background:var(--white);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:var(--blue);letter-spacing:-1px;}
+    .topbar-name{color:var(--white);font-size:17px;font-weight:700;}
+    .topbar-sub{color:rgba(255,255,255,.65);font-size:12px;}
+    .topbar-right{display:flex;align-items:center;gap:16px;}
+    .topbar-date{color:rgba(255,255,255,.75);font-size:12px;}
+    .badge-live{background:var(--green);color:#fff;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;letter-spacing:.5px;text-transform:uppercase;}
+
+    /* TAB NAV */
+    .tab-nav{background:var(--white);border-bottom:2px solid var(--gray-200);padding:0 32px;display:flex;gap:0;position:sticky;top:64px;z-index:99;box-shadow:var(--shadow-sm);}
+    .tab-btn{padding:14px 22px;font-family:'Poppins',sans-serif;font-size:13px;font-weight:600;color:var(--gray-400);background:none;border:none;border-bottom:3px solid transparent;margin-bottom:-2px;cursor:pointer;transition:all .15s;white-space:nowrap;}
+    .tab-btn:hover{color:var(--blue);}
+    .tab-btn.active{color:var(--blue);border-bottom-color:var(--blue);}
+    .tab-section{display:none;}
+    .tab-section.active{display:block;}
+
+    /* LAYOUT */
+    .page{max-width:1380px;margin:0 auto;padding:28px 24px 60px;}
+
+    /* SECTION HEADER */
+    .section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
+    .section-title{font-size:18px;font-weight:700;color:var(--blue);}
+    .section-sub{font-size:13px;color:var(--gray-400);}
+
+    /* KPI CARDS */
+    .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:14px;margin-bottom:28px;}
+    .kpi-card{background:var(--white);border-radius:var(--radius);padding:20px 18px 16px;box-shadow:var(--shadow-sm);border:1.5px solid var(--gray-200);position:relative;overflow:hidden;transition:box-shadow .2s,transform .2s;}
+    .kpi-card:hover{box-shadow:var(--shadow);transform:translateY(-2px);}
+    .kpi-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;}
+    .kpi-card.blue::before{background:var(--blue);}
+    .kpi-card.orange::before{background:var(--orange);}
+    .kpi-card.green::before{background:var(--green);}
+    .kpi-card.yellow::before{background:var(--yellow);}
+    .kpi-card.purple::before{background:var(--purple);}
+    .kpi-card.red::before{background:var(--red);}
+    .kpi-icon{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:10px;}
+    .kpi-card.blue .kpi-icon{background:var(--blue-light);}
+    .kpi-card.orange .kpi-icon{background:var(--orange-l);}
+    .kpi-card.green .kpi-icon{background:var(--green-l);}
+    .kpi-card.yellow .kpi-icon{background:var(--yellow-l);}
+    .kpi-card.purple .kpi-icon{background:var(--purple-l);}
+    .kpi-card.red .kpi-icon{background:var(--red-l);}
+    .kpi-value{font-size:26px;font-weight:800;line-height:1;margin-bottom:4px;}
+    .kpi-card.blue .kpi-value{color:var(--blue);}
+    .kpi-card.orange .kpi-value{color:var(--orange);}
+    .kpi-card.green .kpi-value{color:var(--green);}
+    .kpi-card.yellow .kpi-value{color:var(--yellow);}
+    .kpi-card.purple .kpi-value{color:var(--purple);}
+    .kpi-card.red .kpi-value{color:var(--red);}
+    .kpi-label{font-size:12px;color:var(--gray-600);font-weight:500;}
+    .kpi-sub{font-size:11px;color:var(--gray-400);margin-top:2px;}
+
+    /* PIPELINE FUNNEL */
+    .pipeline{display:flex;gap:0;margin-bottom:28px;overflow-x:auto;}
+    .pipe-stage{flex:1;min-width:90px;background:var(--white);border:1.5px solid var(--gray-200);padding:14px 10px;text-align:center;cursor:pointer;transition:background .15s;}
+    .pipe-stage:first-child{border-radius:var(--radius) 0 0 var(--radius);}
+    .pipe-stage:last-child{border-radius:0 var(--radius) var(--radius) 0;}
+    .pipe-stage:not(:first-child){border-left:none;}
+    .pipe-stage:hover{background:var(--gray-50);}
+    .pipe-stage.active{background:var(--blue-light);border-color:var(--blue);z-index:1;}
+    .pipe-stage-num{font-size:22px;font-weight:800;color:var(--blue);}
+    .pipe-stage-name{font-size:10px;color:var(--gray-600);font-weight:500;margin-top:2px;}
+    .pipe-stage-val{font-size:10px;color:var(--green);font-weight:600;margin-top:2px;}
+
+    /* CHARTS */
+    .charts-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-bottom:28px;}
+    @media(max-width:900px){.charts-row{grid-template-columns:1fr 1fr;}}
+    @media(max-width:600px){.charts-row{grid-template-columns:1fr;}}
+    .charts-row-2{display:grid;grid-template-columns:2fr 1fr;gap:18px;margin-bottom:28px;}
+    @media(max-width:900px){.charts-row-2{grid-template-columns:1fr;}}
+    .chart-card{background:var(--white);border-radius:var(--radius);padding:20px 20px 16px;box-shadow:var(--shadow-sm);border:1.5px solid var(--gray-200);}
+    .chart-title{font-size:14px;font-weight:600;color:var(--gray-800);margin-bottom:6px;}
+    .chart-sub{font-size:11px;color:var(--gray-400);margin-bottom:12px;}
+    .chart-wrap{position:relative;height:200px;}
+    .chart-wrap-tall{position:relative;height:260px;}
+
+    /* FILTERS */
+    .filters-bar{background:var(--white);border-radius:var(--radius);padding:14px 18px;box-shadow:var(--shadow-sm);border:1.5px solid var(--gray-200);display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:18px;}
+    .filter-label{font-size:12px;font-weight:600;color:var(--gray-600);}
+    .filter-btn{padding:5px 13px;border-radius:20px;border:1.5px solid var(--gray-200);background:var(--white);font-family:'Poppins',sans-serif;font-size:12px;font-weight:500;color:var(--gray-600);cursor:pointer;transition:all .15s;}
+    .filter-btn:hover{border-color:var(--blue);color:var(--blue);}
+    .filter-btn.active{background:var(--blue);border-color:var(--blue);color:#fff;}
+    .filter-sep{width:1px;height:22px;background:var(--gray-200);}
+    .search-input{flex:1;min-width:180px;padding:6px 14px;border:1.5px solid var(--gray-200);border-radius:20px;font-family:'Poppins',sans-serif;font-size:12px;color:var(--gray-800);outline:none;transition:border-color .15s;}
+    .search-input:focus{border-color:var(--blue);}
+
+    /* TABLE */
+    .table-card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow-sm);border:1.5px solid var(--gray-200);overflow:hidden;margin-bottom:28px;}
+    .table-header{padding:14px 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--gray-200);}
+    .table-title{font-size:15px;font-weight:700;color:var(--gray-800);}
+    .table-count{font-size:12px;color:var(--gray-400);}
+    .table-wrap{overflow-x:auto;}
+    table{width:100%;border-collapse:collapse;font-size:13px;}
+    thead th{background:var(--gray-50);padding:10px 13px;text-align:left;font-size:11px;font-weight:600;color:var(--gray-400);text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--gray-200);white-space:nowrap;cursor:pointer;user-select:none;}
+    thead th:hover{color:var(--blue);}
+    tbody tr:hover{background:var(--gray-50);}
+    tbody td{padding:11px 13px;border-bottom:1px solid var(--gray-200);vertical-align:middle;color:var(--gray-800);}
+    tbody tr:last-child td{border-bottom:none;}
+
+    /* BADGES */
+    .status-badge{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:12px;font-size:11px;font-weight:600;white-space:nowrap;}
+    .status-dot{width:6px;height:6px;border-radius:50%;}
+    .s-kickoff{background:#eff6ff;color:#1d4ed8;} .s-kickoff .status-dot{background:#3b82f6;}
+    .s-candidates{background:#fff7ed;color:#c2410c;} .s-candidates .status-dot{background:var(--orange);}
+    .s-interviews{background:#fefce8;color:#a16207;} .s-interviews .status-dot{background:var(--yellow);}
+    .s-assessment{background:#fdf4ff;color:#7e22ce;} .s-assessment .status-dot{background:var(--purple);}
+    .s-final{background:#fff7ed;color:#9a3412;} .s-final .status-dot{background:#ef4444;}
+    .s-offer{background:#ecfeff;color:#0e7490;} .s-offer .status-dot{background:#06b6d4;}
+    .s-invoice{background:#f0fdf4;color:#15803d;} .s-invoice .status-dot{background:var(--green);}
+    .s-placed{background:#f0fdf4;color:#166534;} .s-placed .status-dot{background:#16a34a;}
+    .s-closed{background:var(--gray-100);color:var(--gray-400);} .s-closed .status-dot{background:var(--gray-400);}
+
+    .advisor-tag{display:inline-block;padding:2px 9px;border-radius:10px;font-size:11px;font-weight:600;}
+    .adv-jesus{background:#eff6ff;color:var(--blue);}
+    .adv-miguel{background:var(--orange-l);color:var(--orange);}
+    .adv-guillermo{background:var(--purple-l);color:var(--purple);}
+    .adv-genesis{background:var(--orange-l);color:var(--orange);}
+    .adv-vicky{background:#eff6ff;color:var(--blue);}
+    .adv-amimo{background:var(--green-l);color:var(--green);}
+    .adv-cami{background:var(--purple-l);color:var(--purple);}
+    .adv-nadeia{background:var(--yellow-l);color:var(--yellow);}
+    .adv-unassigned{background:var(--gray-100);color:var(--gray-400);}
+
+    .priority-badge{width:24px;height:24px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;}
+    .pri-1{background:#fee2e2;color:#b91c1c;}
+    .pri-other{background:var(--yellow-l);color:#92400e;}
+
+    .val-green{color:var(--green);font-weight:600;}
+    .val-blue{color:var(--blue);font-weight:600;}
+    .val-orange{color:var(--orange);font-weight:600;}
+
+    /* STALE ALERT */
+    .stale-badge{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;background:#fef2f2;color:#b91c1c;animation:pulse 2s infinite;}
+    @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.6;}}
+
+    /* LEADERBOARD */
+    .leaderboard{background:var(--white);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow-sm);border:1.5px solid var(--gray-200);margin-bottom:28px;}
+    .lb-title{font-size:15px;font-weight:700;margin-bottom:14px;}
+    .lb-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--gray-100);}
+    .lb-row:last-child{border-bottom:none;}
+    .lb-rank{font-size:17px;font-weight:800;width:26px;color:var(--gray-400);}
+    .lb-rank.r1{color:#f59e0b;} .lb-rank.r2{color:#94a3b8;} .lb-rank.r3{color:#b45309;}
+    .lb-avatar{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:#fff;}
+    .lb-info{flex:1;}
+    .lb-name{font-size:13px;font-weight:600;}
+    .lb-meta{font-size:11px;color:var(--gray-400);}
+    .lb-bar-wrap{flex:2;}
+    .lb-bar-bg{height:8px;background:var(--gray-100);border-radius:4px;overflow:hidden;}
+    .lb-bar-fill{height:100%;border-radius:4px;}
+    .lb-stat{font-size:13px;font-weight:700;min-width:30px;text-align:right;}
+
+    /* CLOSED SECTION */
+    .closed-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:28px;}
+    @media(max-width:900px){.closed-grid{grid-template-columns:1fr;}}
+    .reason-card{background:var(--white);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow-sm);border:1.5px solid var(--gray-200);}
+    .reason-title{font-size:14px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+    .reason-row{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid var(--gray-100);}
+    .reason-row:last-child{border-bottom:none;}
+    .reason-icon{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;margin-top:1px;}
+    .reason-company{font-size:13px;font-weight:600;}
+    .reason-role{font-size:11px;color:var(--gray-400);}
+    .reason-note{font-size:11px;color:var(--gray-600);margin-top:3px;line-height:1.4;}
+    .closer-tag{display:inline-block;padding:2px 8px;border-radius:8px;font-size:10px;font-weight:700;}
+    .closer-us{background:var(--red-l);color:var(--red);}
+    .closer-customer{background:var(--orange-l);color:var(--orange);}
+    .closer-paused{background:var(--yellow-l);color:var(--yellow);}
+
+    /* PLACEMENT TIMELINE */
+    .time-tabs{display:flex;gap:8px;margin-bottom:16px;}
+    .time-tab{padding:6px 16px;border-radius:20px;border:1.5px solid var(--gray-200);background:var(--white);font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;color:var(--gray-600);cursor:pointer;transition:all .15s;}
+    .time-tab:hover{border-color:var(--blue);color:var(--blue);}
+    .time-tab.active{background:var(--blue);border-color:var(--blue);color:#fff;}
+    .placement-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px;}
+    @media(max-width:700px){.placement-kpis{grid-template-columns:1fr 1fr;}}
+    .mini-kpi{background:var(--white);border-radius:var(--radius-sm);padding:14px;border:1.5px solid var(--gray-200);text-align:center;}
+    .mini-kpi-val{font-size:20px;font-weight:800;color:var(--blue);}
+    .mini-kpi-val.green{color:var(--green);}
+    .mini-kpi-val.orange{color:var(--orange);}
+    .mini-kpi-label{font-size:11px;color:var(--gray-400);font-weight:500;margin-top:2px;}
+    .placement-list{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow-sm);border:1.5px solid var(--gray-200);overflow:hidden;}
+    .placement-list-header{padding:12px 16px;background:var(--gray-50);border-bottom:1px solid var(--gray-200);font-size:12px;font-weight:600;color:var(--gray-600);display:grid;grid-template-columns:2fr 2fr 1fr 1fr 1fr;gap:8px;}
+    .placement-list-row{padding:11px 16px;border-bottom:1px solid var(--gray-100);font-size:13px;display:grid;grid-template-columns:2fr 2fr 1fr 1fr 1fr;gap:8px;align-items:center;transition:background .1s;}
+    .placement-list-row:hover{background:var(--gray-50);}
+    .placement-list-row:last-child{border-bottom:none;}
+
+    /* STAGE REVENUE STRIP */
+    .stage-rev-card{background:var(--white);border:1.5px solid var(--gray-200);border-radius:var(--radius-sm);padding:12px 14px;text-align:center;transition:box-shadow .15s,transform .15s;cursor:default;}
+    .stage-rev-card:hover{box-shadow:var(--shadow);transform:translateY(-2px);}
+    .stage-rev-card-label{font-size:10px;font-weight:700;color:var(--gray-400);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;}
+    .stage-rev-card-count{font-size:18px;font-weight:800;color:var(--blue);line-height:1;}
+    .stage-rev-card-rev{font-size:12px;font-weight:700;color:var(--green);margin-top:3px;}
+    .stage-rev-card-rev.muted{color:var(--gray-400);}
+    .stage-rev-card.highlight{border-color:var(--blue);background:var(--blue-light);}
+
+    /* PLACING RATE CARDS */
+    .pr-card{background:var(--white);border:1.5px solid var(--gray-200);border-radius:var(--radius-sm);padding:16px 18px;text-align:center;transition:box-shadow .15s,transform .15s;}
+    .pr-card:hover{box-shadow:var(--shadow);transform:translateY(-2px);}
+    .pr-card-period{font-size:11px;font-weight:700;color:var(--gray-400);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;}
+    .pr-card-rate{font-size:30px;font-weight:800;line-height:1;margin-bottom:6px;}
+    .pr-card-rate.green{color:var(--green);}
+    .pr-card-rate.yellow{color:var(--yellow);}
+    .pr-card-rate.red{color:var(--red);}
+    .pr-card-detail{font-size:11px;color:var(--gray-400);font-weight:500;}
+    .pr-card.highlight-card{border-color:var(--blue);background:var(--blue-light);}
+    .pr-card.highlight-card .pr-card-period{color:var(--blue);}
+    .pr-card-null{font-size:20px;font-weight:800;color:var(--gray-400);}
+
+    /* NO RESULTS */
+    .no-results{text-align:center;padding:40px;color:var(--gray-400);font-size:14px;}
+
+    /* FOOTER */
+    .footer{text-align:center;padding:24px;font-size:11px;color:var(--gray-400);}
+    .footer span{color:var(--blue);font-weight:600;}
+  </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <div class="topbar-brand">
+    <div class="topbar-logo">CM</div>
+    <div>
+      <div class="topbar-name">Core Members — KPI Dashboard</div>
+      <div class="topbar-sub">Sagan Recruitment · Hiring Process Tracker</div>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <span class="topbar-date" id="topbar-date"></span>
+    <span class="badge-live">Live</span>
+  </div>
+</header>
+
+<!-- TAB NAV -->
+<nav class="tab-nav">
+  <button class="tab-btn active" data-tab="overview">📊 Overview</button>
+  <button class="tab-btn" data-tab="active">🎯 Active Processes</button>
+  <button class="tab-btn" data-tab="placements">✅ Placement Activity</button>
+  <button class="tab-btn" data-tab="closed">🔒 Closed & Paused</button>
+</nav>
+
+<main class="page">
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- TAB 1: OVERVIEW                                               -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <section class="tab-section active" id="tab-overview">
+
+    <div class="section-header" style="margin-bottom:14px;">
+      <div><div class="section-title">Overview</div><div class="section-sub" id="overview-stat-line">Loading data…</div></div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card blue"><div class="kpi-icon">🎯</div><div class="kpi-value" id="kpi-active">—</div><div class="kpi-label">Active Processes</div><div class="kpi-sub">Across all stages</div></div>
+      <div class="kpi-card green"><div class="kpi-icon">✅</div><div class="kpi-value" id="kpi-placed">—</div><div class="kpi-label">Total Placed</div><div class="kpi-sub">All time</div></div>
+      <div class="kpi-card orange"><div class="kpi-icon">💰</div><div class="kpi-value" id="kpi-pipeline">—</div><div class="kpi-label">Active Pipeline</div><div class="kpi-sub">Projected deal value</div></div>
+      <div class="kpi-card yellow"><div class="kpi-icon">⚡</div><div class="kpi-value" id="kpi-avg-days">—</div><div class="kpi-label">Avg. Days to Place</div><div class="kpi-sub">Historical average</div></div>
+      <div class="kpi-card purple"><div class="kpi-icon">📈</div><div class="kpi-value" id="kpi-revenue">—</div><div class="kpi-label">Revenue Generated</div><div class="kpi-sub">All placed deals</div></div>
+      <div class="kpi-card green"><div class="kpi-icon">🗓️</div><div class="kpi-value" id="kpi-placed-30">—</div><div class="kpi-label">Placed Last 30d</div><div class="kpi-sub" id="kpi-placed-30-sub">—</div></div>
+      <div class="kpi-card blue"><div class="kpi-icon">🔥</div><div class="kpi-value" id="kpi-placed-7">—</div><div class="kpi-label">Placed Last 7d</div><div class="kpi-sub" id="kpi-placed-7-sub">—</div></div>
+      <div class="kpi-card red"><div class="kpi-icon">⏸️</div><div class="kpi-value" id="kpi-closed">—</div><div class="kpi-label">Closed / Paused</div><div class="kpi-sub" id="kpi-closed-sub">—</div></div>
+      <div class="kpi-card yellow"><div class="kpi-icon">🔁</div><div class="kpi-value" id="kpi-replacement-rate">—</div><div class="kpi-label">Replacement Rate</div><div class="kpi-sub" id="kpi-replacement-sub">Active processes</div></div>
+    </div>
+
+    <!-- PLACING RATE -->
+    <div class="section-header" style="margin-top:8px;">
+      <div><div class="section-title">📊 Placing Rate</div><div class="section-sub">Placements ÷ (Placements + Closed/Paused) · how often we close a deal</div></div>
+    </div>
+    <div id="placing-rate-strip" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:28px;"></div>
+
+    <!-- PIPELINE FUNNEL -->
+    <div class="section-header">
+      <div class="section-title">Active Funnel by Stage</div>
+      <div class="section-sub">Process count · projected deal value per stage</div>
+    </div>
+    <div class="pipeline" id="overview-pipeline">
+      <!-- rendered by JS -->
+    </div>
+
+    <!-- CHARTS ROW -->
+    <div class="charts-row">
+      <div class="chart-card"><div class="chart-title">Active by Advisor</div><div class="chart-wrap"><canvas id="chartAdvisor"></canvas></div></div>
+      <div class="chart-card"><div class="chart-title">Active by Stage</div><div class="chart-wrap"><canvas id="chartStage"></canvas></div></div>
+      <div class="chart-card"><div class="chart-title">Closed / Paused by Reason</div><div class="chart-wrap"><canvas id="chartClosed"></canvas></div></div>
+    </div>
+
+    <!-- MONTHLY REVENUE CHART -->
+    <div class="charts-row-2">
+      <div class="chart-card">
+        <div class="chart-title">Monthly Placements & Revenue</div>
+        <div class="chart-sub">Deal value by month (all time)</div>
+        <div class="chart-wrap-tall"><canvas id="chartMonthly"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Placed by Advisor — All Time</div>
+        <div class="chart-sub">Total placements per advisor</div>
+        <div class="chart-wrap-tall"><canvas id="chartAdvisorPlaced"></canvas></div>
+      </div>
+    </div>
+
+    <!-- LEADERBOARD -->
+    <div class="leaderboard">
+      <div class="lb-title" id="leaderboard-title">👑 Advisor Leaderboard</div>
+      <div id="leaderboard-rows"></div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- TAB 2: ACTIVE PROCESSES                                       -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <section class="tab-section" id="tab-active">
+
+    <div class="section-header" style="margin-bottom:14px;">
+      <div><div class="section-title">Active Hiring Processes</div><div class="section-sub" id="active-count-label">Showing 39 of 39 processes</div></div>
+    </div>
+
+    <div class="filters-bar">
+      <span class="filter-label">Advisor:</span>
+      <button class="filter-btn active" data-advisor="all">All</button>
+      <button class="filter-btn" data-advisor="Genesis">Genesis</button>
+      <button class="filter-btn" data-advisor="Vicky">Vicky</button>
+      <button class="filter-btn" data-advisor="Amimo">Amimo</button>
+      <button class="filter-btn" data-advisor="Cami">Cami</button>
+      <button class="filter-btn" data-advisor="Nadeia">Nadeia</button>
+      <div class="filter-sep"></div>
+      <span class="filter-label">Stage:</span>
+      <button class="filter-btn active" data-status="all">All</button>
+      <button class="filter-btn" data-status="1. KickOff Meeting">KickOff</button>
+      <button class="filter-btn" data-status="2. Candidates Presented">Candidates</button>
+      <button class="filter-btn" data-status="3. 1st Round of Interviews">Interviews</button>
+      <button class="filter-btn" data-status="4. Assessment">Assessment</button>
+      <button class="filter-btn" data-status="5. Final Interview">Final</button>
+      <button class="filter-btn" data-status="6. Job Offer Letter / Signature">Job Offer</button>
+      <button class="filter-btn" data-status="7. Invoice">Invoice</button>
+      <div class="filter-sep"></div>
+      <input class="search-input" type="text" id="searchInput" placeholder="🔍  Search company, role, notes…" />
+    </div>
+
+    <!-- Stage Revenue Strip -->
+    <div id="stage-revenue-strip" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:18px;"></div>
+
+    <div class="table-card">
+      <div class="table-header">
+        <span class="table-title">All Active Processes</span>
+        <span class="table-count" id="table-sub-count">· 39 shown</span>
+      </div>
+      <div class="table-wrap">
+        <table id="main-table">
+          <thead>
+            <tr>
+              <th data-col="Priorities">Pri ↕</th>
+              <th data-col="Company Name">Company / Contact ↕</th>
+              <th data-col="Role">Role ↕</th>
+              <th data-col="Status">Stage ↕</th>
+              <th data-col="Advisor">Advisor ↕</th>
+              <th data-col="KickOff Meeting">KickOff ↕</th>
+              <th data-col="Budget ($)">Budget ↕</th>
+              <th data-col="Deal Value ($)">Deal Value ↕</th>
+              <th>Alert</th>
+              <th>Repl.</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+        <div class="no-results" id="no-results" style="display:none;">No processes match your filters.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- TAB 3: PLACEMENT ACTIVITY                                     -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <section class="tab-section" id="tab-placements">
+
+    <div class="section-header" style="margin-bottom:14px;">
+      <div><div class="section-title">Placement Activity</div><div class="section-sub">Revenue & placement tracking over time</div></div>
+    </div>
+
+    <div class="time-tabs">
+      <button class="time-tab active" data-period="all">All Time</button>
+      <button class="time-tab" data-period="30">Last 30 Days</button>
+      <button class="time-tab" data-period="7">Last 7 Days</button>
+    </div>
+
+    <div class="placement-kpis" id="placement-kpis">
+      <!-- rendered by JS -->
+    </div>
+
+    <div class="charts-row-2" style="margin-bottom:20px;">
+      <div class="chart-card">
+        <div class="chart-title" id="timeline-chart-title">Monthly Placements & Revenue</div>
+        <div class="chart-sub" id="timeline-chart-sub">All time · grouped by month placed</div>
+        <div class="chart-wrap-tall"><canvas id="chartTimeline"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Revenue by Advisor</div>
+        <div class="chart-sub" id="adv-rev-sub">All time</div>
+        <div class="chart-wrap-tall"><canvas id="chartAdvRev"></canvas></div>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <div class="table-header">
+        <span class="table-title" id="placement-table-title">All Placements</span>
+        <span class="table-count" id="placement-table-count"></span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Date Placed</th>
+              <th>Company / Contact</th>
+              <th>Role</th>
+              <th>Advisor</th>
+              <th>Days</th>
+              <th>Budget</th>
+              <th>Deal Value</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody id="placement-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <!-- TAB 4: CLOSED & PAUSED                                        -->
+  <!-- ══════════════════════════════════════════════════════════════ -->
+  <section class="tab-section" id="tab-closed">
+
+    <div class="section-header" style="margin-bottom:14px;">
+      <div><div class="section-title">Closed & Paused Analysis</div><div class="section-sub" id="closed-analysis-sub">— processes · Understanding why we lose deals</div></div>
+    </div>
+
+    <!-- Closed KPIs -->
+    <div class="kpi-grid" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:24px;">
+      <div class="kpi-card red"><div class="kpi-icon">🔒</div><div class="kpi-value" id="kpi-closed-total">—</div><div class="kpi-label">Total Closed/Paused</div><div class="kpi-sub">All time</div></div>
+      <div class="kpi-card orange"><div class="kpi-icon">👤</div><div class="kpi-value" id="kpi-closed-customer">—</div><div class="kpi-label">Paused by Customer</div><div class="kpi-sub" id="kpi-closed-customer-sub">—</div></div>
+      <div class="kpi-card yellow"><div class="kpi-icon">🏢</div><div class="kpi-value" id="kpi-closed-hired">—</div><div class="kpi-label">Closed by Customer</div><div class="kpi-sub">Hired elsewhere</div></div>
+      <div class="kpi-card blue"><div class="kpi-icon">⏸️</div><div class="kpi-value" id="kpi-closed-us">—</div><div class="kpi-label">Paused by Us</div><div class="kpi-sub">Customer MIA</div></div>
+    </div>
+
+    <div class="charts-row" style="margin-bottom:24px;">
+      <div class="chart-card"><div class="chart-title">Who Closed It?</div><div class="chart-wrap"><canvas id="chartWhoClosedPie"></canvas></div></div>
+      <div class="chart-card"><div class="chart-title">Reason Category</div><div class="chart-wrap"><canvas id="chartReasonPie"></canvas></div></div>
+      <div class="chart-card"><div class="chart-title">Closed by Advisor</div><div class="chart-wrap"><canvas id="chartClosedAdvisor"></canvas></div></div>
+    </div>
+
+    <!-- Filters for closed -->
+    <div class="filters-bar" style="margin-bottom:18px;">
+      <span class="filter-label">Who closed:</span>
+      <button class="filter-btn active" data-closer="all">All</button>
+      <button class="filter-btn" data-closer="customer">By Customer</button>
+      <button class="filter-btn" data-closer="us">By Us (MIA)</button>
+      <button class="filter-btn" data-closer="paused">Paused</button>
+      <div class="filter-sep"></div>
+      <input class="search-input" type="text" id="closedSearch" placeholder="🔍  Search company, reason…" />
+    </div>
+
+    <div class="table-card">
+      <div class="table-header">
+        <span class="table-title">Closed & Paused Processes</span>
+        <span class="table-count" id="closed-table-count"></span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Company / Contact</th>
+              <th>Role</th>
+              <th>Advisor</th>
+              <th>Closed By</th>
+              <th>Repl.</th>
+              <th>Reason</th>
+            </tr>
+          </thead>
+          <tbody id="closed-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<footer class="footer">
+  Core Members KPI Dashboard · <span>Sagan Recruitment</span> · Loading live data… · Built with ♥ for the Core Members team
+</footer>
+
+<script>
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// DATA — populated at runtime from wg-data.json (auto-synced from sheet)
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// ── FALLBACK hardcoded data (used if live fetch fails) ──
+let ACTIVE = [
+  {Priorities:"1",Status:"5. Final Interview","Company Name":"BoreIt",Role:"Junior Estimator and Project Coordinator",Advisor:"Jesus","KickOff Meeting":"Dec 11, 2025","Budget ($)":"1,200","Deal Value ($)":"4,320",Notes:"Resurfaced · New batch Tues Feb 17th",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"3. 1st Round of Interviews","Company Name":"DoveHill",Role:"Executive Assistant",Advisor:"MIguel","KickOff Meeting":"Jan 27, 2026","Budget ($)":"2,000","Deal Value ($)":"—",Notes:"Diana - 2nd interview Feb 17th · New batch Mon Feb 16th",LastUpdate:"Feb 16, 2026",isReplacement:true},
+  {Priorities:"5",Status:"3. 1st Round of Interviews","Company Name":"3 Seasons Personal Training",Role:"Executive Assistant",Advisor:"Jesus","KickOff Meeting":"Jan 29, 2026","Budget ($)":"1,500","Deal Value ($)":"6,300",Notes:"Karen - 1st interview Feb 10th · New drop Feb 16th",LastUpdate:"Feb 12, 2026"},
+  {Priorities:"1",Status:"3. 1st Round of Interviews","Company Name":"Splash Plumbing",Role:"Operations Administrator",Advisor:"MIguel","KickOff Meeting":"Feb 9, 2026","Budget ($)":"1,500","Deal Value ($)":"6,300",Notes:"Azucena & Amy - 1st interview Fri Feb 13 · New drop Feb 18th",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"7. Invoice","Company Name":"Just For Your Paws LLC",Role:"Sales Associate",Advisor:"MIguel","KickOff Meeting":"Nov 11, 2025","Budget ($)":"1,500","Deal Value ($)":"6,300",Notes:"Hiring Zana",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"2. Candidates Presented","Company Name":"Coby Health LLC",Role:"E-Commerce / Telehealth Manager",Advisor:"MIguel","KickOff Meeting":"Jan 23, 2026","Budget ($)":"2,200","Deal Value ($)":"7,000",Notes:"Fine Tuning · Follow up Feb 9th & 16th",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"7. Invoice","Company Name":"Bumblebee Tech",Role:"Test Engineer",Advisor:"Jesus","KickOff Meeting":"Dec 23, 2025","Budget ($)":"650","Deal Value ($)":"3,510",Notes:"Hiring Shahnewaz · Invoiced",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"5. Final Interview","Company Name":"HAVN",Role:"Ecom Operations Manager",Advisor:"MIguel","KickOff Meeting":"Jan 13, 2026","Budget ($)":"4,000","Deal Value ($)":"16,800",Notes:"Maribel - 2nd interview this week · New drop Feb 18th",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"7. Invoice","Company Name":"Integrative Mind Psychiatry & TMS",Role:"CSR / Intake Coordinator",Advisor:"Jesus","KickOff Meeting":"Jan 9, 2026","Budget ($)":"1,300","Deal Value ($)":"2,808",Notes:"Hiring Lerato",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"5. Final Interview","Company Name":"JG Holding Ventures",Role:"Sales Development Representative",Advisor:"Guillermo","KickOff Meeting":"Jan 16, 2026","Budget ($)":"2,000","Deal Value ($)":"8,400",Notes:"Stefano - 2nd interview pending · Potentially hiring",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"5. Final Interview","Company Name":"Logan the Insurance Guy",Role:"Executive Assistant",Advisor:"Guillermo","KickOff Meeting":"Jan 20, 2026","Budget ($)":"1,800","Deal Value ($)":"5,400",Notes:"Nickoy - 1st interview Tues Feb 17th · Continuous presentation",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"4. Assessment","Company Name":"Sandy Vans",Role:"Video Editor",Advisor:"MIguel","KickOff Meeting":"Jan 20, 2026","Budget ($)":"1,300","Deal Value ($)":"5,460",Notes:"Juan / Carlos / Stella / Saad - interviews Feb 3–5",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"3. 1st Round of Interviews","Company Name":"Deeto",Role:"Sales Development Rep",Advisor:"MIguel","KickOff Meeting":"Jan 21, 2026","Budget ($)":"1,500","Deal Value ($)":"4,000",Notes:"Open to other locations · New drop Feb 6th",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"7. Invoice","Company Name":"Bumble Roofing – W. Chicago",Role:"Operations & Sales Coordinator",Advisor:"Guillermo","KickOff Meeting":"Jan 23, 2026","Budget ($)":"1,500","Deal Value ($)":"5,400",Notes:"Anyelo (PT) + Rolando (FT) hired · Placed Feb 11",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"5. Final Interview","Company Name":"Hubflow",Role:"Executive Assistant",Advisor:"MIguel","KickOff Meeting":"Jan 26, 2026","Budget ($)":"1,500","Deal Value ($)":"6,300",Notes:"Alexa - reference check",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"3. 1st Round of Interviews","Company Name":"Signarama (Bailey)",Role:"Sales Outreach & CRM Coordinator",Advisor:"Guillermo","KickOff Meeting":"Jan 26, 2026","Budget ($)":"1,800","Deal Value ($)":"7,560",Notes:"Queenniexeth (TAP) - 1st interview this week",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"3. 1st Round of Interviews","Company Name":"Koala Insulation Cleveland West",Role:"Operations & Sales Support Specialist",Advisor:"MIguel","KickOff Meeting":"Feb 3, 2026","Budget ($)":"1,750","Deal Value ($)":"7,350",Notes:"Amy & Daniel - 1st interview Feb 6 · New drop Feb 18th",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"2. Candidates Presented","Company Name":"Doorvana",Role:"Operations Support",Advisor:"Guillermo","KickOff Meeting":"Feb 2, 2026","Budget ($)":"1,500","Deal Value ($)":"5,400",Notes:"New batch Feb 12th · Follow up Feb 16th",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"3. 1st Round of Interviews","Company Name":"TNT Growth",Role:"Head of Data and Analytics",Advisor:"Jesus","KickOff Meeting":"Jan 27, 2026","Budget ($)":"7,500","Deal Value ($)":"31,500",Notes:"Rafael - 1st interview Fri Feb 20th",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"3. 1st Round of Interviews","Company Name":"Farm Grill",Role:"Catering Sales & Marketing",Advisor:"Guillermo","KickOff Meeting":"Feb 4, 2026","Budget ($)":"1,200","Deal Value ($)":"5,040",Notes:"Alejandro - 1st interview this week",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"2. Candidates Presented","Company Name":"Equity Plumbing",Role:"Marketing Specialist",Advisor:"MIguel","KickOff Meeting":"Feb 10, 2026","Budget ($)":"1,500","Deal Value ($)":"6,300",Notes:"First drop Fri Feb 13th",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"2. Candidates Presented","Company Name":"Pipi Tea",Role:"Web & Graphic Designer",Advisor:"Guillermo","KickOff Meeting":"Feb 2, 2026","Budget ($)":"1,800","Deal Value ($)":"7,560",Notes:"New drop Feb 12th · Evaluating candidates",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"2. Candidates Presented","Company Name":"Topaz Capital Group",Role:"Remote Acquisitions Analyst",Advisor:"Guillermo","KickOff Meeting":"Feb 4, 2026","Budget ($)":"1,200","Deal Value ($)":"5,040",Notes:"First drop Fri Feb 13th",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"3. 1st Round of Interviews","Company Name":"Koala Insulation Central Jersey",Role:"Administrative Assistant / CSR",Advisor:"MIguel","KickOff Meeting":"Feb 5, 2026","Budget ($)":"1,200","Deal Value ($)":"5,040",Notes:"Heidi - 1st interview Feb 19 · New drop Feb 16th",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"1. KickOff Meeting","Company Name":"Signarama – Pflugerville",Role:"Project Manager / Coordinator",Advisor:"MIguel","KickOff Meeting":"Pending","Budget ($)":"2,000","Deal Value ($)":"8,400",Notes:"Pending KickOff",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"3. 1st Round of Interviews","Company Name":"Koala Insulation Birmingham",Role:"Office Assistant",Advisor:"Guillermo","KickOff Meeting":"Feb 3, 2026","Budget ($)":"1,200","Deal Value ($)":"5,040",Notes:"Queenniexeth & Faith (TAP) - 1st interview this week",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"1. KickOff Meeting","Company Name":"Archy",Role:"Senior Visual Designer",Advisor:"Guillermo","KickOff Meeting":"Feb 12, 2026","Budget ($)":"4,500","Deal Value ($)":"18,900",Notes:"First drop Wed Feb 18th",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"8",Status:"1. KickOff Meeting","Company Name":"Foundry Financial",Role:"TBD",Advisor:"Unassigned","KickOff Meeting":"Feb 19, 2026","Budget ($)":"TBD","Deal Value ($)":"—",Notes:"",LastUpdate:"Feb 9, 2026"},
+  {Priorities:"1",Status:"1. KickOff Meeting","Company Name":"ChargeItSpot",Role:"Scrum Master",Advisor:"Jesus","KickOff Meeting":"Feb 12, 2026","Budget ($)":"2,500","Deal Value ($)":"10,500",Notes:"First batch Wed Feb 18th",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"2. Candidates Presented","Company Name":"SirReel",Role:"Administrative Assistant",Advisor:"MIguel","KickOff Meeting":"Feb 10, 2026","Budget ($)":"1,200","Deal Value ($)":"5,040",Notes:"First drop Feb 12th",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"1. KickOff Meeting","Company Name":"Transworld Business Advisors",Role:"Telemarketing",Advisor:"MIguel","KickOff Meeting":"Feb 18, 2026","Budget ($)":"1,000","Deal Value ($)":"4,200",Notes:"",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"1. KickOff Meeting","Company Name":"TAG Electric Co",Role:"Operations Coordinator",Advisor:"Guillermo","KickOff Meeting":"Feb 11, 2026","Budget ($)":"TBD","Deal Value ($)":"—",Notes:"First drop Fri Feb 13th",LastUpdate:"Feb 16, 2026",isReplacement:true},
+  {Priorities:"1",Status:"1. KickOff Meeting","Company Name":"American Home Water & Air",Role:"CSR / Outbound Sales",Advisor:"MIguel","KickOff Meeting":"Feb 16, 2026","Budget ($)":"2,000","Deal Value ($)":"8,400",Notes:"",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"1. KickOff Meeting","Company Name":"ChargeItSpot",Role:"Sr. Software Engineer",Advisor:"Jesus","KickOff Meeting":"Feb 13, 2026","Budget ($)":"3,000","Deal Value ($)":"12,600",Notes:"First batch Wed Feb 18th",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"1. KickOff Meeting","Company Name":"Integrative Mind Psychiatry & TMS",Role:"Marketing Manager",Advisor:"Jesus","KickOff Meeting":"Feb 9, 2026","Budget ($)":"TBD","Deal Value ($)":"—",Notes:"First batch Wed Feb 18th",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"1. KickOff Meeting","Company Name":"Drink CS2",Role:"Graphic and Web Designer",Advisor:"Jesus","KickOff Meeting":"Feb 16, 2026","Budget ($)":"TBD","Deal Value ($)":"—",Notes:"First batch Wed Feb 18th",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"2. Candidates Presented","Company Name":"Home Rescue Partner",Role:"CSR",Advisor:"Guillermo","KickOff Meeting":"Feb 9, 2026","Budget ($)":"TBD","Deal Value ($)":"—",Notes:"New drop Tues Feb 17th",LastUpdate:"Feb 16, 2026",isReplacement:true},
+  {Priorities:"1",Status:"1. KickOff Meeting","Company Name":"Precise Striping",Role:"Construction Estimator",Advisor:"Guillermo","KickOff Meeting":"Feb 13, 2026","Budget ($)":"1,800","Deal Value ($)":"5,400",Notes:"First batch Wed Feb 18th",LastUpdate:"Feb 16, 2026"},
+  {Priorities:"1",Status:"1. KickOff Meeting","Company Name":"Precise Striping",Role:"Construction Admin Coordinator",Advisor:"Guillermo","KickOff Meeting":"Feb 13, 2026","Budget ($)":"1,500","Deal Value ($)":"4,500",Notes:"First batch Wed Feb 18th",LastUpdate:"Feb 16, 2026"},
+];
+
+let PLACED = [
+  {date:"Sep 9, 2025","Company Name":"Green Turf Irrigation",Role:"Office Administrator",Advisor:"MIguel",days:13,budget:1500,dv:5400,Notes:"PLACED - Became member"},
+  {date:"Aug 11, 2025","Company Name":"In2Green",Role:"Junior Salesperson / BDR",Advisor:"MIguel",days:16,budget:1600,dv:5000,Notes:"PLACED"},
+  {date:"Sep 9, 2025","Company Name":"Barhite & Holzinger",Role:"Property Management Admin",Advisor:"MIguel",days:44,budget:1500,dv:5400,Notes:"PLACED"},
+  {date:"Oct 28, 2025","Company Name":"MastermindTalks INC",Role:"Personal/Executive Assistant",Advisor:"Jesus",days:57,budget:1200,dv:3600,Notes:"PLACED - Talent Agent Program"},
+  {date:"Sep 15, 2025","Company Name":"DoveHill",Role:"Executive Assistant",Advisor:"MIguel",days:20,budget:1800,dv:6600,Notes:"PLACED"},
+  {date:"Oct 3, 2025","Company Name":"MJW Investments",Role:"Marketing Manager",Advisor:"MIguel",days:21,budget:1500,dv:0,Notes:"PLACED"},
+  {date:"Oct 3, 2025","Company Name":"MJW Investments",Role:"Collections Specialist / BM",Advisor:"MIguel",days:21,budget:1500,dv:0,Notes:"PLACED"},
+  {date:"Oct 3, 2025","Company Name":"MJW Investments",Role:"Accounts Payable Clerk",Advisor:"MIguel",days:21,budget:1300,dv:5400,Notes:"PLACED"},
+  {date:"Oct 3, 2025","Company Name":"MJW Investments",Role:"Centralized Leasing",Advisor:"MIguel",days:21,budget:1200,dv:0,Notes:"PLACED"},
+  {date:"Sep 15, 2025","Company Name":"Alkali",Role:"Business Development Manager",Advisor:"MIguel",days:13,budget:2500,dv:12000,Notes:"PLACED"},
+  {date:"Sep 17, 2025","Company Name":"CRCL Group",Role:"Assistant Project Manager",Advisor:"MIguel",days:15,budget:1800,dv:6600,Notes:"PLACED"},
+  {date:"Nov 12, 2025","Company Name":"Emily Prchlik Fine Jewelry",Role:"Operations Coordinator",Advisor:"MIguel",days:42,budget:1200,dv:4000,Notes:"PLACED - Talent Agent Program"},
+  {date:"Oct 17, 2025","Company Name":"Coverage Cure Inc",Role:"Executive Assistant (CoS)",Advisor:"MIguel",days:24,budget:1600,dv:6000,Notes:"PLACED"},
+  {date:"Oct 24, 2025","Company Name":"SuiteOp",Role:"Customer Success Specialist",Advisor:"MIguel",days:24,budget:1300,dv:3900,Notes:"PLACED"},
+  {date:"Dec 3, 2025","Company Name":"Pacecar Solutions",Role:"FP&A Lead",Advisor:"Jesus",days:41,budget:2500,dv:18900,Notes:"PLACED - Talent Agent Program"},
+  {date:"Nov 17, 2025","Company Name":"Law Office of Andrew Gavrin",Role:"Legal Assistant",Advisor:"MIguel",days:15,budget:1200,dv:4200,Notes:"PLACED - Talent Agent Program"},
+  {date:"Nov 6, 2025","Company Name":"Scrunch",Role:"Finance Operations Specialist",Advisor:"MIguel",days:10,budget:1200,dv:0,Notes:"PLACED - Became member"},
+  {date:"Dec 1, 2025","Company Name":"Moran Family of Brands",Role:"Outside Sales Representative",Advisor:"MIguel",days:24,budget:1800,dv:8820,Notes:"PLACED"},
+  {date:"Nov 14, 2025","Company Name":"Storm Ruleman, PLLC",Role:"Legal/Executive Assistant",Advisor:"MIguel",days:12,budget:1200,dv:0,Notes:"PLACED - Became member"},
+  {date:"Jan 7, 2026","Company Name":"Crystal Vision",Role:"Optometric Assistant",Advisor:"MIguel",days:42,budget:1500,dv:8400,Notes:"Hiring Kim"},
+  {date:"Dec 3, 2025","Company Name":"Yellow Dog Plumbing",Role:"Chief Marketing Officer",Advisor:"MIguel",days:15,budget:2500,dv:10500,Notes:"PLACED"},
+  {date:"Nov 20, 2025","Company Name":"SMB Law Group LLP",Role:"Corporate Paralegal M&A",Advisor:"MIguel",days:10,budget:1200,dv:0,Notes:"PLACED"},
+  {date:"Jan 15, 2026","Company Name":"Koala Insulation Kansas City",Role:"CS & Admin Coordinator",Advisor:"MIguel",days:41,budget:1500,dv:6300,Notes:"Hiring Valeria"},
+  {date:"Jan 20, 2026","Company Name":"Goldfish Ads",Role:"SDR",Advisor:"MIguel",days:43,budget:1500,dv:6300,Notes:"Hiring Yasmin"},
+  {date:"Jan 6, 2026","Company Name":"MRJP Insulation",Role:"CSR Dispatch",Advisor:"Jesus",days:31,budget:1300,dv:4620,Notes:"Hiring Agostina (TAP)"},
+  {date:"Jan 26, 2026","Company Name":"Mother",Role:"Customer Sales Representative",Advisor:"Jesus",days:35,budget:1200,dv:4200,Notes:"Hiring Nangel"},
+  {date:"Jan 6, 2026","Company Name":"Koala Insulation S. Connecticut",Role:"Remote Admin & Sales Support",Advisor:"MIguel",days:26,budget:1100,dv:3900,Notes:"Hiring Odeh (TAP)"},
+  {date:"Feb 2, 2026","Company Name":"Splash Plumbing",Role:"Executive Assistant",Advisor:"MIguel",days:41,budget:1800,dv:7560,Notes:"Hiring Laura · Invoice"},
+  {date:"Jan 12, 2026","Company Name":"Precise Striping",Role:"Construction Estimator",Advisor:"Guillermo",days:20,budget:1800,dv:7560,Notes:"Hiring Geordy"},
+  {date:"Jan 6, 2026","Company Name":"LMG Glass and Mirror",Role:"Retail Glass Estimator",Advisor:"MIguel",days:19,budget:2400,dv:10080,Notes:"Hiring Aura"},
+  {date:"Jan 9, 2026","Company Name":"Home Rescue Partner",Role:"CSR",Advisor:"Guillermo",days:20,budget:700,dv:1470,Notes:"Hiring Bruno"},
+  {date:"Jan 8, 2026","Company Name":"TAG Electric Co",Role:"Operations Coordinator",Advisor:"Guillermo",days:15,budget:1700,dv:7001,Notes:"Hiring Athena (TAP)"},
+  {date:"Feb 3, 2026","Company Name":"Two Front",Role:"Recruiter",Advisor:"Guillermo",days:26,budget:1500,dv:6300,Notes:"Hiring Katherine"},
+  {date:"Feb 3, 2026","Company Name":"Legion Management",Role:"AR/AP Specialist",Advisor:"Guillermo",days:22,budget:1200,dv:5040,Notes:"Hiring Marisse (TAP)"},
+  {date:"Feb 5, 2026","Company Name":"Pipi Tea",Role:"Operations Manager",Advisor:"Guillermo",days:22,budget:2000,dv:8400,Notes:"Douglas (TAP)"},
+  {date:"Feb 2, 2026","Company Name":"Air Man Heating Cooling & Plumbing",Role:"Customer Service Representative",Advisor:"Guillermo",days:18,budget:1300,dv:5460,Notes:"Hiring Lexanne · Became Member"},
+  {date:"Jan 27, 2026","Company Name":"Drink CS2",Role:"Customer Service Representative",Advisor:"Jesus",days:10,budget:1200,dv:2184,Notes:"Hiring Anoosh"},
+];
+
+let CLOSED = [
+  {date:"Jul 2, 2025","Company Name":"Strutton Plumbing",Role:"CSR",Advisor:"MIguel",closer:"customer",reason:"Paused — Internal restructuring (estimator resigned)",category:"Internal Change"},
+  {date:"Jul 3, 2025","Company Name":"Sunshine Clean Pros",Role:"Senior Sales Representative",Advisor:"MIguel",closer:"customer",reason:"Paused — Changed direction, exploring other options",category:"Changed Direction"},
+  {date:"Jul 10, 2025","Company Name":"Matthew Morris",Role:"Private Equity Analyst",Advisor:"Jesus",closer:"customer",reason:"Paused — Busy closing a deal, not ready to onboard",category:"Bad Timing"},
+  {date:"Jul 21, 2025","Company Name":"Modern Stile Design Build",Role:"Senior Executive Assistant",Advisor:"MIguel",closer:"customer",reason:"Closed — Hired outside Sagan",category:"Hired Elsewhere",isReplacement:true},
+  {date:"Jul 30, 2025","Company Name":"Pop's Pool Service",Role:"Operations Coordinator",Advisor:"MIguel",closer:"customer",reason:"Paused — Parental leave",category:"Bad Timing"},
+  {date:"Aug 4, 2025","Company Name":"Village Dental At Saxony",Role:"Patient Success Coordinator",Advisor:"MIguel",closer:"us",reason:"Paused by us — Customer MIA",category:"Customer MIA"},
+  {date:"Aug 4, 2025","Company Name":"MOTION RX",Role:"Sales Development Rep",Advisor:"Jesus",closer:"us",reason:"Paused by us — Customer MIA",category:"Customer MIA"},
+  {date:"Aug 5, 2025","Company Name":"Deljo HVAC",Role:"CSR / Outbound Specialist",Advisor:"MIguel",closer:"customer",reason:"Paused — Customer transitioning to GM role, bad timing",category:"Bad Timing"},
+  {date:"Aug 14, 2025","Company Name":"ConstantHire",Role:"Sourcing & Recruiting Coordinator",Advisor:"Jesus",closer:"us",reason:"Paused by us — Customer MIA",category:"Customer MIA",isReplacement:true},
+  {date:"Sep 4, 2025","Company Name":"Elevator Goods (FluffCo)",Role:"Operations & Billing Data Analyst",Advisor:"MIguel",closer:"customer",reason:"Paused — Peak season, not enough time to onboard",category:"Bad Timing"},
+  {date:"Sep 23, 2025","Company Name":"The Vested Group",Role:"Staff Accountant",Advisor:"MIguel",closer:"customer",reason:"Paused — Asked to resume search Jan 2026",category:"Bad Timing"},
+  {date:"Sep 23, 2025","Company Name":"Boost Patients",Role:"Project Manager",Advisor:"Jesus",closer:"customer",reason:"Paused — Not ready to move forward, resume Jan 2026",category:"Bad Timing"},
+  {date:"Oct 3, 2025","Company Name":"Shinesty",Role:"Project Manager",Advisor:"MIguel",closer:"customer",reason:"Closed — Changed job description",category:"Changed Direction"},
+  {date:"Oct 3, 2025","Company Name":"Doorvana",Role:"Content Marketer",Advisor:"Jesus",closer:"customer",reason:"Paused — Business shifted, need Ops role over marketing",category:"Changed Direction"},
+  {date:"Oct 9, 2025","Company Name":"Contextual.io",Role:"UI/UX Designer",Advisor:"Jesus",closer:"customer",reason:"Closed — Customer stopped search via Sagan",category:"Hired Elsewhere"},
+  {date:"Oct 10, 2025","Company Name":"Boost Patients",Role:"Content Marketing Specialist",Advisor:"Jesus",closer:"customer",reason:"Paused — Business reorganization, search on hold",category:"Bad Timing"},
+  {date:"Oct 21, 2025","Company Name":"Fisherman Mortgage Services",Role:"Loan Coordinator",Advisor:"MIguel",closer:"us",reason:"Paused by us — 2 weeks MIA",category:"Customer MIA"},
+  {date:"Oct 21, 2025","Company Name":"Shinesty",Role:"Ecommerce Product Manager",Advisor:"MIguel",closer:"customer",reason:"Closed — Decided to hire local talent",category:"Hired Elsewhere"},
+  {date:"Oct 22, 2025","Company Name":"Flex Workshop",Role:"Facebook Marketplace Specialist",Advisor:"MIguel",closer:"customer",reason:"Paused — Personnel changes, needs time to reorganize",category:"Internal Change"},
+  {date:"Oct 27, 2025","Company Name":"Valuable Studios",Role:"Graphic Designer",Advisor:"Jesus",closer:"us",reason:"Paused by us — 3 weeks MIA",category:"Customer MIA"},
+  {date:"Oct 29, 2025","Company Name":"Prosperkey Property Management",Role:"Leasing Assistant",Advisor:"MIguel",closer:"customer",reason:"Paused — New role, customer not ready yet",category:"Bad Timing"},
+  {date:"Nov 3, 2025","Company Name":"Thomsen Properties",Role:"Resident Accounts Coordinator",Advisor:"MIguel",closer:"paused",reason:"Paused until January — Will restart interview process",category:"Bad Timing"},
+  {date:"Nov 4, 2025","Company Name":"Percy LLC",Role:"Recruiter",Advisor:"MIguel",closer:"customer",reason:"Paused — Final interviews done, waiting on decision",category:"Bad Timing"},
+  {date:"Nov 14, 2025","Company Name":"Building Blocks Facades",Role:"Sales Operations & EA",Advisor:"MIguel",closer:"us",reason:"Paused by us — 3 weeks MIA after 7+ drops",category:"Customer MIA"},
+  {date:"Nov 17, 2025","Company Name":"Neely Lending Group",Role:"Loan Officer Assistant",Advisor:"MIguel",closer:"customer",reason:"Closed — Found someone independently (mortgage experience)",category:"Hired Elsewhere"},
+  {date:"Nov 21, 2025","Company Name":"Everpeak Partners",Role:"Salesforce & HubSpot Admin",Advisor:"Jesus",closer:"us",reason:"Paused by us — No feedback after presentations",category:"Customer MIA"},
+  {date:"Dec 2, 2025","Company Name":"Heritage Land Partners",Role:"Real Estate Acquisitions Manager",Advisor:"MIguel",closer:"us",reason:"Paused by us — 3 weeks MIA, multiple follow-ups",category:"Customer MIA"},
+  {date:"Dec 7, 2025","Company Name":"Wired Rhino",Role:"Content Operations Manager",Advisor:"Jesus",closer:"customer",reason:"Closed — Built internal AI tools (Claude Code!), no longer needs hire",category:"Changed Direction"},
+  {date:"Dec 11, 2025","Company Name":"Brookside Heating & Cooling",Role:"Sourcing Specialist – Skilled Trades",Advisor:"MIguel",closer:"customer",reason:"Paused — Hired Monserrat independently, went cold",category:"Hired Elsewhere"},
+  {date:"Dec 2, 2025","Company Name":"Strutton Plumbing (2nd role)",Role:"Plumbing Estimator",Advisor:"Guillermo",closer:"us",reason:"Paused by us — 3 weeks MIA after presentations",category:"Customer MIA"},
+  {date:"Feb 10, 2026","Company Name":"Fully Promoted",Role:"Customer Service Specialist",Advisor:"Guillermo",closer:"us",reason:"Paused by us — No notes / early closure",category:"Customer MIA"},
+];
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// LIVE DATA LOADER  (fetches wg-data.json pushed by Apps Script)
+// Falls back to the hardcoded arrays above if fetch fails.
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+const REPLACEMENT_KEYS = new Set([
+  "DoveHill|Executive Assistant",
+  "TAG Electric Co|Operations Coordinator",
+  "Home Rescue Partner|CSR",
+  "Modern Stile Design Build|Senior Executive Assistant",
+  "ConstantHire|Sourcing & Recruiting Coordinator",
+]);
+
+function deriveCloserCategory(notes) {
+  const n = (notes||"").toLowerCase();
+  if(n.includes("paused by us")||n.includes("mia")) return {closer:"us",category:"Customer MIA"};
+  if(n.includes("hired outside")||n.includes("hired elsewhere")||n.includes("hired independently")||n.includes("hired local")||n.includes("hired monserrat")||n.includes("stopped search")) return {closer:"customer",category:"Hired Elsewhere"};
+  if(n.includes("changed direction")||n.includes("changed job")||n.includes("business shifted")||n.includes("changed description")||n.includes("ops role")||n.includes("ai tools")) return {closer:"customer",category:"Changed Direction"};
+  if(n.includes("restructur")||n.includes("personnel change")||n.includes("reorganiz")||n.includes("internal")) return {closer:"customer",category:"Internal Change"};
+  return {closer:"customer",category:"Bad Timing"};
+}
+
+async function loadData() {
+  try {
+    const resp = await fetch("https://raw.githubusercontent.com/wg-dotcom/core-kpi-dashboard/main/core-data.json?cb="+Date.now());
+    if(!resp.ok) throw new Error("HTTP "+resp.status);
+    const data = await resp.json();
+
+    // Reset arrays (overwrite fallback)
+    ACTIVE = []; PLACED = []; CLOSED = [];
+
+    (data.rows||[]).forEach(r=>{
+      const key = `${r["Company Name"]}|${r.Role}`;
+      const isReplacement = REPLACEMENT_KEYS.has(key)
+        || String(r["Is replacement?"]).toLowerCase()==="true";
+      const status = r.Status||"";
+
+      if(status==="8. Placed"){
+        PLACED.push({
+          date: r["Date Placed"]||r["Date"]||"",
+          "Company Name": r["Company Name"],
+          Name: r["Name"]||"",
+          Role: r.Role, Advisor: r.Advisor,
+          days: parseInt(r["Days for Placement"])||0,
+          budget: parseFloat(r["Budget ($)"])||0,
+          dv: parseFloat(r["Deal Value ($)"])||0,
+          Notes: r.Notes||"", isReplacement,
+        });
+      } else if(status==="9. Closed / Paused / M.I.A."){
+        const {closer,category} = deriveCloserCategory(r.Notes);
+        CLOSED.push({
+          date: r["Date"]||"",
+          "Company Name": r["Company Name"],
+          Name: r["Name"]||"",
+          Role: r.Role, Advisor: r.Advisor,
+          closer, reason: r.Notes||"", category, isReplacement,
+        });
+      } else if(status){
+        ACTIVE.push({
+          Priorities: r.Priorities||"5",
+          Status: status,
+          "Company Name": r["Company Name"],
+          Name: r["Name"]||"",
+          Role: r.Role, Advisor: r.Advisor,
+          "KickOff Meeting": r["KickOff Meeting"]||"",
+          "Budget ($)": r["Budget ($)"]||"",
+          "Deal Value ($)": r["Deal Value ($)"]||"—",
+          Notes: r.Notes||"",
+          LastUpdate: r["Last Update"]||"",
+          isReplacement,
+        });
+      }
+    });
+
+    // Update footer with live sync time
+    const updated = new Date(data.updated);
+    const syncStr = updated.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})
+      +" · "+updated.toLocaleTimeString("en-US",{hour:"2-digit",minute:"2-digit"});
+    const footer = document.querySelector(".footer");
+    if(footer) footer.innerHTML = `Core Members KPI Dashboard · <span>Sagan Recruitment</span> · Last synced: ${syncStr} · Built with ♥ for the Core Members team`;
+
+    console.log(`✅ Live data loaded: ${ACTIVE.length} active, ${PLACED.length} placed, ${CLOSED.length} closed`);
+  } catch(e) {
+    console.warn("⚠️ Using fallback data:", e.message);
+  }
+}
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// HELPERS
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+const STATUS_CLASS = {"1. KickOff Meeting":"s-kickoff","2. Candidates Presented":"s-candidates","3. 1st Round of Interviews":"s-interviews","4. Assessment":"s-assessment","5. Final Interview":"s-final","6. Job Offer Letter / Signature":"s-offer","7. Invoice":"s-invoice","8. Placed":"s-placed","9. Closed / Paused / M.I.A.":"s-closed"};
+const STATUS_LABEL = {"1. KickOff Meeting":"KickOff","2. Candidates Presented":"Candidates Sent","3. 1st Round of Interviews":"Interviewing","4. Assessment":"Assessment","5. Final Interview":"Final Interview","6. Job Offer Letter / Signature":"Job Offer 📝","7. Invoice":"Invoice ✓"};
+const ADV_CLASS = {"Genesis":"adv-genesis","Vicky":"adv-vicky","Amimo":"adv-amimo","Cami":"adv-cami","Nadeia":"adv-nadeia","Jesus":"adv-jesus","MIguel":"adv-miguel","Guillermo":"adv-guillermo"};
+const ADV_COLOR = {"Genesis":"var(--orange)","Vicky":"var(--blue)","Amimo":"var(--green)","Cami":"var(--purple)","Nadeia":"var(--yellow)","Unassigned":"var(--gray-400)"};
+const NOW = new Date();
+
+function parseDate(s) {
+  if(!s||s==="Pending"||s==="TBD") return null;
+  const d = new Date(s + (s.includes(",") ? "" : ", 2026"));
+  return isNaN(d) ? null : d;
+}
+function daysSince(d) {
+  if(!d) return 999;
+  return Math.floor((NOW - d) / 86400000);
+}
+function fmtMoney(v) {
+  const n = Math.round(parseFloat(String(v).replace(/[^0-9.]/g,""))||0);
+  return isNaN(n)||n===0 ? "—" : "$" + n.toLocaleString();
+}
+function advisorClass(a) { return ADV_CLASS[a] || "adv-unassigned"; }
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// TABS
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+document.querySelectorAll(".tab-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
+    document.querySelectorAll(".tab-section").forEach(s=>s.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById("tab-"+btn.dataset.tab).classList.add("active");
+  });
+});
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// ACTIVE TABLE
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+let filterAdvisor="all", filterStatus="all", searchQ="", sortCol="Priorities", sortDir="asc";
+
+function getFiltered() {
+  return ACTIVE.filter(r => {
+    const adv = filterAdvisor==="all" || r.Advisor===filterAdvisor;
+    const sta = filterStatus==="all" || r.Status===filterStatus;
+    const q = !searchQ || [r["Company Name"],r.Role,r.Advisor,r.Notes].join(" ").toLowerCase().includes(searchQ.toLowerCase());
+    return adv && sta && q;
+  }).sort((a,b) => {
+    let av=a[sortCol]||"", bv=b[sortCol]||"";
+    if(sortCol==="Priorities"){av=parseInt(av)||99;bv=parseInt(bv)||99;}
+    else if(["Budget ($)","Deal Value ($)"].includes(sortCol)){av=parseFloat(String(av).replace(/[^0-9.]/g,""))||0;bv=parseFloat(String(bv).replace(/[^0-9.]/g,""))||0;}
+    if(av<bv) return sortDir==="asc"?-1:1;
+    if(av>bv) return sortDir==="asc"?1:-1;
+    return 0;
+  });
+}
+
+function renderTable() {
+  const rows = getFiltered();
+  const tbody = document.getElementById("table-body");
+  const noRes = document.getElementById("no-results");
+  document.getElementById("table-sub-count").textContent=`· ${rows.length} shown`;
+  document.getElementById("active-count-label").textContent=`Showing ${rows.length} of ${ACTIVE.length} processes`;
+  if(!rows.length){tbody.innerHTML="";noRes.style.display="block";return;}
+  noRes.style.display="none";
+
+  tbody.innerHTML = rows.map(r => {
+    const sc = STATUS_CLASS[r.Status]||"s-kickoff";
+    const sl = STATUS_LABEL[r.Status]||r.Status;
+    const ac = advisorClass(r.Advisor);
+    const pri = r.Priorities==="1"
+      ? `<span class="priority-badge pri-1">P1</span>`
+      : `<span class="priority-badge pri-other">${r.Priorities}</span>`;
+    const dvRaw = parseDV(r["Deal Value ($)"]);
+    const dv = dvRaw > 0
+      ? `<span class="val-green">${fmtMoney(dvRaw)}</span>`
+      : `<span style="color:var(--gray-400)">—</span>`;
+    const budRaw = parseDV(r["Budget ($)"]);
+    const bud = budRaw > 0
+      ? `<span class="val-blue">${fmtMoney(budRaw)}</span>`
+      : `<span style="color:var(--gray-400)">${r["Budget ($)"]||"—"}</span>`;
+    // Stale check: last update > 7 days ago
+    const lu = parseDate(r.LastUpdate);
+    const stale = daysSince(lu) > 7;
+    const staleBadge = stale ? `<span class="stale-badge">⚠ ${daysSince(lu)}d ago</span>` : `<span style="font-size:11px;color:var(--gray-400)">${r.LastUpdate}</span>`;
+    return `<tr>
+      <td>${pri}</td>
+      <td><strong>${r["Company Name"]}</strong>${r.Name ? `<br><span style="font-size:11px;color:var(--gray-400);font-weight:400;">${r.Name}</span>` : ""}</td>
+      <td style="max-width:160px;">${r.Role}</td>
+      <td><span class="status-badge ${sc}"><span class="status-dot"></span>${sl}</span></td>
+      <td><span class="advisor-tag ${ac}">${r.Advisor}</span></td>
+      <td style="font-size:12px;">${r["KickOff Meeting"]||"—"}</td>
+      <td>${bud}</td><td>${dv}</td>
+      <td>${staleBadge}</td>
+      <td>${r.isReplacement ? `<span style="background:var(--yellow-l);color:var(--yellow);border:1px solid var(--yellow);border-radius:12px;font-size:10px;font-weight:700;padding:2px 7px;white-space:nowrap;">🔁 Repl.</span>` : `<span style="color:var(--gray-400);font-size:11px;">—</span>`}</td>
+      <td style="font-size:11px;color:var(--gray-400);max-width:200px;white-space:normal;">${r.Notes||""}</td>
+    </tr>`;
+  }).join("");
+}
+
+document.querySelectorAll("[data-advisor]").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll("[data-advisor]").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active"); filterAdvisor=btn.dataset.advisor; renderTable();
+  });
+});
+document.querySelectorAll("[data-status]").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll("[data-status]").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active"); filterStatus=btn.dataset.status; renderTable();
+  });
+});
+document.getElementById("searchInput").addEventListener("input",e=>{searchQ=e.target.value;renderTable();});
+document.querySelectorAll("thead th[data-col]").forEach(th=>{
+  th.addEventListener("click",()=>{
+    if(sortCol===th.dataset.col) sortDir=sortDir==="asc"?"desc":"asc";
+    else{sortCol=th.dataset.col;sortDir="asc";}
+    renderTable();
+  });
+});
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// PLACEMENT ACTIVITY
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+let placementPeriod = "all";
+let timelineChart = null, advRevChart = null;
+
+function getPlacedFiltered(period) {
+  if(period==="all") return PLACED;
+  const cutoff = new Date(NOW); cutoff.setDate(cutoff.getDate() - parseInt(period));
+  return PLACED.filter(p => { const d=parseDate(p.date); return d && d >= cutoff; });
+}
+
+function renderPlacementKPIs(rows) {
+  const count = rows.length;
+  const rev = rows.reduce((s,r)=>s+r.dv,0);
+  const avgDays = rows.length ? Math.round(rows.reduce((s,r)=>s+r.days,0)/rows.length) : 0;
+  const advisors = {};
+  rows.forEach(r=>{ advisors[r.Advisor]=(advisors[r.Advisor]||0)+1; });
+  const topAdvisor = Object.entries(advisors).sort((a,b)=>b[1]-a[1])[0];
+  document.getElementById("placement-kpis").innerHTML = `
+    <div class="mini-kpi"><div class="mini-kpi-val">${count}</div><div class="mini-kpi-label">Placements</div></div>
+    <div class="mini-kpi"><div class="mini-kpi-val green">$${(rev/1000).toFixed(1)}K</div><div class="mini-kpi-label">Revenue</div></div>
+    <div class="mini-kpi"><div class="mini-kpi-val orange">${avgDays}d</div><div class="mini-kpi-label">Avg Days to Place</div></div>
+    <div class="mini-kpi"><div class="mini-kpi-val">${topAdvisor ? topAdvisor[0] : "—"}</div><div class="mini-kpi-label">Top Advisor (${topAdvisor ? topAdvisor[1] : 0} placed)</div></div>
+  `;
+}
+
+function renderPlacementTable(rows) {
+  document.getElementById("placement-table-count").textContent=`· ${rows.length} placements`;
+  // Group by month (newest first)
+  const sorted = rows.slice().sort((a,b)=>{
+    const da=parseDate(a.date)||new Date(0), db=parseDate(b.date)||new Date(0);
+    return db-da;
+  });
+  // Build month buckets in order
+  const buckets=[]; const bucketMap={};
+  sorted.forEach(r=>{
+    const d=parseDate(r.date); if(!d) return;
+    const key=d.toLocaleDateString("en-US",{month:"long",year:"numeric"});
+    if(!bucketMap[key]){bucketMap[key]={label:key,rows:[],rev:0};buckets.push(bucketMap[key]);}
+    bucketMap[key].rows.push(r);
+    bucketMap[key].rev+=r.dv;
+  });
+  const html=buckets.map(b=>{
+    const monthRev=b.rev>0?`<span style="color:var(--green);font-weight:700;margin-left:10px;">$${(b.rev/1000).toFixed(1)}K revenue</span>`:"";
+    const header=`<tr>
+      <td colspan="8" style="background:var(--blue-light);padding:8px 14px;font-size:12px;font-weight:700;color:var(--blue);border-top:2px solid var(--gray-200);">
+        📅 ${b.label} &nbsp;·&nbsp; <span style="font-weight:500;">${b.rows.length} placement${b.rows.length!==1?"s":""}</span>${monthRev}
+      </td>
+    </tr>`;
+    const dataRows=b.rows.map(r=>`
+      <tr>
+        <td style="font-size:12px;">${r.date}</td>
+        <td><strong>${r["Company Name"]}</strong>${r.Name ? `<br><span style="font-size:11px;color:var(--gray-400);font-weight:400;">${r.Name}</span>` : ""}</td>
+        <td style="font-size:12px;">${r.Role}</td>
+        <td><span class="advisor-tag ${advisorClass(r.Advisor)}">${r.Advisor}</span></td>
+        <td style="text-align:center;font-weight:600;">${r.days}d</td>
+        <td><span class="val-blue">${fmtMoney(r.budget)}</span></td>
+        <td><span class="val-green">${r.dv>0?fmtMoney(r.dv):"—"}</span></td>
+        <td style="font-size:11px;color:var(--gray-400);max-width:180px;white-space:normal;">${r.Notes}</td>
+      </tr>
+    `).join("");
+    return header+dataRows;
+  }).join("");
+  document.getElementById("placement-tbody").innerHTML = html || `<tr><td colspan="8" style="text-align:center;padding:24px;color:var(--gray-400);">No placements in this period.</td></tr>`;
+}
+
+function buildMonthlyData(rows) {
+  const months = {};
+  rows.forEach(r=>{
+    const d=parseDate(r.date); if(!d) return;
+    const key=d.toLocaleDateString("en-US",{month:"short",year:"numeric"});
+    if(!months[key]) months[key]={count:0,rev:0};
+    months[key].count++; months[key].rev+=r.dv;
+  });
+  // Sort chronologically
+  const sorted = Object.entries(months).sort((a,b)=>new Date(a[0])-new Date(b[0]));
+  return { labels:sorted.map(e=>e[0]), counts:sorted.map(e=>e[1].count), revs:sorted.map(e=>e[1].rev) };
+}
+
+function renderTimelineChart(rows, period) {
+  const ctx = document.getElementById("chartTimeline");
+  if(timelineChart) timelineChart.destroy();
+  if(period==="all") {
+    const {labels,counts,revs} = buildMonthlyData(rows);
+    document.getElementById("timeline-chart-title").textContent="Monthly Placements & Revenue";
+    document.getElementById("timeline-chart-sub").textContent="All time · grouped by month placed";
+    timelineChart = new Chart(ctx, {
+      data:{labels,datasets:[
+        {type:"bar",label:"Placements",data:counts,backgroundColor:"rgba(11,77,153,.25)",borderColor:"#0b4d99",borderWidth:2,borderRadius:4,yAxisID:"y"},
+        {type:"line",label:"Revenue ($)",data:revs,borderColor:"#22c55e",backgroundColor:"rgba(34,197,94,.08)",tension:.4,pointRadius:4,pointBackgroundColor:"#22c55e",yAxisID:"y2"}
+      ]},
+      options:{plugins:{legend:{position:"top",labels:{font:{family:"Poppins",size:11}}}},scales:{y:{beginAtZero:true,grid:{color:"#f1f5f9"},ticks:{font:{family:"Poppins",size:10}}},y2:{position:"right",beginAtZero:true,grid:{display:false},ticks:{font:{family:"Poppins",size:10},callback:v=>"$"+(v/1000).toFixed(0)+"K"}}},maintainAspectRatio:false}
+    });
+  } else {
+    const label = period==="30"?"Last 30 Days":"Last 7 Days";
+    document.getElementById("timeline-chart-title").textContent=`${label} — Daily Placements`;
+    document.getElementById("timeline-chart-sub").textContent=`${rows.length} placements in the period`;
+    // Group by day
+    const days={};
+    rows.forEach(r=>{const d=parseDate(r.date);if(!d)return;const k=d.toLocaleDateString("en-US",{month:"short",day:"numeric"});if(!days[k])days[k]={count:0,rev:0};days[k].count++;days[k].rev+=r.dv;});
+    const sorted=Object.entries(days).sort((a,b)=>new Date(a[0]+", 2026")-new Date(b[0]+", 2026"));
+    timelineChart = new Chart(ctx,{
+      data:{labels:sorted.map(e=>e[0]),datasets:[
+        {type:"bar",label:"Placements",data:sorted.map(e=>e[1].count),backgroundColor:"rgba(11,77,153,.3)",borderColor:"#0b4d99",borderWidth:2,borderRadius:4,yAxisID:"y"},
+        {type:"line",label:"Revenue ($)",data:sorted.map(e=>e[1].rev),borderColor:"#22c55e",backgroundColor:"rgba(34,197,94,.08)",tension:.4,pointRadius:5,pointBackgroundColor:"#22c55e",yAxisID:"y2"}
+      ]},
+      options:{plugins:{legend:{position:"top",labels:{font:{family:"Poppins",size:11}}}},scales:{y:{beginAtZero:true,ticks:{font:{family:"Poppins",size:10},stepSize:1}},y2:{position:"right",beginAtZero:true,grid:{display:false},ticks:{font:{family:"Poppins",size:10},callback:v=>"$"+(v/1000).toFixed(1)+"K"}}},maintainAspectRatio:false}
+    });
+  }
+}
+
+function renderAdvRevChart(rows, period) {
+  const ctx = document.getElementById("chartAdvRev");
+  if(advRevChart) advRevChart.destroy();
+  document.getElementById("adv-rev-sub").textContent=period==="all"?"All time":period==="30"?"Last 30 days":"Last 7 days";
+  const advisors={Jesus:0,MIguel:0,Guillermo:0};
+  rows.forEach(r=>{if(advisors[r.Advisor]!==undefined) advisors[r.Advisor]+=r.dv;});
+  advRevChart = new Chart(ctx,{
+    type:"doughnut",
+    data:{labels:["Jesus","Miguel","Guillermo"],datasets:[{data:[advisors.Jesus,advisors.MIguel,advisors.Guillermo],backgroundColor:["#0b4d99","#ff5722","#8b5cf6"],borderWidth:2,borderColor:"#fff"}]},
+    options:{plugins:{legend:{position:"bottom",labels:{font:{family:"Poppins",size:11},padding:10}}},cutout:"62%",maintainAspectRatio:false}
+  });
+}
+
+function updatePlacementTab(period) {
+  placementPeriod = period;
+  const rows = getPlacedFiltered(period);
+  renderPlacementKPIs(rows);
+  renderPlacementTable(rows);
+  renderTimelineChart(rows, period);
+  renderAdvRevChart(rows, period);
+  document.getElementById("placement-table-title").textContent = period==="all"?"All Placements":period==="30"?"Placements — Last 30 Days":"Placements — Last 7 Days";
+}
+
+document.querySelectorAll(".time-tab").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".time-tab").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active"); updatePlacementTab(btn.dataset.period);
+  });
+});
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// CLOSED TABLE
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+let closerFilter="all", closedSearch="";
+
+function getClosedFiltered() {
+  return CLOSED.filter(r=>{
+    const cf = closerFilter==="all"||r.closer===closerFilter;
+    const q = !closedSearch||[r["Company Name"],r.Role,r.reason,r.category].join(" ").toLowerCase().includes(closedSearch.toLowerCase());
+    return cf&&q;
+  });
+}
+
+function renderClosedTable() {
+  const rows = getClosedFiltered();
+  document.getElementById("closed-table-count").textContent=`· ${rows.length} shown`;
+  const closerLabel={customer:"👤 Customer",us:"⏸ Us (MIA)",paused:"⏸ Paused"};
+  const closerCls={customer:"closer-customer",us:"closer-us",paused:"closer-paused"};
+  document.getElementById("closed-tbody").innerHTML = rows.map(r=>`
+    <tr>
+      <td style="font-size:12px;white-space:nowrap;">${r.date}</td>
+      <td><strong>${r["Company Name"]}</strong>${r.Name ? `<br><span style="font-size:11px;color:var(--gray-400);font-weight:400;">${r.Name}</span>` : ""}</td>
+      <td style="font-size:12px;max-width:150px;">${r.Role}</td>
+      <td><span class="advisor-tag ${advisorClass(r.Advisor)}">${r.Advisor}</span></td>
+      <td><span class="closer-tag ${closerCls[r.closer]}">${closerLabel[r.closer]||r.closer}</span></td>
+      <td>${r.isReplacement ? `<span style="background:var(--yellow-l);color:var(--yellow);border:1px solid var(--yellow);border-radius:12px;font-size:10px;font-weight:700;padding:2px 7px;">🔁</span>` : `<span style="color:var(--gray-400);font-size:11px;">—</span>`}</td>
+      <td style="font-size:12px;color:var(--gray-600);max-width:280px;white-space:normal;">${r.reason}</td>
+    </tr>
+  `).join("");
+}
+
+document.querySelectorAll("[data-closer]").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll("[data-closer]").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active"); closerFilter=btn.dataset.closer; renderClosedTable();
+  });
+});
+document.getElementById("closedSearch").addEventListener("input",e=>{closedSearch=e.target.value;renderClosedTable();});
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// CHARTS (OVERVIEW)
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+function initOverviewCharts() {
+  const BLUE="#0b4d99",ORANGE="#ff5722",PURPLE="#8b5cf6",GREEN="#22c55e",YELLOW="#f59e0b",RED="#ef4444";
+
+  // Active by Advisor (dynamic)
+  const advCount={Miguel:0,Guillermo:0,Jesus:0,Unassigned:0};
+  ACTIVE.forEach(r=>{ const k=r.Advisor==="MIguel"?"Miguel":r.Advisor; advCount[k]=(advCount[k]||0)+1; });
+  new Chart(document.getElementById("chartAdvisor"),{
+    type:"doughnut",
+    data:{labels:["Miguel","Guillermo","Jesus","Unassigned"],datasets:[{data:[advCount.Miguel,advCount.Guillermo,advCount.Jesus,advCount.Unassigned],backgroundColor:[ORANGE,PURPLE,BLUE,"#94a3b8"],borderWidth:2,borderColor:"#fff"}]},
+    options:{plugins:{legend:{position:"bottom",labels:{font:{family:"Poppins",size:11},padding:10}}},cutout:"65%",maintainAspectRatio:false}
+  });
+
+  // Active by Stage (dynamic)
+  const stageLabels=["KickOff","Candidates","Interviews","Assessment","Final","Job Offer","Invoice"];
+  const stageKeys=["1. KickOff Meeting","2. Candidates Presented","3. 1st Round of Interviews","4. Assessment","5. Final Interview","6. Job Offer Letter / Signature","7. Invoice"];
+  const stageCounts=stageKeys.map(k=>ACTIVE.filter(r=>r.Status===k).length);
+  new Chart(document.getElementById("chartStage"),{
+    type:"bar",
+    data:{labels:stageLabels,datasets:[{data:stageCounts,backgroundColor:["#3b82f6",ORANGE,YELLOW,PURPLE,RED,GREEN],borderRadius:6,borderSkipped:false}]},
+    options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,ticks:{font:{family:"Poppins",size:10}},grid:{color:"#f1f5f9"}},x:{ticks:{font:{family:"Poppins",size:10}},grid:{display:false}}},maintainAspectRatio:false}
+  });
+
+  // Closed by reason
+  const reasons={};
+  CLOSED.forEach(r=>{reasons[r.category]=(reasons[r.category]||0)+1;});
+  new Chart(document.getElementById("chartClosed"),{
+    type:"doughnut",
+    data:{labels:Object.keys(reasons),datasets:[{data:Object.values(reasons),backgroundColor:[RED,ORANGE,YELLOW,PURPLE,"#94a3b8","#06b6d4"],borderWidth:2,borderColor:"#fff"}]},
+    options:{plugins:{legend:{position:"bottom",labels:{font:{family:"Poppins",size:10},padding:8}}},cutout:"60%",maintainAspectRatio:false}
+  });
+
+  // Monthly revenue chart (Overview)
+  const {labels,counts,revs} = buildMonthlyData(PLACED);
+  new Chart(document.getElementById("chartMonthly"),{
+    data:{labels,datasets:[
+      {type:"bar",label:"Placements",data:counts,backgroundColor:"rgba(11,77,153,.2)",borderColor:BLUE,borderWidth:2,borderRadius:4,yAxisID:"y"},
+      {type:"line",label:"Revenue",data:revs,borderColor:GREEN,backgroundColor:"rgba(34,197,94,.07)",tension:.4,pointRadius:3,pointBackgroundColor:GREEN,yAxisID:"y2"}
+    ]},
+    options:{plugins:{legend:{position:"top",labels:{font:{family:"Poppins",size:11}}}},scales:{y:{beginAtZero:true,grid:{color:"#f1f5f9"},ticks:{font:{family:"Poppins",size:10}}},y2:{position:"right",beginAtZero:true,grid:{display:false},ticks:{font:{family:"Poppins",size:10},callback:v=>"$"+(v/1000).toFixed(0)+"K"}}},maintainAspectRatio:false}
+  });
+
+  // Advisor placed (dynamic)
+  const advPlaced={Miguel:0,Guillermo:0,Jesus:0};
+  PLACED.forEach(r=>{ const k=r.Advisor==="MIguel"?"Miguel":r.Advisor; if(advPlaced[k]!==undefined) advPlaced[k]++; });
+  new Chart(document.getElementById("chartAdvisorPlaced"),{
+    type:"bar",
+    data:{labels:["Miguel","Guillermo","Jesus"],datasets:[{data:[advPlaced.Miguel,advPlaced.Guillermo,advPlaced.Jesus],backgroundColor:[ORANGE,PURPLE,BLUE],borderRadius:8,borderSkipped:false}]},
+    options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,ticks:{font:{family:"Poppins",size:10}},grid:{color:"#f1f5f9"}},x:{ticks:{font:{family:"Poppins",size:11,weight:"600"}},grid:{display:false}}},maintainAspectRatio:false,indexAxis:"y"}
+  });
+
+  // Who closed pie (dynamic)
+  const closerCount={customer:0,us:0,paused:0};
+  CLOSED.forEach(r=>{ closerCount[r.closer]=(closerCount[r.closer]||0)+1; });
+  new Chart(document.getElementById("chartWhoClosedPie"),{
+    type:"doughnut",
+    data:{labels:["Paused by Customer","Paused by Us","Paused"],datasets:[{data:[closerCount.customer,closerCount.us,closerCount.paused],backgroundColor:[ORANGE,BLUE,RED],borderWidth:2,borderColor:"#fff"}]},
+    options:{plugins:{legend:{position:"bottom",labels:{font:{family:"Poppins",size:11},padding:8}}},cutout:"62%",maintainAspectRatio:false}
+  });
+
+  const catCounts={};
+  CLOSED.forEach(r=>{catCounts[r.category]=(catCounts[r.category]||0)+1;});
+  new Chart(document.getElementById("chartReasonPie"),{
+    type:"doughnut",
+    data:{labels:Object.keys(catCounts),datasets:[{data:Object.values(catCounts),backgroundColor:[RED,ORANGE,YELLOW,PURPLE,"#94a3b8","#06b6d4"],borderWidth:2,borderColor:"#fff"}]},
+    options:{plugins:{legend:{position:"bottom",labels:{font:{family:"Poppins",size:10},padding:8}}},cutout:"60%",maintainAspectRatio:false}
+  });
+
+  const closedByAdv={Jesus:0,MIguel:0,Guillermo:0};
+  CLOSED.forEach(r=>{if(closedByAdv[r.Advisor]!==undefined) closedByAdv[r.Advisor]++;});
+  new Chart(document.getElementById("chartClosedAdvisor"),{
+    type:"doughnut",
+    data:{labels:["Miguel","Jesus","Guillermo"],datasets:[{data:[closedByAdv.MIguel,closedByAdv.Jesus,closedByAdv.Guillermo],backgroundColor:[ORANGE,BLUE,PURPLE],borderWidth:2,borderColor:"#fff"}]},
+    options:{plugins:{legend:{position:"bottom",labels:{font:{family:"Poppins",size:11},padding:8}}},cutout:"62%",maintainAspectRatio:false}
+  });
+}
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// INIT
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// STAGE REVENUE STRIP + OVERVIEW FUNNEL (dynamic)
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+const STAGE_ORDER = [
+  {key:"1. KickOff Meeting",                  label:"KickOff",         emoji:"🚀"},
+  {key:"2. Candidates Presented",             label:"Candidates Sent", emoji:"📋"},
+  {key:"3. 1st Round of Interviews",          label:"Interviewing",    emoji:"🎤"},
+  {key:"4. Assessment",                       label:"Assessment",      emoji:"📝"},
+  {key:"5. Final Interview",                  label:"Final Interview", emoji:"🏁"},
+  {key:"6. Job Offer Letter / Signature",     label:"Job Offer",       emoji:"📝✍️"},
+  {key:"7. Invoice",                          label:"Invoice ✓",       emoji:"💸"},
+];
+
+function parseDV(val) {
+  if(!val || val==="—") return 0;
+  return parseFloat(String(val).replace(/[^0-9.]/g,"")) || 0;
+}
+
+function renderStageRevenue() {
+  // Tally count + deal value per stage from ALL active records
+  const tally = {};
+  STAGE_ORDER.forEach(s=>{ tally[s.key]={count:0,rev:0}; });
+  ACTIVE.forEach(r=>{
+    if(tally[r.Status]){
+      tally[r.Status].count++;
+      tally[r.Status].rev += parseDV(r["Deal Value ($)"]);
+    }
+  });
+
+  // Compute totals across all stages (for "All" card)
+  const totalCount = ACTIVE.length;
+  const totalRev   = ACTIVE.reduce((s,r)=>s+parseDV(r["Deal Value ($)"]),0);
+
+  // ── Stage Revenue Strip (Active Processes tab) ──
+  const strip = document.getElementById("stage-revenue-strip");
+  if(strip){
+    const allCard = `<div class="stage-rev-card highlight">
+      <div class="stage-rev-card-label">🎯 All Active</div>
+      <div class="stage-rev-card-count">${totalCount}</div>
+      <div class="stage-rev-card-rev">$${(totalRev/1000).toFixed(1)}K pipeline</div>
+    </div>`;
+    const stagecards = STAGE_ORDER.map(s=>{
+      const t=tally[s.key];
+      const revStr = t.rev>0 ? `$${(t.rev/1000).toFixed(1)}K` : "No DV yet";
+      const revCls = t.rev>0 ? "" : "muted";
+      return `<div class="stage-rev-card">
+        <div class="stage-rev-card-label">${s.emoji} ${s.label}</div>
+        <div class="stage-rev-card-count">${t.count}</div>
+        <div class="stage-rev-card-rev ${revCls}">${revStr}</div>
+      </div>`;
+    }).join("");
+    strip.innerHTML = allCard + stagecards;
+  }
+
+  // ── Overview Funnel ──
+  const funnel = document.getElementById("overview-pipeline");
+  if(funnel){
+    const allStage = `<div class="pipe-stage">
+      <div class="pipe-stage-num">${totalCount}</div>
+      <div class="pipe-stage-name">All Active</div>
+      <div class="pipe-stage-val">$${Math.round(totalRev/1000)}K</div>
+    </div>`;
+    const stages = STAGE_ORDER.map(s=>{
+      const t=tally[s.key];
+      const revLabel = t.rev>0 ? `$${Math.round(t.rev/1000)}K` : "";
+      return `<div class="pipe-stage">
+        <div class="pipe-stage-num">${t.count}</div>
+        <div class="pipe-stage-name">${s.label}</div>
+        <div class="pipe-stage-val">${revLabel}</div>
+      </div>`;
+    }).join("");
+    funnel.innerHTML = allStage + stages;
+  }
+}
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// PLACING RATE
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+function renderPlacingRate() {
+  const strip = document.getElementById("placing-rate-strip");
+  if (!strip) return;
+
+  const windows = [
+    { label: "All Time",   days: null,  highlight: true },
+    { label: "Last 90d",   days: 90,    highlight: false },
+    { label: "Last 60d",   days: 60,    highlight: false },
+    { label: "Last 30d",   days: 30,    highlight: false },
+  ];
+
+  const cards = windows.map(w => {
+    // Filter PLACED and CLOSED within the time window
+    const placed = PLACED.filter(r => {
+      if (!w.days) return true;
+      const d = parseDate(r.date);
+      return d && daysSince(d) <= w.days;
+    });
+    const closed = CLOSED.filter(r => {
+      if (!w.days) return true;
+      const d = parseDate(r.date);
+      return d && daysSince(d) <= w.days;
+    });
+
+    const p = placed.length;
+    const c = closed.length;
+    const total = p + c;
+    const rate = total > 0 ? Math.round((p / total) * 100) : null;
+
+    // Color coding
+    let rateClass = "green";
+    if (rate === null) rateClass = "";
+    else if (rate < 40) rateClass = "red";
+    else if (rate < 55) rateClass = "yellow";
+
+    const rateDisplay = rate !== null
+      ? `<div class="pr-card-rate ${rateClass}">${rate}%</div>`
+      : `<div class="pr-card-rate"><span class="pr-card-null">—</span></div>`;
+
+    const detail = total > 0
+      ? `${p} placed · ${c} closed · of ${total} resolved`
+      : `No resolved processes`;
+
+    return `<div class="pr-card${w.highlight ? " highlight-card" : ""}">
+      <div class="pr-card-period">${w.label}</div>
+      ${rateDisplay}
+      <div class="pr-card-detail">${detail}</div>
+    </div>`;
+  });
+
+  strip.innerHTML = cards.join("");
+}
+
+document.getElementById("topbar-date").textContent = new Date().toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric",year:"numeric"});
+
+function initDashboard() {
+  // Update hardcoded KPI cards dynamically
+  const totalPlaced = PLACED.length;
+  const totalActive = ACTIVE.length;
+  const totalClosed = CLOSED.length;
+  const totalPipeline = ACTIVE.reduce((s,r)=>s+parseDV(r["Deal Value ($)"]),0);
+  const totalRevenue = PLACED.reduce((s,r)=>s+(r.dv||0),0);
+  const avgDays = PLACED.length ? Math.round(PLACED.reduce((s,r)=>s+(r.days||0),0)/PLACED.length*10)/10 : 0;
+  const now = new Date();
+  const last30 = PLACED.filter(r=>{ const d=parseDate(r.date); return d && (now-d)/86400000<=30; });
+  const last7  = PLACED.filter(r=>{ const d=parseDate(r.date); return d && (now-d)/86400000<=7; });
+  const rev30  = last30.reduce((s,r)=>s+(r.dv||0),0);
+  const rev7   = last7.reduce((s,r)=>s+(r.dv||0),0);
+
+  // ── Overview KPI cards ──
+  const fmtK = v => v >= 1000 ? "$" + Math.round(v/1000) + "K" : "$" + Math.round(v);
+  document.getElementById("kpi-active").textContent   = totalActive;
+  document.getElementById("kpi-placed").textContent   = totalPlaced;
+  document.getElementById("kpi-pipeline").textContent = fmtK(totalPipeline);
+  document.getElementById("kpi-avg-days").textContent = avgDays + "d";
+  document.getElementById("kpi-revenue").textContent  = fmtK(totalRevenue);
+  document.getElementById("kpi-placed-30").textContent    = last30.length;
+  document.getElementById("kpi-placed-30-sub").textContent = fmtK(rev30) + " revenue";
+  document.getElementById("kpi-placed-7").textContent     = last7.length;
+  document.getElementById("kpi-placed-7-sub").textContent  = fmtK(rev7) + " revenue";
+  document.getElementById("kpi-closed").textContent    = totalClosed;
+  const byCustomer = CLOSED.filter(r=>r.closer==="customer").length;
+  const pctCust = totalClosed ? Math.round(byCustomer/totalClosed*100) : 0;
+  document.getElementById("kpi-closed-sub").textContent = pctCust + "% by customer";
+
+  // ── Closed & Paused tab KPIs ──
+  const closedByUs   = CLOSED.filter(r=>r.closer==="us").length;
+  const hiredElsewhere = CLOSED.filter(r=>r.category==="Hired Elsewhere").length;
+  document.getElementById("closed-analysis-sub").textContent  = `${totalClosed} processes · Understanding why we lose deals`;
+  document.getElementById("kpi-closed-total").textContent     = totalClosed;
+  document.getElementById("kpi-closed-customer").textContent  = byCustomer;
+  document.getElementById("kpi-closed-customer-sub").textContent = totalClosed ? Math.round(byCustomer/totalClosed*100)+"% of closed" : "—";
+  document.getElementById("kpi-closed-hired").textContent     = hiredElsewhere;
+  document.getElementById("kpi-closed-us").textContent        = closedByUs;
+
+  // ── Overview stat line ──
+  const statLine = document.getElementById("overview-stat-line");
+  if(statLine) statLine.textContent = `${new Date().toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"})} · ${ACTIVE.length+PLACED.length+CLOSED.length} total processes tracked`;
+
+  // ── Replacement Rate KPI ──
+  const allProcesses = [...ACTIVE, ...PLACED, ...CLOSED];
+  const totalReplActive = ACTIVE.filter(r=>r.isReplacement).length;
+  const totalRepl = allProcesses.filter(r=>r.isReplacement).length;
+  const pct = ACTIVE.length ? Math.round((totalReplActive / ACTIVE.length) * 100) : 0;
+  document.getElementById("kpi-replacement-rate").textContent = pct + "%";
+  document.getElementById("kpi-replacement-sub").textContent = `${totalReplActive} of ${ACTIVE.length} active · ${totalRepl} all time`;
+
+  renderStageRevenue();
+  renderPlacingRate();
+  renderLeaderboard();
+  initOverviewCharts();
+  renderTable();
+  updatePlacementTab("all");
+  renderClosedTable();
+}
+
+function renderLeaderboard() {
+  const container = document.getElementById("leaderboard-rows");
+  const title = document.getElementById("leaderboard-title");
+  if(!container) return;
+
+  const agg = {};
+  ACTIVE.forEach(r => {
+    const a = r.Advisor || "Unassigned";
+    if(!agg[a]) agg[a] = { advisor:a, active:0, pipeline:0, placed:0, revenue:0 };
+    agg[a].active += 1;
+    agg[a].pipeline += parseDV(r["Deal Value ($)"]);
+  });
+  PLACED.forEach(r => {
+    const a = r.Advisor || "Unassigned";
+    if(!agg[a]) agg[a] = { advisor:a, active:0, pipeline:0, placed:0, revenue:0 };
+    agg[a].placed += 1;
+    agg[a].revenue += (r.dv || 0);
+  });
+
+  const rankByPlacements = PLACED.length > 0;
+  const rows = Object.values(agg).sort((x,y) => {
+    if(rankByPlacements) return (y.placed - x.placed) || (y.active - x.active);
+    return (y.active - x.active) || (y.pipeline - x.pipeline);
+  });
+
+  if(title) {
+    title.textContent = rankByPlacements
+      ? "👑 Advisor Leaderboard — All-Time Placements"
+      : "👑 Advisor Leaderboard — Active Pipeline";
+  }
+
+  const topVal = rankByPlacements
+    ? Math.max(1, ...rows.map(r => r.placed))
+    : Math.max(1, ...rows.map(r => r.active));
+
+  const fmtK = v => v >= 1000 ? "$" + Math.round(v/1000) + "K" : "$" + Math.round(v);
+
+  container.innerHTML = rows.map((r,i) => {
+    const color = ADV_COLOR[r.advisor] || "var(--gray-400)";
+    const initial = (r.advisor || "?").charAt(0).toUpperCase();
+    const rank = i+1;
+    const rankClass = rank === 1 ? "r1" : rank === 2 ? "r2" : rank === 3 ? "r3" : "";
+    const primary = rankByPlacements ? r.placed : r.active;
+    const pct = Math.round((primary / topVal) * 100);
+    const meta = rankByPlacements
+      ? `${r.placed} placements · ${r.active} active · ${fmtK(r.revenue)} revenue`
+      : `${r.active} active · ${fmtK(r.pipeline)} pipeline`;
+    return `<div class="lb-row"><div class="lb-rank ${rankClass}">${rank}</div><div class="lb-avatar" style="background:${color};">${initial}</div><div class="lb-info"><div class="lb-name">${r.advisor}</div><div class="lb-meta">${meta}</div></div><div class="lb-bar-wrap"><div class="lb-bar-bg"><div class="lb-bar-fill" style="width:${pct}%;background:${color};"></div></div></div><div class="lb-stat" style="color:${color};">${primary}</div></div>`;
+  }).join("");
+}
+
+// Boot: load live data then render
+loadData().then(initDashboard);
+</script>
+</body>
+</html>
