@@ -1,10 +1,10 @@
 {
-  "updated": "2026-05-17T02:00:53.256Z",
+  "updated": "2026-05-17T03:00:53.094Z",
   "rows": [
     {
       "Created Date": "February 5, 2026",
       "Last Update": "April 6, 2026",
-      "Priorities": "40",
+      "Priorities": "41",
       "Hiring Request": "HR31337",
       "Source": "Core",
       "Status": "8. Placed",
@@ -30,7 +30,7 @@
     {
       "Created Date": "February 10, 2026",
       "Last Update": "April 6, 2026",
-      "Priorities": "40",
+      "Priorities": "41",
       "Hiring Request": "HR40713",
       "Source": "Core",
       "Status": "9. Closed / Paused / M.I.A.",
@@ -56,7 +56,7 @@
     {
       "Created Date": "February 13, 2026",
       "Last Update": "March 19, 2026",
-      "Priorities": "58",
+      "Priorities": "59",
       "Hiring Request": "HR69093",
       "Source": "Core",
       "Status": "9. Closed / Paused / M.I.A.",
@@ -82,7 +82,7 @@
     {
       "Created Date": "February 13, 2026",
       "Last Update": "March 19, 2026",
-      "Priorities": "58",
+      "Priorities": "59",
       "Hiring Request": "HR43688",
       "Source": "Core",
       "Status": "9. Closed / Paused / M.I.A.",
@@ -108,7 +108,7 @@
     {
       "Created Date": "February 13, 2026",
       "Last Update": "March 19, 2026",
-      "Priorities": "58",
+      "Priorities": "59",
       "Hiring Request": "HR59526",
       "Source": "Core",
       "Status": "9. Closed / Paused / M.I.A.",
@@ -134,7 +134,7 @@
     {
       "Created Date": "February 16, 2026",
       "Last Update": "April 6, 2026",
-      "Priorities": "40",
+      "Priorities": "41",
       "Hiring Request": "HR42040",
       "Source": "Core",
       "Status": "9. Closed / Paused / M.I.A.",
@@ -160,7 +160,7 @@
     {
       "Created Date": "February 19, 2026",
       "Last Update": "March 26, 2026",
-      "Priorities": "51",
+      "Priorities": "52",
       "Hiring Request": "HR62501",
       "Source": "Core",
       "Status": "9. Closed / Paused / M.I.A.",
@@ -186,7 +186,7 @@
     {
       "Created Date": "March 10, 2026",
       "Last Update": "April 3, 2026",
-      "Priorities": "43",
+      "Priorities": "44",
       "Hiring Request": "HR46021",
       "Source": "Core",
       "Status": "9. Closed / Paused / M.I.A.",
@@ -212,7 +212,7 @@
     {
       "Created Date": "March 17, 2026",
       "Last Update": "April 13, 2026",
-      "Priorities": "33",
+      "Priorities": "34",
       "Hiring Request": "HR86943",
       "Source": "Core",
       "Status": "8. Placed",
@@ -238,7 +238,7 @@
     {
       "Created Date": "March 18, 2026",
       "Last Update": "April 16, 2026",
-      "Priorities": "30",
+      "Priorities": "31",
       "Hiring Request": "HR85295",
       "Source": "Core",
       "Status": "8. Placed",
@@ -264,7 +264,7 @@
     {
       "Created Date": "March 17, 2026",
       "Last Update": "April 16, 2026",
-      "Priorities": "30",
+      "Priorities": "31",
       "Hiring Request": "HR53619",
       "Source": "Core",
       "Status": "8. Placed",
@@ -290,7 +290,7 @@
     {
       "Created Date": "March 19, 2026",
       "Last Update": "May 11, 2026",
-      "Priorities": "5",
+      "Priorities": "6",
       "Hiring Request": "HR91566",
       "Source": "Core",
       "Status": "4. Assessment",
@@ -316,7 +316,7 @@
     {
       "Created Date": "March 19, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR99485",
       "Source": "Core",
       "Status": "7. Invoice",
@@ -342,7 +342,7 @@
     {
       "Created Date": "March 19, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR50323",
       "Source": "Core",
       "Status": "3. 1st Round of Interviews",
@@ -368,7 +368,7 @@
     {
       "Created Date": "March 18, 2026",
       "Last Update": "April 9, 2026",
-      "Priorities": "37",
+      "Priorities": "38",
       "Hiring Request": "HR44052",
       "Source": "Core",
       "Status": "9. Closed / Paused / M.I.A.",
@@ -394,7 +394,7 @@
     {
       "Created Date": "March 24, 2026",
       "Last Update": "April 30, 2026",
-      "Priorities": "16",
+      "Priorities": "17",
       "Hiring Request": "HR88270",
       "Source": "Core",
       "Status": "9. Closed / Paused / M.I.A.",
@@ -420,7 +420,7 @@
     {
       "Created Date": "March 25, 2026",
       "Last Update": "April 9, 2026",
-      "Priorities": "37",
+      "Priorities": "38",
       "Hiring Request": "HR53298",
       "Source": "Core",
       "Status": "8. Placed",
@@ -446,7 +446,7 @@
     {
       "Created Date": "March 25, 2026",
       "Last Update": "April 16, 2026",
-      "Priorities": "30",
+      "Priorities": "31",
       "Hiring Request": "HR61217",
       "Source": "Core",
       "Status": "9. Closed / Paused / M.I.A.",
@@ -472,7 +472,7 @@
     {
       "Created Date": "April 2, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR84653",
       "Source": "Core",
       "Status": "5. Final Interview",
@@ -498,7 +498,7 @@
     {
       "Created Date": "April 3, 2026",
       "Last Update": "April 27, 2026",
-      "Priorities": "19",
+      "Priorities": "20",
       "Hiring Request": "HR51329",
       "Source": "Core",
       "Status": "8. Placed",
@@ -524,7 +524,7 @@
     {
       "Created Date": "April 3, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR59248",
       "Source": "Core",
       "Status": "5. Final Interview",
@@ -550,7 +550,7 @@
     {
       "Created Date": "April 6, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR75086",
       "Source": "Core",
       "Status": "2. Candidates Presented",
@@ -576,7 +576,7 @@
     {
       "Created Date": "April 8, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR57600",
       "Source": "Core",
       "Status": "2. Candidates Presented",
@@ -602,7 +602,7 @@
     {
       "Created Date": "April 8, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR65519",
       "Source": "Core",
       "Status": "3. 1st Round of Interviews",
@@ -628,7 +628,7 @@
     {
       "Created Date": "April 8, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR73438",
       "Source": "Core",
       "Status": "3. 1st Round of Interviews",
@@ -654,7 +654,7 @@
     {
       "Created Date": "April 8, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR81357",
       "Source": "Core",
       "Status": "3. 1st Round of Interviews",
@@ -680,7 +680,7 @@
     {
       "Created Date": "April 9, 2026",
       "Last Update": "May 11, 2026",
-      "Priorities": "5",
+      "Priorities": "6",
       "Hiring Request": "HR63871",
       "Source": "Core",
       "Status": "9. Closed / Paused / M.I.A.",
@@ -706,7 +706,7 @@
     {
       "Created Date": "April 9, 2026",
       "Last Update": "May 11, 2026",
-      "Priorities": "5",
+      "Priorities": "6",
       "Hiring Request": "HR71790",
       "Source": "Core",
       "Status": "9. Closed / Paused / M.I.A.",
@@ -732,7 +732,7 @@
     {
       "Created Date": "April 9, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR79709",
       "Source": "Core",
       "Status": "2. Candidates Presented",
@@ -758,7 +758,7 @@
     {
       "Created Date": "April 9, 2026",
       "Last Update": "May 11, 2026",
-      "Priorities": "5",
+      "Priorities": "6",
       "Hiring Request": "HR87628",
       "Source": "Core",
       "Status": "9. Closed / Paused / M.I.A.",
@@ -784,7 +784,7 @@
     {
       "Created Date": "April 14, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR82684",
       "Source": "Core",
       "Status": "2. Candidates Presented",
@@ -810,7 +810,7 @@
     {
       "Created Date": "April 14, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR90603",
       "Source": "Core",
       "Status": "2. Candidates Presented",
@@ -836,7 +836,7 @@
     {
       "Created Date": "April 20, 2026",
       "Last Update": "May 11, 2026",
-      "Priorities": "5",
+      "Priorities": "6",
       "Hiring Request": "HR66525",
       "Source": "Core",
       "Status": "9. Closed / Paused / M.I.A.",
@@ -862,7 +862,7 @@
     {
       "Created Date": "April 20, 2026",
       "Last Update": "May 11, 2026",
-      "Priorities": "5",
+      "Priorities": "6",
       "Hiring Request": "HR74444",
       "Source": "Core",
       "Status": "9. Closed / Paused / M.I.A.",
@@ -888,7 +888,7 @@
     {
       "Created Date": "April 20, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR90282",
       "Source": "Core",
       "Status": "2. Candidates Presented",
@@ -914,7 +914,7 @@
     {
       "Created Date": "April 20, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR82363",
       "Source": "Core",
       "Status": "2. Candidates Presented",
@@ -940,7 +940,7 @@
     {
       "Created Date": "April 20, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR98201",
       "Source": "Core",
       "Status": "3. 1st Round of Interviews",
@@ -966,7 +966,7 @@
     {
       "Created Date": "April 9, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR78061",
       "Source": "Core",
       "Status": "8. Placed",
@@ -992,7 +992,7 @@
     {
       "Created Date": "April 9, 2026",
       "Last Update": "May 4, 2026",
-      "Priorities": "12",
+      "Priorities": "13",
       "Hiring Request": "HR44737",
       "Source": "Core",
       "Status": "8. Placed",
@@ -1018,7 +1018,7 @@
     {
       "Created Date": "April 10, 2026",
       "Last Update": "April 27, 2026",
-      "Priorities": "19",
+      "Priorities": "20",
       "Hiring Request": "HR76413",
       "Source": "Core",
       "Status": "9. Closed / Paused / M.I.A.",
@@ -1044,7 +1044,7 @@
     {
       "Created Date": "April 10, 2026",
       "Last Update": "April 27, 2026",
-      "Priorities": "19",
+      "Priorities": "20",
       "Hiring Request": "HR84332",
       "Source": "Core",
       "Status": "9. Closed / Paused / M.I.A.",
@@ -1070,7 +1070,7 @@
     {
       "Created Date": "April 13, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR43089",
       "Source": "Core",
       "Status": "3. 1st Round of Interviews",
@@ -1096,7 +1096,7 @@
     {
       "Created Date": "April 13, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR51008",
       "Source": "Core",
       "Status": "2. Candidates Presented",
@@ -1122,7 +1122,7 @@
     {
       "Created Date": "April 14, 2026",
       "Last Update": "May 11, 2026",
-      "Priorities": "5",
+      "Priorities": "6",
       "Hiring Request": "HR98522",
       "Source": "Core",
       "Status": "8. Placed",
@@ -1148,7 +1148,7 @@
     {
       "Created Date": "April 16, 2026",
       "Last Update": "May 7, 2026",
-      "Priorities": "9",
+      "Priorities": "10",
       "Hiring Request": "HR39793",
       "Source": "Core",
       "Status": "8. Placed",
@@ -1174,7 +1174,7 @@
     {
       "Created Date": "April 16, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR63550",
       "Source": "Core",
       "Status": "5. Final Interview",
@@ -1200,7 +1200,7 @@
     {
       "Created Date": "April 21, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR76092",
       "Source": "Core",
       "Status": "8. Placed",
@@ -1226,7 +1226,7 @@
     {
       "Created Date": "April 22, 2026",
       "Last Update": "May 11, 2026",
-      "Priorities": "5",
+      "Priorities": "6",
       "Hiring Request": "HR46064",
       "Source": "Core",
       "Status": "8. Placed",
@@ -1252,7 +1252,7 @@
     {
       "Created Date": "April 9, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR97195",
       "Source": "Core",
       "Status": "6. Job Offer Letter / Signature",
@@ -1278,7 +1278,7 @@
     {
       "Created Date": "April 14, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR86986",
       "Source": "Core",
       "Status": "2. Candidates Presented",
@@ -1304,7 +1304,7 @@
     {
       "Created Date": "April 24, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR55310",
       "Source": "Core",
       "Status": "3. 1st Round of Interviews",
@@ -1330,7 +1330,7 @@
     {
       "Created Date": "April 24, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR47391",
       "Source": "Core",
       "Status": "5. Final Interview",
@@ -1356,7 +1356,7 @@
     {
       "Created Date": "April 28, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR93257",
       "Source": "Core",
       "Status": "3. 1st Round of Interviews",
@@ -1382,7 +1382,7 @@
     {
       "Created Date": "April 29, 2026",
       "Last Update": "May 7, 2026",
-      "Priorities": "9",
+      "Priorities": "10",
       "Hiring Request": "HR94905",
       "Source": "Core",
       "Status": "9. Closed / Paused / M.I.A.",
@@ -1408,7 +1408,7 @@
     {
       "Created Date": "April 29, 2026",
       "Last Update": "May 11, 2026",
-      "Priorities": "5",
+      "Priorities": "6",
       "Hiring Request": "HR44095",
       "Source": "Core",
       "Status": "4. Assessment",
@@ -1434,7 +1434,7 @@
     {
       "Created Date": "April 30, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR64556",
       "Source": "Core",
       "Status": "2. Candidates Presented",
@@ -1460,7 +1460,7 @@
     {
       "Created Date": "April 29, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR58285",
       "Source": "Core",
       "Status": "2. Candidates Presented",
@@ -1486,7 +1486,7 @@
     {
       "Created Date": "April 29, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR50366",
       "Source": "Core",
       "Status": "2. Candidates Presented",
@@ -1512,7 +1512,7 @@
     {
       "Created Date": "April 24, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR64192",
       "Source": "Core",
       "Status": "2. Candidates Presented",
@@ -1538,7 +1538,7 @@
     {
       "Created Date": "May 1, 2026",
       "Last Update": "May 11, 2026",
-      "Priorities": "5",
+      "Priorities": "6",
       "Hiring Request": "HR61260",
       "Source": "Core",
       "Status": "1. KickOff Meeting",
@@ -1564,7 +1564,7 @@
     {
       "Created Date": "May 7, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR38830",
       "Source": "Core",
       "Status": "2. Candidates Presented",
@@ -1590,7 +1590,7 @@
     {
       "Created Date": "May 7, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR95911",
       "Source": "Core",
       "Status": "2. Candidates Presented",
@@ -1616,7 +1616,7 @@
     {
       "Created Date": "May 6, 2026",
       "Last Update": "May 11, 2026",
-      "Priorities": "5",
+      "Priorities": "6",
       "Hiring Request": "HR56316",
       "Source": "Core",
       "Status": "1. KickOff Meeting",
@@ -1642,7 +1642,7 @@
     {
       "Created Date": "May 13, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR49724",
       "Source": "Core",
       "Status": "1. KickOff Meeting",
@@ -1668,7 +1668,7 @@
     {
       "Created Date": "May 11, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR62587",
       "Source": "Core",
       "Status": "1. KickOff Meeting",
@@ -1694,7 +1694,7 @@
     {
       "Created Date": "May 12, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR80073",
       "Source": "Core",
       "Status": "1. KickOff Meeting",
@@ -1720,7 +1720,7 @@
     {
       "Created Date": "May 13, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR87992",
       "Source": "Core",
       "Status": "1. KickOff Meeting",
@@ -1746,7 +1746,7 @@
     {
       "Created Date": "May 14, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "2",
+      "Priorities": "3",
       "Hiring Request": "HR86344",
       "Source": "Core",
       "Status": "2. Candidates Presented",
