@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-18T16:47:40.424Z",
+  "updated": "2026-05-18T16:47:46.466Z",
   "rows": [
     {
       "Created Date": "February 5, 2026",
@@ -1822,12 +1822,12 @@
       "Notes": ""
     },
     {
-      "Created Date": "",
-      "Last Update": "",
-      "Priorities": "",
-      "Hiring Request": "",
-      "Source": "",
-      "Status": "",
+      "Created Date": "May 19, 2026",
+      "Last Update": "May 19, 2026",
+      "Priorities": "-1",
+      "Hiring Request": "HR71834",
+      "Source": "Core",
+      "Status": "1. KickOff Meeting",
       "Name": "Michael Poon",
       "Email": "michaelp@finelineprintinggroup.com",
       "Company Name": "Fineline Printing Group",
