@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-18T16:47:14.000Z",
+  "updated": "2026-05-18T16:47:38.417Z",
   "rows": [
     {
       "Created Date": "February 5, 2026",
@@ -1828,8 +1828,8 @@
       "Hiring Request": "",
       "Source": "",
       "Status": "",
-      "Name": "",
-      "Email": "",
+      "Name": "Michael Poon",
+      "Email": "michaelp@finelineprintinggroup.com",
       "Company Name": "Fineline Printing Group",
       "Role": "Magento Developer",
       "NotebookLM": "",
