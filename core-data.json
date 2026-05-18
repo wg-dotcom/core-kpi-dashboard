@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-18T15:00:52.905Z",
+  "updated": "2026-05-18T15:52:06.256Z",
   "rows": [
     {
       "Created Date": "February 5, 2026",
@@ -1768,6 +1768,32 @@
       "%WG": "",
       "Deal Value ($)": "",
       "Notes": "Processed role and sent candidates for alignment - May 13"
+    },
+    {
+      "Created Date": "May 18, 2026",
+      "Last Update": "",
+      "Priorities": "",
+      "Hiring Request": "",
+      "Source": "",
+      "Status": "",
+      "Name": "",
+      "Email": "",
+      "Company Name": "",
+      "Role": "",
+      "NotebookLM": "",
+      "Intake Form": "",
+      "GitHub": "",
+      "Front Thread": "",
+      "AT Link": "",
+      "Advisor": "",
+      "KickOff Meeting": "",
+      "Date Placed": "",
+      "Invoice Paid": "",
+      "Days for Placement": "",
+      "Budget ($)": "",
+      "%WG": "",
+      "Deal Value ($)": "",
+      "Notes": ""
     }
   ]
 }
