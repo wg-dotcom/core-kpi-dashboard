@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-18T16:32:39.877Z",
+  "updated": "2026-05-18T16:32:46.141Z",
   "rows": [
     {
       "Created Date": "February 5, 2026",
@@ -523,11 +523,11 @@
     },
     {
       "Created Date": "April 3, 2026",
-      "Last Update": "May 14, 2026",
-      "Priorities": "4",
+      "Last Update": "May 18, 2026",
+      "Priorities": "0",
       "Hiring Request": "HR59248",
       "Source": "Core",
-      "Status": "5. Final Interview",
+      "Status": "7. Invoice",
       "Name": "Nick Serratelli",
       "Email": "nick@serratellihatcompany.com",
       "Company Name": "Serratelli Hat Company",
