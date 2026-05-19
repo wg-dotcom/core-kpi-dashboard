@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-19T17:23:50.194Z",
+  "updated": "2026-05-19T17:48:15.952Z",
   "rows": [
     {
       "Created Date": "February 5, 2026",
@@ -1920,9 +1920,9 @@
       "Date Placed": "",
       "Invoice Paid": "",
       "Days for Placement": "",
-      "Budget ($)": "",
-      "%WG": "",
-      "Deal Value ($)": "",
+      "Budget ($)": "3,000",
+      "%WG": "18%",
+      "Deal Value ($)": "6,480",
       "Notes": ""
     },
     {
