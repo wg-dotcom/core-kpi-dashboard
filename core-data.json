@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-22T13:20:48.062Z",
+  "updated": "2026-05-22T13:20:54.161Z",
   "rows": [
     {
       "Created Date": "February 5, 2026",
@@ -1929,8 +1929,8 @@
       "Created Date": "",
       "Last Update": "",
       "Priorities": "",
-      "Hiring Request": "[HR49403]",
-      "Source": "",
+      "Hiring Request": "HR49403",
+      "Source": "Core",
       "Status": "",
       "Name": "Shannan Wilson",
       "Email": "",
