@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-26T18:00:50.495Z",
+  "updated": "2026-05-26T18:24:06.277Z",
   "rows": [
     {
       "Created Date": "February 5, 2026",
@@ -1978,30 +1978,30 @@
       "Notes": ""
     },
     {
-      "Created Date": "",
-      "Last Update": "",
-      "Priorities": "",
-      "Hiring Request": "",
-      "Source": "",
-      "Status": "",
-      "Name": "",
-      "Email": "",
-      "Company Name": "",
-      "Role": "",
-      "NotebookLM": "",
+      "Created Date": "May 15, 2026",
+      "Last Update": "May 26, 2026",
+      "Priorities": "0",
+      "Hiring Request": "HR71834",
+      "Source": "Core",
+      "Status": "2. Candidates Presented",
+      "Name": "Michael Poon",
+      "Email": "michaelp@finelineprintinggroup.com",
+      "Company Name": "Fineline Printing Group",
+      "Role": "Magento Developer",
+      "NotebookLM": "https://notebooklm.google.com/notebook/04990ddd-9e96-451a-8eb5-635012a29f44?authuser=0",
       "Intake Form": "",
       "GitHub": "",
       "Front Thread": "",
       "AT Link": "",
-      "Advisor": "",
+      "Advisor": "Genesis",
       "KickOff Meeting": "",
       "Date Placed": "",
       "Invoice Paid": "",
       "Days for Placement": "",
-      "Budget ($)": "",
-      "%WG": "",
-      "Deal Value ($)": "",
-      "Notes": "(Son dos contrataciones)"
+      "Budget ($)": "3,500",
+      "%WG": "18%",
+      "Deal Value ($)": "7,560",
+      "Notes": "2nd drop - May 26\n"
     }
   ]
 }
