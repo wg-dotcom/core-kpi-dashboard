@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-26T14:08:44.613Z",
+  "updated": "2026-05-26T14:11:03.845Z",
   "rows": [
     {
       "Created Date": "February 5, 2026",
@@ -571,12 +571,12 @@
       "Budget ($)": "1,500",
       "%WG": "18%",
       "Deal Value ($)": "3,240",
-      "Notes": "New drop May 14, waiting for response "
+      "Notes": "misaligned expectations - push for call"
     },
     {
       "Created Date": "April 8, 2026",
-      "Last Update": "May 22, 2026",
-      "Priorities": "4",
+      "Last Update": "May 26, 2026",
+      "Priorities": "0",
       "Hiring Request": "HR57600",
       "Source": "Core",
       "Status": "2. Candidates Presented",
@@ -601,8 +601,8 @@
     },
     {
       "Created Date": "April 8, 2026",
-      "Last Update": "May 22, 2026",
-      "Priorities": "4",
+      "Last Update": "May 26, 2026",
+      "Priorities": "0",
       "Hiring Request": "HR65519",
       "Source": "Core",
       "Status": "3. 1st Round of Interviews",
@@ -627,8 +627,8 @@
     },
     {
       "Created Date": "April 8, 2026",
-      "Last Update": "May 22, 2026",
-      "Priorities": "4",
+      "Last Update": "May 26, 2026",
+      "Priorities": "0",
       "Hiring Request": "HR73438",
       "Source": "Core",
       "Status": "3. 1st Round of Interviews",
@@ -653,8 +653,8 @@
     },
     {
       "Created Date": "April 8, 2026",
-      "Last Update": "May 22, 2026",
-      "Priorities": "4",
+      "Last Update": "May 26, 2026",
+      "Priorities": "0",
       "Hiring Request": "HR81357",
       "Source": "Core",
       "Status": "3. 1st Round of Interviews",
