@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-28T22:38:56.473Z",
+  "updated": "2026-05-28T22:39:01.580Z",
   "rows": [
     {
       "Created Date": "February 5, 2026",
@@ -2158,32 +2158,6 @@
       "%WG": "18%",
       "Deal Value ($)": "7,560",
       "Notes": "They decided to close it before submission of candidates "
-    },
-    {
-      "Created Date": "",
-      "Last Update": "",
-      "Priorities": "",
-      "Hiring Request": "",
-      "Source": "",
-      "Advisor": "",
-      "Status": "",
-      "Name": "",
-      "Email": " -  - [HR38188]",
-      "Company Name": "",
-      "Role": "",
-      "NotebookLM": "",
-      "Intake Form": "",
-      "GitHub": "",
-      "Front Thread": "",
-      "AT Link": "",
-      "KickOff Meeting": "",
-      "Date Placed": "",
-      "Invoice Paid": "",
-      "Days for Placement": "",
-      "Budget ($)": "",
-      "%WG": "",
-      "Deal Value ($)": "",
-      "Notes": ""
     }
   ]
 }
