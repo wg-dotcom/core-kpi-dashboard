@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-28T22:00:49.694Z",
+  "updated": "2026-05-28T22:38:12.968Z",
   "rows": [
     {
       "Created Date": "February 5, 2026",
@@ -2158,6 +2158,32 @@
       "%WG": "18%",
       "Deal Value ($)": "7,560",
       "Notes": "They decided to close it before submission of candidates "
+    },
+    {
+      "Created Date": "",
+      "Last Update": "",
+      "Priorities": "",
+      "Hiring Request": "",
+      "Source": "",
+      "Advisor": "",
+      "Status": "",
+      "Name": "",
+      "Email": "Customer Support & CRM Coordinator - Boost Roofing - Wesley Hazlewood [HR38188]",
+      "Company Name": "",
+      "Role": "",
+      "NotebookLM": "",
+      "Intake Form": "",
+      "GitHub": "",
+      "Front Thread": "",
+      "AT Link": "",
+      "KickOff Meeting": "",
+      "Date Placed": "",
+      "Invoice Paid": "",
+      "Days for Placement": "",
+      "Budget ($)": "",
+      "%WG": "",
+      "Deal Value ($)": "",
+      "Notes": ""
     }
   ]
 }
