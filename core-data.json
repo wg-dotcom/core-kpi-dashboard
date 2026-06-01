@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-01T21:01:54.203Z",
+  "updated": "2026-06-01T21:02:13.841Z",
   "rows": [
     {
       "Created Date": "February 5, 2026",
@@ -2160,7 +2160,7 @@
       "Notes": "They decided to close it before submission of candidates "
     },
     {
-      "Created Date": "",
+      "Created Date": "May 22, 2026",
       "Last Update": "",
       "Priorities": "",
       "Hiring Request": "HR46107",
@@ -2184,6 +2184,32 @@
       "%WG": "18%",
       "Deal Value ($)": "8,640",
       "Notes": ""
+    },
+    {
+      "Created Date": "May 21, 2026",
+      "Last Update": "May 21, 2026",
+      "Priorities": "11",
+      "Hiring Request": "HR71834",
+      "Source": "Core",
+      "Advisor": "Genesis",
+      "Status": "9. Closed / Paused / M.I.A.",
+      "Name": "Michael Poon",
+      "Email": "michaelp@finelineprintinggroup.com",
+      "Company Name": "Fineline Printing Group",
+      "Role": "AR/AP Specialist",
+      "NotebookLM": "",
+      "Intake Form": "",
+      "GitHub": "",
+      "Front Thread": "",
+      "AT Link": "",
+      "KickOff Meeting": "",
+      "Date Placed": "",
+      "Invoice Paid": "",
+      "Days for Placement": "",
+      "Budget ($)": "3,500",
+      "%WG": "18%",
+      "Deal Value ($)": "7,560",
+      "Notes": "They decided to close it before submission of candidates "
     }
   ]
 }
