@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-01T20:14:49.152Z",
+  "updated": "2026-06-01T20:14:58.203Z",
   "rows": [
     {
       "Created Date": "February 5, 2026",
@@ -1688,7 +1688,7 @@
       "Days for Placement": "",
       "Budget ($)": " ",
       "%WG": "18%",
-      "Deal Value ($)": "",
+      "Deal Value ($)": "#VALUE!",
       "Notes": "\nMilena - JOL"
     },
     {
@@ -1714,7 +1714,7 @@
       "Days for Placement": "",
       "Budget ($)": "2,000",
       "%WG": "18%",
-      "Deal Value ($)": "",
+      "Deal Value ($)": "4,320",
       "Notes": "1st drop May 14 - 3 candidates\nDaniel - interview 1st week of June\nDiana - interview 1st week of June"
     },
     {
