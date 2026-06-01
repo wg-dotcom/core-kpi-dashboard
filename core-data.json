@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-01T21:03:12.678Z",
+  "updated": "2026-06-01T21:03:41.418Z",
   "rows": [
     {
       "Created Date": "February 5, 2026",
@@ -2210,6 +2210,32 @@
       "%WG": "18%",
       "Deal Value ($)": "7,560",
       "Notes": "They decided to close it before submission of candidates "
+    },
+    {
+      "Created Date": "",
+      "Last Update": "",
+      "Priorities": "",
+      "Hiring Request": "",
+      "Source": "",
+      "Advisor": "",
+      "Status": "",
+      "Name": "",
+      "Email": "",
+      "Company Name": "",
+      "Role": "Property Management Coordinator\r",
+      "NotebookLM": "",
+      "Intake Form": "",
+      "GitHub": "",
+      "Front Thread": "",
+      "AT Link": "",
+      "KickOff Meeting": "",
+      "Date Placed": "",
+      "Invoice Paid": "",
+      "Days for Placement": "",
+      "Budget ($)": "",
+      "%WG": "",
+      "Deal Value ($)": "",
+      "Notes": ""
     }
   ]
 }
