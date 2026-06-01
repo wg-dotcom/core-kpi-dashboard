@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-01T21:04:09.283Z",
+  "updated": "2026-06-01T21:04:11.584Z",
   "rows": [
     {
       "Created Date": "February 5, 2026",
@@ -2217,8 +2217,8 @@
       "Priorities": "",
       "Hiring Request": "",
       "Source": "",
-      "Advisor": "",
-      "Status": "",
+      "Advisor": "Genesis",
+      "Status": "1. KickOff Meeting",
       "Name": "Robert M. Nelson",
       "Email": "rmn@nelsonstoresecure.com",
       "Company Name": "Nelson StoreSecure LLC",
