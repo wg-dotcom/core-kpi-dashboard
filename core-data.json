@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-01T21:00:50.967Z",
+  "updated": "2026-06-01T21:00:56.041Z",
   "rows": [
     {
       "Created Date": "February 5, 2026",
@@ -2158,6 +2158,32 @@
       "%WG": "18%",
       "Deal Value ($)": "7,560",
       "Notes": "They decided to close it before submission of candidates "
+    },
+    {
+      "Created Date": "",
+      "Last Update": "",
+      "Priorities": "",
+      "Hiring Request": "",
+      "Source": "",
+      "Advisor": "",
+      "Status": "",
+      "Name": "Justin Tannenbaum",
+      "Email": "",
+      "Company Name": "",
+      "Role": "",
+      "NotebookLM": "",
+      "Intake Form": "",
+      "GitHub": "",
+      "Front Thread": "",
+      "AT Link": "",
+      "KickOff Meeting": "",
+      "Date Placed": "",
+      "Invoice Paid": "",
+      "Days for Placement": "",
+      "Budget ($)": "",
+      "%WG": "",
+      "Deal Value ($)": "",
+      "Notes": ""
     }
   ]
 }
