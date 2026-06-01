@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-01T18:37:27.985Z",
+  "updated": "2026-06-01T18:41:54.386Z",
   "rows": [
     {
       "Created Date": "February 5, 2026",
@@ -332,7 +332,7 @@
       "AT Link": "https://airtable.com/appnc0HdENzdIcUVP/pageyf52aIL2drWCs?detail=eyJwYWdlSWQiOiJwYWd2b3RTZWZocWZYM3BDSSIsInJvd0lkIjoicmVjUldXa09nUmVreUNiUG8iLCJzaG93Q29tbWVudHMiOmZhbHNlLCJxdWVyeU9yaWdpbkhpbnQiOnsidHlwZSI6InBhZ2VFbGVtZW50IiwiZWxlbWVudElkIjoicGVseTRJcmlmMGhsZjc3VzIiLCJxdWVyeUNvbnRhaW5lcklkIjoicGVsOXV4S3g5NVoxM3VncG0ifX0",
       "KickOff Meeting": "",
       "Date Placed": "May 12, 2026",
-      "Invoice Paid": "May 29",
+      "Invoice Paid": "May 29, 2026",
       "Days for Placement": "",
       "Budget ($)": "1,833",
       "%WG": "18%",
@@ -1190,7 +1190,7 @@
       "AT Link": "",
       "KickOff Meeting": "",
       "Date Placed": "",
-      "Invoice Paid": "May",
+      "Invoice Paid": "???",
       "Days for Placement": "",
       "Budget ($)": "2,500",
       "%WG": "18%",
