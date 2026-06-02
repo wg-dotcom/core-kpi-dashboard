@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-02T21:02:57.803Z",
+  "updated": "2026-06-02T21:03:10.102Z",
   "rows": [
     {
       "Created Date": "February 5, 2026",
@@ -2287,6 +2287,32 @@
       "Budget ($)": "2,000",
       "%WG": "18%",
       "Deal Value ($)": "4,320",
+      "Notes": ""
+    },
+    {
+      "Created Date": "",
+      "Last Update": "",
+      "Priorities": "",
+      "Hiring Request": "",
+      "Source": "",
+      "Advisor": "Amimo",
+      "Status": "",
+      "Name": "",
+      "Email": "",
+      "Company Name": "",
+      "Role": "",
+      "NotebookLM": "",
+      "Intake Form": "",
+      "GitHub": "",
+      "Front Thread": "",
+      "AT Link": "",
+      "KickOff Meeting": "",
+      "Date Placed": "",
+      "Invoice Paid": "",
+      "Days for Placement": "",
+      "Budget ($)": "",
+      "%WG": "",
+      "Deal Value ($)": "",
       "Notes": ""
     },
     {
