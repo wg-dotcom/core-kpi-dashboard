@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-02T14:04:42.843Z",
+  "updated": "2026-06-02T14:05:07.313Z",
   "rows": [
     {
       "Created Date": "February 5, 2026",
@@ -2235,6 +2235,32 @@
       "Budget ($)": "1,800",
       "%WG": "18%",
       "Deal Value ($)": "3,888",
+      "Notes": ""
+    },
+    {
+      "Created Date": "",
+      "Last Update": "",
+      "Priorities": "",
+      "Hiring Request": "",
+      "Source": "",
+      "Advisor": "",
+      "Status": "",
+      "Name": "",
+      "Email": "",
+      "Company Name": "Rubicon",
+      "Role": "Key Account Analyst ",
+      "NotebookLM": "",
+      "Intake Form": "",
+      "GitHub": "",
+      "Front Thread": "",
+      "AT Link": "",
+      "KickOff Meeting": "",
+      "Date Placed": "",
+      "Invoice Paid": "",
+      "Days for Placement": "",
+      "Budget ($)": "",
+      "%WG": "",
+      "Deal Value ($)": "",
       "Notes": ""
     }
   ]
