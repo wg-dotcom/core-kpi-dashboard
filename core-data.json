@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-02T21:09:11.594Z",
+  "updated": "2026-06-02T21:09:14.993Z",
   "rows": [
     {
       "Created Date": "February 5, 2026",
@@ -2301,7 +2301,7 @@
       "Email": "dhru@hey.com",
       "Company Name": "DKP Consulting",
       "Role": "Bookkeeper",
-      "NotebookLM": "",
+      "NotebookLM": "https://notebooklm.google.com/notebook/3441a701-c7d2-42b4-a570-370d3e1947d6?authuser=0",
       "Intake Form": "",
       "GitHub": "",
       "Front Thread": "",
@@ -2353,7 +2353,7 @@
       "Email": "",
       "Company Name": "",
       "Role": "",
-      "NotebookLM": "https://notebooklm.google.com/notebook/d14981cc-1d01-495e-86cc-eb2f5fc1bd3f",
+      "NotebookLM": "",
       "Intake Form": "",
       "GitHub": "",
       "Front Thread": "",
