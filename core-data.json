@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-04T16:02:55.394Z",
+  "updated": "2026-06-04T16:03:12.933Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2405,7 +2405,7 @@
       "Email": "",
       "Company Name": "",
       "Role": "Service Operations Coordinator (SOC)",
-      "NotebookLM": "",
+      "NotebookLM": "https://notebooklm.google.com/notebook/58afbb31-bb7c-4828-b35c-79bb9119696e?authuser=0",
       "Intake Form": "https://docs.google.com/document/d/1QwW-VorWvNJrOVtvQ0mctJ7Bi7IvYN8wzUgmmATGNuU/edit?usp=sharing",
       "GitHub": "",
       "Front Thread": "",
