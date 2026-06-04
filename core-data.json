@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-04T16:02:11.675Z",
+  "updated": "2026-06-04T16:02:13.344Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2392,6 +2392,32 @@
       "%WG": "18%",
       "Deal Value ($)": "4,320",
       "Notes": "1st batch will be dropped today for GTC candidates (Athina, Anthony, & Kevin) - June 4th"
+    },
+    {
+      "Assigned Date": "",
+      "Last Update": "",
+      "Priorities": "",
+      "Hiring Request": "",
+      "Source": "",
+      "Advisor": "",
+      "Status": "",
+      "Name": "",
+      "Email": "",
+      "Company Name": "",
+      "Role": "",
+      "NotebookLM": "",
+      "Intake Form": "https://docs.google.com/document/d/1QwW-VorWvNJrOVtvQ0mctJ7Bi7IvYN8wzUgmmATGNuU/edit?usp=sharing",
+      "GitHub": "",
+      "Front Thread": "",
+      "AT Link": "",
+      "Alignment Date/ KickOff Meeting": "",
+      "Date Placed": "",
+      "Invoice Paid": "",
+      "Days for Placement": "",
+      "Budget ($)": "",
+      "%WG": "",
+      "Deal Value ($)": "",
+      "Notes": ""
     }
   ]
 }
