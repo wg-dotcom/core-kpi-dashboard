@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-08T16:29:38.878Z",
+  "updated": "2026-06-08T16:29:54.870Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2296,7 +2296,7 @@
       "Hiring Request": "HR94948",
       "Source": "Core",
       "Advisor": "Amimo",
-      "Status": "1. KickOff Meeting",
+      "Status": "2. Candidates Presented",
       "Name": "Dhru Purohit",
       "Email": "dhru@hey.com",
       "Company Name": "DKP Consulting",
@@ -2322,7 +2322,7 @@
       "Hiring Request": "HR55353",
       "Source": "Core",
       "Advisor": "Amimo",
-      "Status": "2. Candidates Presented",
+      "Status": "3. 1st Round of Interviews",
       "Name": "Liz Holubec-Delgadillo",
       "Email": "liz@emersonpropertymanagement.com",
       "Company Name": "Emerson Property Management",
