@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-08T19:20:24.132Z",
+  "updated": "2026-06-08T19:20:31.022Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2527,8 +2527,8 @@
       "Assigned Date": "",
       "Last Update": "",
       "Priorities": "",
-      "Hiring Request": "",
-      "Source": "",
+      "Hiring Request": "HR72839",
+      "Source": "Core",
       "Advisor": "",
       "Status": "",
       "Name": "Allen Meringolo",
