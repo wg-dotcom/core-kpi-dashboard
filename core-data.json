@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-08T16:45:00.350Z",
+  "updated": "2026-06-08T16:45:08.678Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -1875,12 +1875,12 @@
     },
     {
       "Assigned Date": "May 15, 2026",
-      "Last Update": "June 4, 2026",
-      "Priorities": "4",
+      "Last Update": "June 8, 2026",
+      "Priorities": "0",
       "Hiring Request": "HR95590",
       "Source": "Core",
       "Advisor": "Cami",
-      "Status": "2. Candidates Presented",
+      "Status": "3. 1st Round of Interviews",
       "Name": "Jesse Prato",
       "Email": "jesse@pothos.capital",
       "Company Name": "Veros CFO",
