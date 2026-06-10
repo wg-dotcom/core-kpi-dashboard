@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-10T20:46:39.224Z",
+  "updated": "2026-06-10T20:46:43.197Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2500,7 +2500,7 @@
     {
       "Assigned Date": "June 4, 2026",
       "Last Update": "June 11, 2026",
-      "Priorities": "",
+      "Priorities": "-1",
       "Hiring Request": "HR97923",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -2526,7 +2526,7 @@
     {
       "Assigned Date": "June 4,2026",
       "Last Update": "",
-      "Priorities": "",
+      "Priorities": "6/10/2026",
       "Hiring Request": "HR72839",
       "Source": "Core",
       "Advisor": "Cami",
@@ -2552,7 +2552,7 @@
     {
       "Assigned Date": "June 5,2026",
       "Last Update": "",
-      "Priorities": "",
+      "Priorities": "6/10/2026",
       "Hiring Request": "HR75493",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -2578,7 +2578,7 @@
     {
       "Assigned Date": "",
       "Last Update": "",
-      "Priorities": "",
+      "Priorities": "6/10/2026",
       "Hiring Request": "HR69222",
       "Source": "",
       "Advisor": "Amimo",
