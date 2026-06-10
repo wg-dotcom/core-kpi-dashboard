@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-10T20:58:03.067Z",
+  "updated": "2026-06-10T20:58:09.193Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2623,7 +2623,7 @@
       "Invoice Paid": "",
       "Days for Placement": "",
       "Budget ($)": "2,000",
-      "%WG": "",
+      "%WG": "18%",
       "Deal Value ($)": "",
       "Notes": ""
     },
@@ -2649,7 +2649,7 @@
       "Invoice Paid": "",
       "Days for Placement": "",
       "Budget ($)": "2,000",
-      "%WG": "",
+      "%WG": "18%",
       "Deal Value ($)": "",
       "Notes": ""
     },
@@ -2675,7 +2675,7 @@
       "Invoice Paid": "",
       "Days for Placement": "",
       "Budget ($)": "2,000",
-      "%WG": "",
+      "%WG": "18%",
       "Deal Value ($)": "",
       "Notes": ""
     },
@@ -2701,7 +2701,7 @@
       "Invoice Paid": "",
       "Days for Placement": "",
       "Budget ($)": "1,400",
-      "%WG": "",
+      "%WG": "18%",
       "Deal Value ($)": "",
       "Notes": ""
     }
