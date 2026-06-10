@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-10T20:55:06.557Z",
+  "updated": "2026-06-10T20:55:13.109Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2583,9 +2583,9 @@
       "Source": "",
       "Advisor": "Amimo",
       "Status": "2. Candidates Presented",
-      "Name": "JossLyn Castor ",
-      "Email": "josslynn.castor@rubicon.com",
-      "Company Name": "Rubicon",
+      "Name": "",
+      "Email": "",
+      "Company Name": "",
       "Role": "Order Management Specialist",
       "NotebookLM": "",
       "Intake Form": "",
@@ -2687,9 +2687,9 @@
       "Source": "",
       "Advisor": "Vicky",
       "Status": "",
-      "Name": "",
-      "Email": "",
-      "Company Name": "",
+      "Name": "JossLyn Castor ",
+      "Email": "josslynn.castor@rubicon.com",
+      "Company Name": "Rubicon",
       "Role": "",
       "NotebookLM": "",
       "Intake Form": "",
