@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-12T20:53:40.161Z",
+  "updated": "2026-06-12T20:54:24.573Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2728,8 +2728,8 @@
       "Days for Placement": "",
       "Budget ($)": "2,000",
       "%WG": "18%",
-      "Deal Value ($)": "=AI(\"Fill an appropriate value for this cell based on the table context\")",
-      "Notes": ""
+      "Deal Value ($)": "4,320",
+      "Notes": "2 Candidates presented Vuyisanani and Sengezo"
     }
   ]
 }
