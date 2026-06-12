@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-12T20:53:38.932Z",
+  "updated": "2026-06-12T20:53:40.161Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2728,7 +2728,7 @@
       "Days for Placement": "",
       "Budget ($)": "2,000",
       "%WG": "18%",
-      "Deal Value ($)": "",
+      "Deal Value ($)": "=AI(\"Fill an appropriate value for this cell based on the table context\")",
       "Notes": ""
     }
   ]
