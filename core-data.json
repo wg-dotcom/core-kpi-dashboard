@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-12T23:59:45.013Z",
+  "updated": "2026-06-12T23:59:47.642Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2713,8 +2713,8 @@
       "Source": "",
       "Advisor": "",
       "Status": "",
-      "Name": "",
-      "Email": "Christopher Meyers",
+      "Name": "Christopher Meyers",
+      "Email": "",
       "Company Name": "Coolvu Of Mckinney",
       "Role": "Inbound Sales & Customer Service Coordinator",
       "NotebookLM": "",
