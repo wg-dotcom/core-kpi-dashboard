@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13T00:01:31.768Z",
+  "updated": "2026-06-13T00:01:46.763Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2726,7 +2726,7 @@
       "Date Placed": "",
       "Invoice Paid": "",
       "Days for Placement": "",
-      "Budget ($)": "",
+      "Budget ($)": "2,000",
       "%WG": "18%",
       "Deal Value ($)": "",
       "Notes": "Diana interview scheduled"
