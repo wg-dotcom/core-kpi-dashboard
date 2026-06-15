@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-15T16:49:28.090Z",
+  "updated": "2026-06-15T16:49:29.818Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2552,7 +2552,7 @@
     {
       "Assigned Date": "June 1,2026",
       "Last Update": "June 11, 2026",
-      "Priorities": "",
+      "Priorities": "4",
       "Hiring Request": "HR72839",
       "Source": "Core",
       "Advisor": "Cami",
