@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-15T16:44:05.378Z",
+  "updated": "2026-06-15T16:44:09.250Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2314,6 +2314,32 @@
       "%WG": "18%",
       "Deal Value ($)": "6,480",
       "Notes": "(2nd batch)\nRosy - Interview June 15\nLady - Interview June 16 "
+    },
+    {
+      "Assigned Date": "June 2, 2026",
+      "Last Update": "June 11, 2026",
+      "Priorities": "4",
+      "Hiring Request": "HR55353",
+      "Source": "Core",
+      "Advisor": "Amimo",
+      "Status": "7. Invoice",
+      "Name": "Liz Holubec-Delgadillo",
+      "Email": "liz@emersonpropertymanagement.com",
+      "Company Name": "Emerson Property Management",
+      "Role": "Leasing Specialist",
+      "NotebookLM": "https://notebooklm.google.com/notebook/0ea96210-f8c1-464c-b975-c25569a02ad1?authuser=0",
+      "Intake Form": "https://app.frontapp.com/open/cnv_qmeomru?key=cbG-E52lvdQ0cUNBU1hTSZa64wk5_F92",
+      "GitHub": "",
+      "Front Thread": "https://app.frontapp.com/open/cnv_qmeomru?key=cbG-E52lvdQ0cUNBU1hTSZa64wk5_F92",
+      "AT Link": "https://ta.saganpassport.com/dashboard/my-requests?id=recXnckDYP96wE3CV",
+      "Alignment Date/ KickOff Meeting": "June 3, 2026",
+      "Date Placed": "",
+      "Invoice Paid": "",
+      "Days for Placement": "",
+      "Budget ($)": "1,900",
+      "%WG": "18%",
+      "Deal Value ($)": "4,104",
+      "Notes": "Jessica Hired, Invoice"
     },
     {
       "Assigned Date": "June 2, 2026",
