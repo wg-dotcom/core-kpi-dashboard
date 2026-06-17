@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-17T23:00:56.430Z",
+  "updated": "2026-06-17T23:07:39.718Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2808,6 +2808,32 @@
       "%WG": "18%",
       "Deal Value ($)": "4,320",
       "Notes": "2 Candidates presented Vuyisanani and Sengezo June 12 - pending feedback "
+    },
+    {
+      "Assigned Date": "",
+      "Last Update": "",
+      "Priorities": "",
+      "Hiring Request": "",
+      "Source": "",
+      "Advisor": "Cami",
+      "Status": "",
+      "Name": "",
+      "Email": "",
+      "Company Name": "",
+      "Role": "",
+      "NotebookLM": "",
+      "Intake Form": "",
+      "GitHub": "",
+      "Front Thread": "",
+      "AT Link": "",
+      "Alignment Date/ KickOff Meeting": "",
+      "Date Placed": "",
+      "Invoice Paid": "",
+      "Days for Placement": "",
+      "Budget ($)": "",
+      "%WG": "",
+      "Deal Value ($)": "",
+      "Notes": ""
     }
   ]
 }
