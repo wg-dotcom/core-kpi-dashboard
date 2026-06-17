@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-17T23:10:53.474Z",
+  "updated": "2026-06-17T23:11:12.250Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2830,9 +2830,9 @@
       "Date Placed": "",
       "Invoice Paid": "",
       "Days for Placement": "",
-      "Budget ($)": "",
-      "%WG": "",
-      "Deal Value ($)": "",
+      "Budget ($)": "2,000",
+      "%WG": "18%",
+      "Deal Value ($)": "=AI(\"Fill an appropriate value for this cell based on the table context\")",
       "Notes": ""
     },
     {
@@ -2856,9 +2856,9 @@
       "Date Placed": "",
       "Invoice Paid": "",
       "Days for Placement": "",
-      "Budget ($)": "",
-      "%WG": "",
-      "Deal Value ($)": "",
+      "Budget ($)": "2,000",
+      "%WG": "18%",
+      "Deal Value ($)": "=AI(\"Fill an appropriate value for this cell based on the table context\")",
       "Notes": ""
     }
   ]
