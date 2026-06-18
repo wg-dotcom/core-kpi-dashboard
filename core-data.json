@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T18:29:12.930Z",
+  "updated": "2026-06-18T18:29:14.409Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2447,8 +2447,8 @@
     },
     {
       "Assigned Date": "June 4, 2026",
-      "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Last Update": "June 18, 2026",
+      "Priorities": "0",
       "Hiring Request": "HR75814",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -2896,7 +2896,7 @@
       "Advisor": "Amimo",
       "Status": "2. Candidates Presented",
       "Name": "Aashish Chenna",
-      "Email": "",
+      "Email": "aashishc@cardinalheating.com",
       "Company Name": "Cardinal Heating and Air",
       "Role": "HR & Admin Coordinator  - ",
       "NotebookLM": "https://notebooklm.google.com/notebook/009a3cbb-8275-45c2-a941-a7487fbdfde0?authuser=0",
