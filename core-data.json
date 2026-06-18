@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T18:36:39.281Z",
+  "updated": "2026-06-18T18:36:44.436Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2894,7 +2894,7 @@
       "Hiring Request": "HR54711",
       "Source": "Core",
       "Advisor": "Amimo",
-      "Status": "2. Candidates Presented",
+      "Status": "1. KickOff Meeting",
       "Name": "Aashish Chenna",
       "Email": "aashishc@cardinalheating.com",
       "Company Name": "Cardinal Heating and Air",
@@ -3058,7 +3058,7 @@
       "NotebookLM": "https://notebooklm.google.com/notebook/73232bd7-af7f-4d05-9ab3-caee2c672e94?authuser=0",
       "Intake Form": "",
       "GitHub": "",
-      "Front Thread": "",
+      "Front Thread": "Front (2)",
       "AT Link": "",
       "Alignment Date/ KickOff Meeting": "",
       "Date Placed": "",
