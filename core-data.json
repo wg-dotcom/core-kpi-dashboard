@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T18:19:44.951Z",
+  "updated": "2026-06-18T18:20:08.049Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -1923,7 +1923,7 @@
       "Budget ($)": "2,500",
       "%WG": "18%",
       "Deal Value ($)": "5,400",
-      "Notes": "1st  drop May 27 (5)\nUchuenna - interview completed, assessment                       15 new batch sent : Edsander, Fernando and Elizabeth - coordinating meetings"
+      "Notes": "1st  drop May 27 (5)\nUchuenna - interview completed, assessment                       June 15 new batch sent : Edsander, Fernando and Elizabeth - coordinating meetings"
     },
     {
       "Assigned Date": "May 15, 2026",
@@ -2936,7 +2936,7 @@
       "Days for Placement": "",
       "Budget ($)": "",
       "%WG": "",
-      "Deal Value ($)": "=AI(\"Fill an appropriate value for this cell based on the table context\")",
+      "Deal Value ($)": "Something went wrong. Try again.",
       "Notes": ""
     },
     {
