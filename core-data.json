@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T18:18:49.231Z",
+  "updated": "2026-06-18T18:19:44.951Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -1901,8 +1901,8 @@
     },
     {
       "Assigned Date": "May 15, 2026",
-      "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Last Update": "June 18, 2026",
+      "Priorities": "0",
       "Hiring Request": "HR95590",
       "Source": "Core",
       "Advisor": "Cami",
@@ -2884,7 +2884,7 @@
       "Days for Placement": "",
       "Budget ($)": "3,000",
       "%WG": "18%",
-      "Deal Value ($)": "=AI(\"Fill an appropriate value for this cell based on the table context\")",
+      "Deal Value ($)": "5,400",
       "Notes": "Sourcing for candidates"
     },
     {
@@ -2910,7 +2910,7 @@
       "Days for Placement": "",
       "Budget ($)": "",
       "%WG": "",
-      "Deal Value ($)": "=AI(\"Fill an appropriate value for this cell based on the table context\")",
+      "Deal Value ($)": "3,888",
       "Notes": ""
     },
     {
@@ -2962,7 +2962,7 @@
       "Days for Placement": "",
       "Budget ($)": "",
       "%WG": "",
-      "Deal Value ($)": "=AI(\"Fill an appropriate value for this cell based on the table context\")",
+      "Deal Value ($)": "0",
       "Notes": ""
     },
     {
