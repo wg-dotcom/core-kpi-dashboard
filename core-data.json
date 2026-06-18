@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T18:20:20.831Z",
+  "updated": "2026-06-18T18:22:05.139Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -1949,7 +1949,7 @@
       "Budget ($)": "2,000",
       "%WG": "18%",
       "Deal Value ($)": "4,320",
-      "Notes": "1st drop May 27 (2) - \nEdgar - Interview June 4 \nFausto, Cassandra, pending rejected\nDayana - interview this week "
+      "Notes": "1st drop May 27 (2) - \nEdgar - Interview June 4 \nFausto, Cassandra, rejected /push back Kevin pending feedback.\nDayana - interview this week - cddt unresponsive"
     },
     {
       "Assigned Date": "May 19, 2026",
@@ -2936,7 +2936,7 @@
       "Days for Placement": "",
       "Budget ($)": "",
       "%WG": "",
-      "Deal Value ($)": "Something went wrong. Try again.",
+      "Deal Value ($)": "0",
       "Notes": ""
     },
     {
