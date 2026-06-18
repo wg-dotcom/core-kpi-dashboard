@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T16:01:20.387Z",
+  "updated": "2026-06-18T16:03:24.784Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2860,6 +2860,32 @@
       "%WG": "18%",
       "Deal Value ($)": "4320",
       "Notes": "Luciano and Rodrigo presented"
+    },
+    {
+      "Assigned Date": "",
+      "Last Update": "",
+      "Priorities": "",
+      "Hiring Request": "",
+      "Source": "",
+      "Advisor": "Amimo",
+      "Status": "",
+      "Name": "",
+      "Email": "",
+      "Company Name": "",
+      "Role": "",
+      "NotebookLM": "",
+      "Intake Form": "",
+      "GitHub": "",
+      "Front Thread": "",
+      "AT Link": "",
+      "Alignment Date/ KickOff Meeting": "",
+      "Date Placed": "",
+      "Invoice Paid": "",
+      "Days for Placement": "",
+      "Budget ($)": "",
+      "%WG": "",
+      "Deal Value ($)": "",
+      "Notes": ""
     }
   ]
 }
