@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T18:35:07.721Z",
+  "updated": "2026-06-18T18:35:10.716Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2833,7 +2833,7 @@
       "Budget ($)": "2,000",
       "%WG": "18%",
       "Deal Value ($)": "4320",
-      "Notes": ""
+      "Notes": "Sourcing for candidates"
     },
     {
       "Assigned Date": "June 16,2026",
@@ -3048,7 +3048,7 @@
       "Last Update": "",
       "Priorities": "",
       "Hiring Request": "HR67253",
-      "Source": "",
+      "Source": "Core",
       "Advisor": "Nicky",
       "Status": "",
       "Name": "",
