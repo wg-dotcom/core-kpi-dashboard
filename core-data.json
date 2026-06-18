@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T15:00:51.105Z",
+  "updated": "2026-06-18T16:00:49.509Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2842,7 +2842,7 @@
       "Hiring Request": "HR70549",
       "Source": "Core",
       "Advisor": "Cami",
-      "Status": "1. KickOff Meeting",
+      "Status": "2. Candidates Presented",
       "Name": "Tory Sheffer",
       "Email": "tory@airhandlers.com",
       "Company Name": "Air Handlers Service Group",
@@ -2859,7 +2859,7 @@
       "Budget ($)": "2,000",
       "%WG": "18%",
       "Deal Value ($)": "4320",
-      "Notes": ""
+      "Notes": "Luciano and Rodrigo presented"
     }
   ]
 }
