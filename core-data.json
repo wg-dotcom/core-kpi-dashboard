@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T18:34:28.355Z",
+  "updated": "2026-06-18T18:34:32.871Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2812,7 +2812,7 @@
     {
       "Assigned Date": "June 16,2026",
       "Last Update": "June 17,2026",
-      "Priorities": "",
+      "Priorities": "1",
       "Hiring Request": "HR78468",
       "Source": "Core",
       "Advisor": "Cami",
@@ -2838,7 +2838,7 @@
     {
       "Assigned Date": "June 16,2026",
       "Last Update": "June 18,2026",
-      "Priorities": "",
+      "Priorities": "0",
       "Hiring Request": "HR70549",
       "Source": "Core",
       "Advisor": "Cami",
@@ -2864,7 +2864,7 @@
     {
       "Assigned Date": "June 17,2026",
       "Last Update": "June 19,2026",
-      "Priorities": "",
+      "Priorities": "-1",
       "Hiring Request": "HR80116",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -2890,7 +2890,7 @@
     {
       "Assigned Date": "June 18,2026",
       "Last Update": "June 20,2026",
-      "Priorities": "",
+      "Priorities": "-2",
       "Hiring Request": "HR54711",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -2916,7 +2916,7 @@
     {
       "Assigned Date": "June 16,2026",
       "Last Update": "June 21,2026",
-      "Priorities": "",
+      "Priorities": "-3",
       "Hiring Request": "HR94306",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -2942,7 +2942,7 @@
     {
       "Assigned Date": "June 20,2026",
       "Last Update": "June 22,2026",
-      "Priorities": "",
+      "Priorities": "-4",
       "Hiring Request": "HR72197",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -2968,7 +2968,7 @@
     {
       "Assigned Date": "June 17,2026",
       "Last Update": "June 23,2026",
-      "Priorities": "",
+      "Priorities": "-5",
       "Hiring Request": "HR53063",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -2994,7 +2994,7 @@
     {
       "Assigned Date": "June 17,2026",
       "Last Update": "June 24,2026",
-      "Priorities": "",
+      "Priorities": "-6",
       "Hiring Request": "HR99250",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -3020,7 +3020,7 @@
     {
       "Assigned Date": "June 17,2026",
       "Last Update": "June 25,2026",
-      "Priorities": "",
+      "Priorities": "-7",
       "Hiring Request": "HR91331",
       "Source": "Core",
       "Advisor": "Genesis",
