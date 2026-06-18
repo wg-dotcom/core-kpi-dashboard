@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T16:43:52.629Z",
+  "updated": "2026-06-18T16:44:17.778Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2365,7 +2365,7 @@
       "Budget ($)": "1,900",
       "%WG": "18%",
       "Deal Value ($)": "4,104",
-      "Notes": "Jessica Hired, Invoice"
+      "Notes": "Jessica Hired and invoice paid"
     },
     {
       "Assigned Date": "June 2, 2026",
@@ -2374,7 +2374,7 @@
       "Hiring Request": "HR55353",
       "Source": "Core",
       "Advisor": "Amimo",
-      "Status": "6. Job Offer Letter / Signature",
+      "Status": "8. Placed",
       "Name": "Liz Holubec-Delgadillo",
       "Email": "liz@emersonpropertymanagement.com",
       "Company Name": "Emerson Property Management",
