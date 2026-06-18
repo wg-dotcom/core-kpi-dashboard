@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T16:07:36.848Z",
+  "updated": "2026-06-18T16:07:49.959Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2917,14 +2917,14 @@
       "Assigned Date": "",
       "Last Update": "",
       "Priorities": "",
-      "Hiring Request": "",
-      "Source": "",
+      "Hiring Request": "HR94306",
+      "Source": "Core",
       "Advisor": "Amimo",
       "Status": "",
       "Name": "",
       "Email": "",
       "Company Name": " Badger Gutters",
-      "Role": "Home Services Operations Coordinator - HR94306",
+      "Role": "Home Services Operations Coordinator",
       "NotebookLM": "",
       "Intake Form": "",
       "GitHub": "",
