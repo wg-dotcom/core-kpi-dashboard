@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T18:36:46.563Z",
+  "updated": "2026-06-18T18:36:49.538Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2889,8 +2889,8 @@
     },
     {
       "Assigned Date": "June 18,2026",
-      "Last Update": "June 20,2026",
-      "Priorities": "-2",
+      "Last Update": "June 18,2026",
+      "Priorities": "0",
       "Hiring Request": "HR54711",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -3058,7 +3058,7 @@
       "NotebookLM": "https://notebooklm.google.com/notebook/73232bd7-af7f-4d05-9ab3-caee2c672e94?authuser=0",
       "Intake Form": "",
       "GitHub": "",
-      "Front Thread": "Front (2)",
+      "Front Thread": "",
       "AT Link": "",
       "Alignment Date/ KickOff Meeting": "",
       "Date Placed": "",
