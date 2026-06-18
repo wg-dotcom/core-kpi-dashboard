@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T17:51:01.017Z",
+  "updated": "2026-06-18T17:51:04.148Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2970,8 +2970,8 @@
       "Last Update": "",
       "Priorities": "",
       "Hiring Request": "HR53063",
-      "Source": "",
-      "Advisor": "",
+      "Source": "Core",
+      "Advisor": "Genesis",
       "Status": "",
       "Name": "",
       "Email": "",
