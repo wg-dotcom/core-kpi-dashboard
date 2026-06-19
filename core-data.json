@@ -1,10 +1,10 @@
 {
-  "updated": "2026-06-19T02:00:51.379Z",
+  "updated": "2026-06-19T03:00:58.458Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
       "Last Update": "April 6, 2026",
-      "Priorities": "73",
+      "Priorities": "74",
       "Hiring Request": "HR31337",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -30,7 +30,7 @@
     {
       "Assigned Date": "February 10, 2026",
       "Last Update": "April 6, 2026",
-      "Priorities": "73",
+      "Priorities": "74",
       "Hiring Request": "HR40713",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -56,7 +56,7 @@
     {
       "Assigned Date": "February 13, 2026",
       "Last Update": "March 19, 2026",
-      "Priorities": "91",
+      "Priorities": "92",
       "Hiring Request": "HR69093",
       "Source": "Core",
       "Advisor": "Sofia",
@@ -82,7 +82,7 @@
     {
       "Assigned Date": "February 13, 2026",
       "Last Update": "March 19, 2026",
-      "Priorities": "91",
+      "Priorities": "92",
       "Hiring Request": "HR43688",
       "Source": "Core",
       "Advisor": "Andrea",
@@ -108,7 +108,7 @@
     {
       "Assigned Date": "February 13, 2026",
       "Last Update": "March 19, 2026",
-      "Priorities": "91",
+      "Priorities": "92",
       "Hiring Request": "HR59526",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -134,7 +134,7 @@
     {
       "Assigned Date": "February 16, 2026",
       "Last Update": "April 6, 2026",
-      "Priorities": "73",
+      "Priorities": "74",
       "Hiring Request": "HR42040",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -160,7 +160,7 @@
     {
       "Assigned Date": "February 19, 2026",
       "Last Update": "March 26, 2026",
-      "Priorities": "84",
+      "Priorities": "85",
       "Hiring Request": "HR62501",
       "Source": "Core",
       "Advisor": "Cami",
@@ -186,7 +186,7 @@
     {
       "Assigned Date": "March 10, 2026",
       "Last Update": "April 3, 2026",
-      "Priorities": "76",
+      "Priorities": "77",
       "Hiring Request": "HR46021",
       "Source": "Core",
       "Advisor": "Andrea",
@@ -212,7 +212,7 @@
     {
       "Assigned Date": "March 17, 2026",
       "Last Update": "April 13, 2026",
-      "Priorities": "66",
+      "Priorities": "67",
       "Hiring Request": "HR86943",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -238,7 +238,7 @@
     {
       "Assigned Date": "March 18, 2026",
       "Last Update": "April 16, 2026",
-      "Priorities": "63",
+      "Priorities": "64",
       "Hiring Request": "HR85295",
       "Source": "Core",
       "Advisor": "Cami",
@@ -264,7 +264,7 @@
     {
       "Assigned Date": "March 17, 2026",
       "Last Update": "April 16, 2026",
-      "Priorities": "63",
+      "Priorities": "64",
       "Hiring Request": "HR53619",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -290,7 +290,7 @@
     {
       "Assigned Date": "March 19, 2026",
       "Last Update": "May 18, 2026",
-      "Priorities": "31",
+      "Priorities": "32",
       "Hiring Request": "HR91566",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -316,7 +316,7 @@
     {
       "Assigned Date": "March 19, 2026",
       "Last Update": "May 22, 2026",
-      "Priorities": "27",
+      "Priorities": "28",
       "Hiring Request": "HR99485",
       "Source": "Core",
       "Advisor": "Nadeia",
@@ -342,7 +342,7 @@
     {
       "Assigned Date": "March 19, 2026",
       "Last Update": "June 18, 2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR50323",
       "Source": "Core",
       "Advisor": "Cami",
@@ -368,7 +368,7 @@
     {
       "Assigned Date": "March 18, 2026",
       "Last Update": "April 9, 2026",
-      "Priorities": "70",
+      "Priorities": "71",
       "Hiring Request": "HR44052",
       "Source": "Core",
       "Advisor": "Andrea",
@@ -394,7 +394,7 @@
     {
       "Assigned Date": "March 24, 2026",
       "Last Update": "April 30, 2026",
-      "Priorities": "49",
+      "Priorities": "50",
       "Hiring Request": "HR88270",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -420,7 +420,7 @@
     {
       "Assigned Date": "March 25, 2026",
       "Last Update": "April 9, 2026",
-      "Priorities": "70",
+      "Priorities": "71",
       "Hiring Request": "HR53298",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -446,7 +446,7 @@
     {
       "Assigned Date": "March 25, 2026",
       "Last Update": "April 16, 2026",
-      "Priorities": "63",
+      "Priorities": "64",
       "Hiring Request": "HR61217",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -472,7 +472,7 @@
     {
       "Assigned Date": "April 2, 2026",
       "Last Update": "June 4, 2026",
-      "Priorities": "14",
+      "Priorities": "15",
       "Hiring Request": "HR84653",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -498,7 +498,7 @@
     {
       "Assigned Date": "April 3, 2026",
       "Last Update": "April 27, 2026",
-      "Priorities": "52",
+      "Priorities": "53",
       "Hiring Request": "HR51329",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -524,7 +524,7 @@
     {
       "Assigned Date": "April 3, 2026",
       "Last Update": "May 22, 2026",
-      "Priorities": "27",
+      "Priorities": "28",
       "Hiring Request": "HR59248",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -550,7 +550,7 @@
     {
       "Assigned Date": "April 6, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR75086",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -576,7 +576,7 @@
     {
       "Assigned Date": "April 8, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR57600",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -602,7 +602,7 @@
     {
       "Assigned Date": "April 8, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR65519",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -628,7 +628,7 @@
     {
       "Assigned Date": "April 8, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR73438",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -654,7 +654,7 @@
     {
       "Assigned Date": "April 8, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR81357",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -680,7 +680,7 @@
     {
       "Assigned Date": "April 9, 2026",
       "Last Update": "May 11, 2026",
-      "Priorities": "38",
+      "Priorities": "39",
       "Hiring Request": "HR63871",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -706,7 +706,7 @@
     {
       "Assigned Date": "April 9, 2026",
       "Last Update": "May 11, 2026",
-      "Priorities": "38",
+      "Priorities": "39",
       "Hiring Request": "HR71790",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -732,7 +732,7 @@
     {
       "Assigned Date": "April 9, 2026",
       "Last Update": "May 28, 2026",
-      "Priorities": "21",
+      "Priorities": "22",
       "Hiring Request": "HR79709",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -758,7 +758,7 @@
     {
       "Assigned Date": "April 9, 2026",
       "Last Update": "May 11, 2026",
-      "Priorities": "38",
+      "Priorities": "39",
       "Hiring Request": "HR87628",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -784,7 +784,7 @@
     {
       "Assigned Date": "April 14, 2026",
       "Last Update": "May 28, 2026",
-      "Priorities": "21",
+      "Priorities": "22",
       "Hiring Request": "HR82684",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -810,7 +810,7 @@
     {
       "Assigned Date": "April 14, 2026",
       "Last Update": "May 26, 2026",
-      "Priorities": "23",
+      "Priorities": "24",
       "Hiring Request": "HR90603",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -836,7 +836,7 @@
     {
       "Assigned Date": "April 20, 2026",
       "Last Update": "May 11, 2026",
-      "Priorities": "38",
+      "Priorities": "39",
       "Hiring Request": "HR66525",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -862,7 +862,7 @@
     {
       "Assigned Date": "April 20, 2026",
       "Last Update": "May 11, 2026",
-      "Priorities": "38",
+      "Priorities": "39",
       "Hiring Request": "HR74444",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -888,7 +888,7 @@
     {
       "Assigned Date": "April 20, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR90282",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -914,7 +914,7 @@
     {
       "Assigned Date": "April 20, 2026",
       "Last Update": "May 26, 2026",
-      "Priorities": "23",
+      "Priorities": "24",
       "Hiring Request": "HR82363",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -940,7 +940,7 @@
     {
       "Assigned Date": "April 20, 2026",
       "Last Update": "May 26, 2026",
-      "Priorities": "23",
+      "Priorities": "24",
       "Hiring Request": "HR98201",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -966,7 +966,7 @@
     {
       "Assigned Date": "April 9, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "35",
+      "Priorities": "36",
       "Hiring Request": "HR78061",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -992,7 +992,7 @@
     {
       "Assigned Date": "April 9, 2026",
       "Last Update": "May 4, 2026",
-      "Priorities": "45",
+      "Priorities": "46",
       "Hiring Request": "HR44737",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -1018,7 +1018,7 @@
     {
       "Assigned Date": "April 10, 2026",
       "Last Update": "April 27, 2026",
-      "Priorities": "52",
+      "Priorities": "53",
       "Hiring Request": "HR76413",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -1044,7 +1044,7 @@
     {
       "Assigned Date": "April 10, 2026",
       "Last Update": "April 27, 2026",
-      "Priorities": "52",
+      "Priorities": "53",
       "Hiring Request": "HR84332",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -1070,7 +1070,7 @@
     {
       "Assigned Date": "April 13, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR43089",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -1096,7 +1096,7 @@
     {
       "Assigned Date": "April 13, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR51008",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -1122,7 +1122,7 @@
     {
       "Assigned Date": "April 14, 2026",
       "Last Update": "May 11, 2026",
-      "Priorities": "38",
+      "Priorities": "39",
       "Hiring Request": "HR98522",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -1148,7 +1148,7 @@
     {
       "Assigned Date": "April 16, 2026",
       "Last Update": "May 7, 2026",
-      "Priorities": "42",
+      "Priorities": "43",
       "Hiring Request": "HR39793",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -1174,7 +1174,7 @@
     {
       "Assigned Date": "April 16, 2026",
       "Last Update": "May 22, 2026",
-      "Priorities": "27",
+      "Priorities": "28",
       "Hiring Request": "HR63550",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -1200,7 +1200,7 @@
     {
       "Assigned Date": "April 21, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "35",
+      "Priorities": "36",
       "Hiring Request": "HR76092",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -1226,7 +1226,7 @@
     {
       "Assigned Date": "April 22, 2026",
       "Last Update": "May 11, 2026",
-      "Priorities": "38",
+      "Priorities": "39",
       "Hiring Request": "HR46064",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -1252,7 +1252,7 @@
     {
       "Assigned Date": "April 9, 2026",
       "Last Update": "June 8, 2026",
-      "Priorities": "10",
+      "Priorities": "11",
       "Hiring Request": "HR97195",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -1278,7 +1278,7 @@
     {
       "Assigned Date": "April 14, 2026",
       "Last Update": "May 26, 2026",
-      "Priorities": "23",
+      "Priorities": "24",
       "Hiring Request": "HR86986",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -1304,7 +1304,7 @@
     {
       "Assigned Date": "April 24, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR55310",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -1330,7 +1330,7 @@
     {
       "Assigned Date": "April 24, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR47391",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -1356,7 +1356,7 @@
     {
       "Assigned Date": "April 27, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR93257",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -1382,7 +1382,7 @@
     {
       "Assigned Date": "April 29, 2026",
       "Last Update": "May 7, 2026",
-      "Priorities": "42",
+      "Priorities": "43",
       "Hiring Request": "HR94905",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -1408,7 +1408,7 @@
     {
       "Assigned Date": "April 29, 2026",
       "Last Update": "June 11, 2026",
-      "Priorities": "7",
+      "Priorities": "8",
       "Hiring Request": "HR44095",
       "Source": "Core",
       "Advisor": "Hanna",
@@ -1434,7 +1434,7 @@
     {
       "Assigned Date": "April 30, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR64556",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -1460,7 +1460,7 @@
     {
       "Assigned Date": "April 29, 2026",
       "Last Update": "June 8, 2026",
-      "Priorities": "10",
+      "Priorities": "11",
       "Hiring Request": "HR58285",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -1486,7 +1486,7 @@
     {
       "Assigned Date": "April 29, 2026",
       "Last Update": "June 8, 2026",
-      "Priorities": "10",
+      "Priorities": "11",
       "Hiring Request": "HR50366",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -1512,7 +1512,7 @@
     {
       "Assigned Date": "April 24, 2026",
       "Last Update": "May 14, 2026",
-      "Priorities": "35",
+      "Priorities": "36",
       "Hiring Request": "HR64192",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -1538,7 +1538,7 @@
     {
       "Assigned Date": "May 1, 2026",
       "Last Update": "June 11, 2026",
-      "Priorities": "7",
+      "Priorities": "8",
       "Hiring Request": "HR61260",
       "Source": "Core",
       "Advisor": "Cami",
@@ -1564,7 +1564,7 @@
     {
       "Assigned Date": "May 7, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR38830",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -1590,7 +1590,7 @@
     {
       "Assigned Date": "May 7, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR95911",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -1616,7 +1616,7 @@
     {
       "Assigned Date": "May 7, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR95911",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -1642,7 +1642,7 @@
     {
       "Assigned Date": "May 6, 2026",
       "Last Update": "June 4, 2026",
-      "Priorities": "14",
+      "Priorities": "15",
       "Hiring Request": "HR56316",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -1668,7 +1668,7 @@
     {
       "Assigned Date": "May 13, 2026",
       "Last Update": "June 4, 2026",
-      "Priorities": "14",
+      "Priorities": "15",
       "Hiring Request": "HR49724",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -1694,7 +1694,7 @@
     {
       "Assigned Date": "May 11, 2026",
       "Last Update": "June 11, 2026",
-      "Priorities": "7",
+      "Priorities": "8",
       "Hiring Request": "HR62587",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -1720,7 +1720,7 @@
     {
       "Assigned Date": "May 7, 2026",
       "Last Update": "June 18, 2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR80073",
       "Source": "Core",
       "Advisor": "Cami",
@@ -1746,7 +1746,7 @@
     {
       "Assigned Date": "May 07, 2026",
       "Last Update": "June 18, 2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR87992",
       "Source": "Core",
       "Advisor": "Cami",
@@ -1772,7 +1772,7 @@
     {
       "Assigned Date": "May 14, 2026",
       "Last Update": "June 18, 2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR86344",
       "Source": "Core",
       "Advisor": "Cami",
@@ -1798,7 +1798,7 @@
     {
       "Assigned Date": "May 26, 2026",
       "Last Update": "June 8, 2026",
-      "Priorities": "10",
+      "Priorities": "11",
       "Hiring Request": "HR36861",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -1824,7 +1824,7 @@
     {
       "Assigned Date": "May 26, 2026",
       "Last Update": "June 8, 2026",
-      "Priorities": "10",
+      "Priorities": "11",
       "Hiring Request": "HR36861",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -1850,7 +1850,7 @@
     {
       "Assigned Date": "May 14, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR71833",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -1876,7 +1876,7 @@
     {
       "Assigned Date": "May 15, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR71834",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -1902,7 +1902,7 @@
     {
       "Assigned Date": "May 15, 2026",
       "Last Update": "June 18, 2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR95590",
       "Source": "Core",
       "Advisor": "Cami",
@@ -1928,7 +1928,7 @@
     {
       "Assigned Date": "May 15, 2026",
       "Last Update": "June 18, 2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR62266",
       "Source": "Core",
       "Advisor": "Cami",
@@ -1954,7 +1954,7 @@
     {
       "Assigned Date": "May 19, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR62267",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -1980,7 +1980,7 @@
     {
       "Assigned Date": "May 22, 2026",
       "Last Update": "June 18, 2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR49403",
       "Source": "Core",
       "Advisor": "Cami",
@@ -2006,7 +2006,7 @@
     {
       "Assigned Date": "May 22, 2026",
       "Last Update": "June 18, 2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "",
       "Source": "Core",
       "Advisor": "Cami",
@@ -2032,7 +2032,7 @@
     {
       "Assigned Date": "May 26, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR95269",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -2058,7 +2058,7 @@
     {
       "Assigned Date": "May 26, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR96917",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -2084,7 +2084,7 @@
     {
       "Assigned Date": "May 26, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR88998",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -2110,7 +2110,7 @@
     {
       "Assigned Date": "May 26, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR81079",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -2136,7 +2136,7 @@
     {
       "Assigned Date": "May 26, 2026",
       "Last Update": "June 18, 2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR38188",
       "Source": "Core",
       "Advisor": "Cami",
@@ -2188,7 +2188,7 @@
     {
       "Assigned Date": "May 26, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR46107",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -2214,7 +2214,7 @@
     {
       "Assigned Date": "May 22, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR? ",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -2240,7 +2240,7 @@
     {
       "Assigned Date": "",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR99892",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -2266,7 +2266,7 @@
     {
       "Assigned Date": "May 28, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR60297",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -2292,7 +2292,7 @@
     {
       "Assigned Date": "June 3, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR96596",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -2318,7 +2318,7 @@
     {
       "Assigned Date": "June 2, 2026",
       "Last Update": "June 18, 2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR94948",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -2344,7 +2344,7 @@
     {
       "Assigned Date": "June 2, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR55353",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -2370,7 +2370,7 @@
     {
       "Assigned Date": "June 2, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR55353",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -2396,7 +2396,7 @@
     {
       "Assigned Date": "June 2, 2026",
       "Last Update": "June 18, 2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR39515",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -2422,7 +2422,7 @@
     {
       "Assigned Date": "June 2, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR49082",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -2448,7 +2448,7 @@
     {
       "Assigned Date": "June 4, 2026",
       "Last Update": "June 18, 2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR75814",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -2474,7 +2474,7 @@
     {
       "Assigned Date": "June 4, 2026",
       "Last Update": "June 18, 2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR67895",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -2500,7 +2500,7 @@
     {
       "Assigned Date": "June 4, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR? ",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -2526,7 +2526,7 @@
     {
       "Assigned Date": "June 4, 2026",
       "Last Update": "June 15, 2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR? ",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -2552,7 +2552,7 @@
     {
       "Assigned Date": "June 4, 2026",
       "Last Update": "June 11, 2026",
-      "Priorities": "7",
+      "Priorities": "8",
       "Hiring Request": "HR97923",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -2578,7 +2578,7 @@
     {
       "Assigned Date": "June 1,2026",
       "Last Update": "June 18, 2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR72839",
       "Source": "Core",
       "Advisor": "Cami",
@@ -2604,7 +2604,7 @@
     {
       "Assigned Date": "June 9,2026",
       "Last Update": "June 18, 2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR75493",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -2630,7 +2630,7 @@
     {
       "Assigned Date": "June 9,2026",
       "Last Update": "June 18, 2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR69222",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -2656,7 +2656,7 @@
     {
       "Assigned Date": "June 5,2026",
       "Last Update": "June 15,2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR70870",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -2682,7 +2682,7 @@
     {
       "Assigned Date": "June 5,2026",
       "Last Update": "June 15,2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR62951",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -2708,7 +2708,7 @@
     {
       "Assigned Date": "June 5,2026",
       "Last Update": "June 15,2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "HR47113",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -2734,7 +2734,7 @@
     {
       "Assigned Date": "June 2,2026",
       "Last Update": "June 15,2026",
-      "Priorities": "3",
+      "Priorities": "4",
       "Hiring Request": "N/A",
       "Source": "Core",
       "Advisor": "Vicky",
@@ -2760,7 +2760,7 @@
     {
       "Assigned Date": "June 8,2026",
       "Last Update": "June 18,2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR85060",
       "Source": "Core",
       "Advisor": "Cami",
@@ -2786,7 +2786,7 @@
     {
       "Assigned Date": "June 8,2026",
       "Last Update": "June 18,2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR91652",
       "Source": "Core",
       "Advisor": "Cami",
@@ -2812,7 +2812,7 @@
     {
       "Assigned Date": "June 16,2026",
       "Last Update": "June 18,2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR78468",
       "Source": "Core",
       "Advisor": "Cami",
@@ -2838,7 +2838,7 @@
     {
       "Assigned Date": "June 16,2026",
       "Last Update": "June 18,2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR70549",
       "Source": "Core",
       "Advisor": "Cami",
@@ -2864,7 +2864,7 @@
     {
       "Assigned Date": "June 17,2026",
       "Last Update": "June 18,2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR80116",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -2890,7 +2890,7 @@
     {
       "Assigned Date": "June 18,2026",
       "Last Update": "June 18,2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR54711",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -2916,7 +2916,7 @@
     {
       "Assigned Date": "June 16,2026",
       "Last Update": "June 18,2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR94306",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -2942,7 +2942,7 @@
     {
       "Assigned Date": "June 20,2026",
       "Last Update": "June 18,2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR72197",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -2968,7 +2968,7 @@
     {
       "Assigned Date": "June 17,2026",
       "Last Update": "June 18,2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR53063",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -2994,7 +2994,7 @@
     {
       "Assigned Date": "June 17,2026",
       "Last Update": "June 18,2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR99250",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -3020,7 +3020,7 @@
     {
       "Assigned Date": "June 17,2026",
       "Last Update": "June 18,2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR91331",
       "Source": "Core",
       "Advisor": "Genesis",
@@ -3046,7 +3046,7 @@
     {
       "Assigned Date": "June 18,2026",
       "Last Update": "June 18,2026",
-      "Priorities": "0",
+      "Priorities": "1",
       "Hiring Request": "HR67253",
       "Source": "Core",
       "Advisor": "Nicky",
