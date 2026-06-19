@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-19T17:43:47.569Z",
+  "updated": "2026-06-19T17:43:50.836Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2934,7 +2934,7 @@
       "Date Placed": "",
       "Invoice Paid": "",
       "Days for Placement": "",
-      "Budget ($)": "",
+      "Budget ($)": "2,000",
       "%WG": "",
       "Deal Value ($)": "0",
       "Notes": "1st Batch - 3 candidates (Aremi, Ilse & Camoya)"
