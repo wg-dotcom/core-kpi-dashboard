@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-19T20:00:50.921Z",
+  "updated": "2026-06-19T20:37:07.861Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -3068,6 +3068,32 @@
       "%WG": "",
       "Deal Value ($)": "",
       "Notes": "Member replied back with some clarifications, added on the new JD and requested approval to launch the search"
+    },
+    {
+      "Assigned Date": "",
+      "Last Update": "",
+      "Priorities": "",
+      "Hiring Request": "",
+      "Source": "",
+      "Advisor": "Amimo",
+      "Status": "",
+      "Name": "",
+      "Email": "",
+      "Company Name": "",
+      "Role": "",
+      "NotebookLM": "",
+      "Intake Form": "",
+      "GitHub": "",
+      "Front Thread": "",
+      "AT Link": "",
+      "Alignment Date/ KickOff Meeting": "",
+      "Date Placed": "",
+      "Invoice Paid": "",
+      "Days for Placement": "",
+      "Budget ($)": "",
+      "%WG": "",
+      "Deal Value ($)": "",
+      "Notes": ""
     }
   ]
 }
