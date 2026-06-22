@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-22T18:05:38.225Z",
+  "updated": "2026-06-22T18:05:43.321Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -957,7 +957,7 @@
       "Alignment Date/ KickOff Meeting": "April 20, 2026",
       "Date Placed": "",
       "Invoice Paid": "",
-      "Days for Placement": "-32951",
+      "Days for Placement": "",
       "Budget ($)": "4,500",
       "%WG": "18%",
       "Deal Value ($)": "9,720",
@@ -1295,7 +1295,7 @@
       "Alignment Date/ KickOff Meeting": "",
       "Date Placed": "May 26, 2026",
       "Invoice Paid": "May 26, 2026",
-      "Days for Placement": "",
+      "Days for Placement": "31",
       "Budget ($)": "2,000",
       "%WG": "18%",
       "Deal Value ($)": "4,320",
