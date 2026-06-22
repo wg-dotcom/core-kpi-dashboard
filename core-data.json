@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-22T16:37:26.326Z",
+  "updated": "2026-06-22T16:37:33.176Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2088,7 +2088,7 @@
       "Hiring Request": "HR88998",
       "Source": "Core",
       "Advisor": "Vicky",
-      "Status": "6. Job Offer Letter / Signature",
+      "Status": "7. Invoice",
       "Name": "HENRY GURZHIEV",
       "Email": "janne.v@ultimatedentallab.com",
       "Company Name": "Ultimate Dental Lab",
@@ -2109,8 +2109,8 @@
     },
     {
       "Assigned Date": "May 26, 2026",
-      "Last Update": "June 15, 2026",
-      "Priorities": "7",
+      "Last Update": "June 22, 2026",
+      "Priorities": "0",
       "Hiring Request": "HR81079",
       "Source": "Core",
       "Advisor": "Vicky",
