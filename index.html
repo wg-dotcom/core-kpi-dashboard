@@ -422,7 +422,7 @@
     <div class="charts-row-2" style="margin-bottom:20px;">
       <div class="chart-card">
         <div class="chart-title" id="timeline-chart-title">Monthly Placements & Revenue</div>
-        <div class="chart-sub" id="timeline-chart-sub">All time · grouped by month placed</div>
+        <div class="chart-sub" id="timeline-chart-sub">All time · grouped by month invoice paid</div>
         <div class="chart-wrap-tall"><canvas id="chartTimeline"></canvas></div>
       </div>
       <div class="chart-card">
@@ -441,7 +441,7 @@
         <table>
           <thead>
             <tr>
-              <th>Date Placed</th>
+              <th>Invoice Paid</th>
               <th>Company / Contact</th>
               <th>Role</th>
               <th>Advisor</th>
@@ -680,7 +680,8 @@ async function loadData() {
 
       if(status==="8. Placed"){
         PLACED.push({
-          date: r["Date Placed"]||r["Date"]||"",
+          date: r["Invoice Paid"]||"",
+          datePlaced: r["Date Placed"]||"",
           "Company Name": r["Company Name"],
           Name: r["Name"]||"",
           Role: r.Role, Advisor: r.Advisor,
@@ -883,25 +884,29 @@ function renderPlacementTable(rows) {
     const da=parseDate(a.date)||new Date(0), db=parseDate(b.date)||new Date(0);
     return db-da;
   });
-  // Build month buckets in order
+  // Build month buckets in order (grouped by Invoice Paid date)
+  const AWAIT="Awaiting Invoice Payment";
   const buckets=[]; const bucketMap={};
   sorted.forEach(r=>{
-    const d=parseDate(r.date); if(!d) return;
-    const key=d.toLocaleDateString("en-US",{month:"long",year:"numeric"});
-    if(!bucketMap[key]){bucketMap[key]={label:key,rows:[],rev:0};buckets.push(bucketMap[key]);}
+    const d=parseDate(r.date);
+    const key=d?d.toLocaleDateString("en-US",{month:"long",year:"numeric"}):AWAIT;
+    if(!bucketMap[key]){bucketMap[key]={label:key,rows:[],rev:0,paid:!!d};buckets.push(bucketMap[key]);}
     bucketMap[key].rows.push(r);
     bucketMap[key].rev+=r.dv;
   });
   const html=buckets.map(b=>{
-    const monthRev=b.rev>0?`<span style="color:var(--green);font-weight:700;margin-left:10px;">$${(b.rev/1000).toFixed(1)}K revenue</span>`:"";
+    const monthRev=(b.paid&&b.rev>0)?`<span style="color:var(--green);font-weight:700;margin-left:10px;">$${(b.rev/1000).toFixed(1)}K collected</span>`:"";
+    const head=b.paid
+      ? `📅 ${b.label} &nbsp;·&nbsp; <span style="font-weight:500;">${b.rows.length} paid</span>${monthRev}`
+      : `🕓 <span style="color:var(--orange);">${b.label}</span> &nbsp;·&nbsp; <span style="font-weight:500;">${b.rows.length} placement${b.rows.length!==1?"s":""} not yet invoiced/paid</span>`;
     const header=`<tr>
-      <td colspan="8" style="background:var(--blue-light);padding:8px 14px;font-size:12px;font-weight:700;color:var(--blue);border-top:2px solid var(--gray-200);">
-        📅 ${b.label} &nbsp;·&nbsp; <span style="font-weight:500;">${b.rows.length} placement${b.rows.length!==1?"s":""}</span>${monthRev}
+      <td colspan="8" style="background:${b.paid?"var(--blue-light)":"#fff7ed"};padding:8px 14px;font-size:12px;font-weight:700;color:${b.paid?"var(--blue)":"var(--orange)"};border-top:2px solid var(--gray-200);">
+        ${head}
       </td>
     </tr>`;
     const dataRows=b.rows.map(r=>`
       <tr>
-        <td style="font-size:12px;">${r.date}</td>
+        <td style="font-size:12px;">${r.date || (r.datePlaced?`<span style="color:var(--gray-400);">placed ${r.datePlaced}</span>`:"—")}</td>
         <td><strong>${r["Company Name"]}</strong>${r.Name ? `<br><span style="font-size:11px;color:var(--gray-400);font-weight:400;">${r.Name}</span>` : ""}</td>
         <td style="font-size:12px;">${r.Role}</td>
         <td><span class="advisor-tag ${advisorClass(r.Advisor)}">${r.Advisor}</span></td>
@@ -935,7 +940,7 @@ function renderTimelineChart(rows, period) {
   if(period==="all") {
     const {labels,counts,revs} = buildMonthlyData(rows);
     document.getElementById("timeline-chart-title").textContent="Monthly Placements & Revenue";
-    document.getElementById("timeline-chart-sub").textContent="All time · grouped by month placed";
+    document.getElementById("timeline-chart-sub").textContent="All time · grouped by month invoice paid";
     timelineChart = new Chart(ctx, {
       data:{labels,datasets:[
         {type:"bar",label:"Placements",data:counts,backgroundColor:"rgba(11,77,153,.25)",borderColor:"#0b4d99",borderWidth:2,borderRadius:4,yAxisID:"y"},
