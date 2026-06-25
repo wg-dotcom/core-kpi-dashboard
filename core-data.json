@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25T18:32:08.941Z",
+  "updated": "2026-06-25T18:32:38.671Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2504,7 +2504,7 @@
       "Hiring Request": "HR96596",
       "Source": "Core",
       "Advisor": "Vicky",
-      "Status": "6. Job Offer Letter / Signature",
+      "Status": "8. Placed",
       "Name": "Rebecca Green",
       "Email": "rebecca@mintads.com",
       "Company Name": "Mint Adds",
@@ -2733,8 +2733,8 @@
     },
     {
       "Assigned Date": "June 4, 2026",
-      "Last Update": "June 22, 2026",
-      "Priorities": "3",
+      "Last Update": "June 25, 2026",
+      "Priorities": "0",
       "Hiring Request": "HR35898",
       "Source": "Core",
       "Advisor": "Genesis",
