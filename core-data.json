@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25T18:55:49.256Z",
+  "updated": "2026-06-25T18:57:01.281Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -3175,8 +3175,8 @@
     },
     {
       "Assigned Date": "June 18,2026",
-      "Last Update": "June 22,2026",
-      "Priorities": "3",
+      "Last Update": "June 25,2026",
+      "Priorities": "0",
       "Hiring Request": "HR89362",
       "Source": "Core",
       "Advisor": "Amimo",
@@ -3201,8 +3201,8 @@
     },
     {
       "Assigned Date": "June 24,2026",
-      "Last Update": "June 23,2026",
-      "Priorities": "2",
+      "Last Update": "June 25,2026",
+      "Priorities": "0",
       "Hiring Request": "HR86066",
       "Source": "Core",
       "Advisor": "Amimo",
