@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25T15:39:28.086Z",
+  "updated": "2026-06-25T15:45:51.716Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -3120,6 +3120,32 @@
       "%WG": "18%",
       "Deal Value ($)": "6,480",
       "Notes": "1st batch - Neil, Moses & Dennis"
+    },
+    {
+      "Assigned Date": "",
+      "Last Update": "",
+      "Priorities": "",
+      "Hiring Request": "",
+      "Source": "",
+      "Advisor": "Amimo",
+      "Status": "",
+      "Name": "",
+      "Email": "",
+      "Company Name": "",
+      "Role": "",
+      "NotebookLM": "",
+      "Intake Form": "",
+      "GitHub": "",
+      "Front Thread": "",
+      "AT Link": "",
+      "Alignment Date/ KickOff Meeting": "",
+      "Date Placed": "",
+      "Invoice Paid": "",
+      "Days for Placement": "",
+      "Budget ($)": "",
+      "%WG": "",
+      "Deal Value ($)": "",
+      "Notes": ""
     }
   ]
 }
