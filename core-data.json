@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-26T16:40:11.479Z",
+  "updated": "2026-06-26T16:45:29.106Z",
   "rows": [
     {
       "Assigned Date": "February 5, 2026",
@@ -2738,7 +2738,7 @@
       "Date Placed": "",
       "Invoice Date": "",
       "Payment Date": "",
-      "Days for Placement": "",
+      "Days for Placement": "-32984",
       "Budget ($)": "1,500",
       "%WG": "18%",
       "Deal Value ($)": "3,240",
@@ -2850,7 +2850,7 @@
       "Date Placed": "",
       "Invoice Date": "",
       "Payment Date": "",
-      "Days for Placement": "",
+      "Days for Placement": "-32984",
       "Budget ($)": "1,500",
       "%WG": "18%",
       "Deal Value ($)": "3,240",
