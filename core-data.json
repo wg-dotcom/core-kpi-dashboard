@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-28T22:26:47.691Z",
+  "updated": "2026-06-28T22:27:03.978Z",
   "rows": [
     {
       "wzv b": "June 15,2026",
@@ -1087,8 +1087,8 @@
       "Invoice Date": "",
       "Payment Date": "",
       "Days for Placement": "",
-      "Budget ($)": "",
-      "%WG": "",
+      "Budget ($)": "1,500",
+      "%WG": "18%",
       "Deal Value ($)": "",
       "Total Paid ($)": "",
       "Notes": ""
