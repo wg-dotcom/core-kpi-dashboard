@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-29T14:01:01.499Z",
+  "updated": "2026-06-29T14:55:33.825Z",
   "rows": [
     {
       "Date Assigned": "June 15,2026",
@@ -647,8 +647,8 @@
     },
     {
       "Date Assigned": "June 18,2026",
-      "Last Update": "June 26,2026",
-      "Priorities": "3",
+      "Last Update": "June 29,2026",
+      "Priorities": "0",
       "Hiring Request": "HR67253",
       "Source": "Core",
       "Advisor": "Nicky",
@@ -671,7 +671,7 @@
       "%WG": "18%",
       "Deal Value ($)": "5,400",
       "Total Paid ($)": "",
-      "Notes": "06/26: Batch #1 (2) went MIA same day of interview, 1 call schedule by the member with one of the TP candidates, searching for new candidates to present. "
+      "Notes": "06/29: Batch #1 (2) went MIA same day of interview, 1 call schedule by the member with one of the TP candidates, searching for new candidates to present. "
     },
     {
       "Date Assigned": "April 6, 2026",
