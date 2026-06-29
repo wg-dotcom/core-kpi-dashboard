@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-29T02:28:24.663Z",
+  "updated": "2026-06-29T02:28:26.105Z",
   "rows": [
     {
       "Date Assigned": "June 15,2026",
@@ -3532,7 +3532,7 @@
     {
       "Date Assigned": "June 26,2026",
       "Last Update": "June 27, 2026",
-      "Priorities": "",
+      "Priorities": "1",
       "Hiring Request": "",
       "Source": "Core",
       "Advisor": "Amimo",
