@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-29T02:21:32.389Z",
+  "updated": "2026-06-29T02:21:54.642Z",
   "rows": [
     {
       "wzv b": "June 15,2026",
@@ -23,9 +23,9 @@
       "Invoice Date": "",
       "Payment Date": "",
       "Days for Placement": "",
-      "Budget ($)": "",
+      "Budget ($)": "1,800",
       "%WG": "18%",
-      "Deal Value ($)": "0",
+      "Deal Value ($)": "3,888",
       "Total Paid ($)": "",
       "Notes": "Sourcing for candidates, First batch next week "
     },
