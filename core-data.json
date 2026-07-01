@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T18:51:32.118Z",
+  "updated": "2026-07-01T18:51:49.413Z",
   "rows": [
     {
       "Date Assigned": "June 15,2026",
@@ -331,9 +331,9 @@
       "Invoice Date": "June 30,2026",
       "Payment Date": "July 01,2026",
       "Days for Placement": "33",
-      "Budget ($)": "2,000",
+      "Budget ($)": "2,100",
       "%WG": "18%",
-      "Deal Value ($)": "4,320",
+      "Deal Value ($)": "4,536",
       "Total Paid ($)": "",
       "Notes": "Hiring Alvaro\n(JOL) - waiting for him to send benefits etc. "
     },
