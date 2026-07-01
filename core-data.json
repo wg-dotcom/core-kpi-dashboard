@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T18:00:54.694Z",
+  "updated": "2026-07-01T18:50:44.516Z",
   "rows": [
     {
       "Date Assigned": "June 15,2026",
@@ -311,12 +311,12 @@
     },
     {
       "Date Assigned": "May 07, 2026",
-      "Last Update": "June 29, 2026",
-      "Priorities": "2",
+      "Last Update": "July 1, 2026",
+      "Priorities": "0",
       "Hiring Request": "HR87992",
       "Source": "Core",
       "Advisor": "Cami",
-      "Status": "6. Job Offer Letter / Signature",
+      "Status": "8. Placed",
       "Name": "Jeffery Runyon",
       "Email": "jefferyrunyon@cmbocaraton.com",
       "Company Name": "Concierge Medicine of Boca Raton",
