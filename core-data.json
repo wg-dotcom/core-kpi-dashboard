@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-02T13:39:00.208Z",
+  "updated": "2026-07-02T13:39:03.667Z",
   "rows": [
     {
       "Date Assigned": "June 15,2026",
@@ -838,7 +838,7 @@
       "Budget ($)": "2,000",
       "%WG": "18%",
       "Deal Value ($)": "4,320",
-      "Total Paid ($)": "",
+      "Total Paid ($)": "4,320",
       "Notes": "Lester - Invoice"
     },
     {
@@ -950,7 +950,7 @@
       "Budget ($)": "2,100",
       "%WG": "18%",
       "Deal Value ($)": "4,536",
-      "Total Paid ($)": "",
+      "Total Paid ($)": "4,536",
       "Notes": "Refilwe - Invoice"
     },
     {
