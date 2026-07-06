@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06T16:32:34.733Z",
+  "updated": "2026-07-06T16:32:45.688Z",
   "rows": [
     {
       "Date Assigned": "February 5, 2026",
@@ -3551,9 +3551,9 @@
       "Invoice Date": "",
       "Payment Date": "",
       "Days for Placement": "",
-      "Budget ($)": "",
-      "%WG": "",
-      "Deal Value ($)": "",
+      "Budget ($)": "2,500",
+      "%WG": "18%",
+      "Deal Value ($)": "5,400",
       "Total Paid ($)": "",
       "Notes": "3 vacancies: offering Edwin"
     },
