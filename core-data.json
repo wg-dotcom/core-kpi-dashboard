@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06T18:30:35.941Z",
+  "updated": "2026-07-06T18:30:42.305Z",
   "rows": [
     {
       "Date Assigned": "February 5, 2026",
@@ -3785,7 +3785,7 @@
       "Date Assigned": "July 6,2026",
       "Last Update": "July 6,2026",
       "Priorities": "0",
-      "Hiring Request": "",
+      "Hiring Request": "HR54069\n",
       "Source": "Core",
       "Advisor": "Nicky",
       "Status": "1. KickOff Meeting",
