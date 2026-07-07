@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T20:07:41.273Z",
+  "updated": "2026-07-07T20:07:59.266Z",
   "rows": [
     {
       "Date Assigned": "February 5, 2026",
@@ -3818,7 +3818,7 @@
       "Advisor": "Genesis",
       "Status": "1. KickOff Meeting",
       "Name": "Nicholas Duncan",
-      "Email": "",
+      "Email": "nick@bonded.ai",
       "Company Name": "Bonded",
       "Role": "Customer Success Manager",
       "NotebookLM": "",
@@ -3846,7 +3846,7 @@
       "Advisor": "Genesis",
       "Status": "1. KickOff Meeting",
       "Name": "Nicholas Duncan",
-      "Email": "",
+      "Email": "nick@bonded.ai",
       "Company Name": "Bonded",
       "Role": "Operations Manager",
       "NotebookLM": "",
