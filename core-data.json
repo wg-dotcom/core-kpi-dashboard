@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T20:09:25.096Z",
+  "updated": "2026-07-07T20:09:34.300Z",
   "rows": [
     {
       "Date Assigned": "February 5, 2026",
@@ -3821,7 +3821,7 @@
       "Email": "nick@bonded.ai",
       "Company Name": "Bonded",
       "Role": "Customer Success Manager",
-      "NotebookLM": "",
+      "NotebookLM": "https://notebooklm.google.com/notebook/a39a0399-80f0-460c-807a-81bf9384e397",
       "Intake Form": "",
       "GitHub": "",
       "Front Thread": "",
@@ -3849,7 +3849,7 @@
       "Email": "nick@bonded.ai",
       "Company Name": "Bonded",
       "Role": "Operations Manager",
-      "NotebookLM": "",
+      "NotebookLM": "https://notebooklm.google.com/notebook/a39a0399-80f0-460c-807a-81bf9384e397",
       "Intake Form": "",
       "GitHub": "",
       "Front Thread": "",
